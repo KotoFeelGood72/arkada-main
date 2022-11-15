@@ -1,4 +1,24 @@
 header.header 
 	.section_in 
-		.header_row 
-		
+		.header_row
+			.header_col_left
+				.header_logo 
+					a(href="#")
+						img(src="i/global/logo.png", alt="Logotype website")
+				nav.header_nav
+					ul
+						-for(i = 0; i < 6; i++)
+							- var navTitle = ['Услуги', 'О нас', 'Партнеры', 'Документы', 'Отзывы', 'Контакты']
+							- var navLink = ['#service', '#about', '#partners', '#document', '#reviews', '#contacts']
+								li 
+									a(href=navLink[i] )=navTitle[i]
+			.header_col_right 
+				.header_number 
+					a(href="tel:+79877150416")
+						.header_number_icon
+							+icon('phone') 
+						p +7 (987) 715-04-16
+			.burger_trigger
+				span 
+				span 
+				span 

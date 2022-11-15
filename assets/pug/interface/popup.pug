@@ -1,0 +1,54 @@
+.callback.popup 
+	.callback_bg.remove_popup.popup_bg 
+	.callback_main.popup_main
+		.callback_back.remove_popup
+			button(type="button")
+				+icon('close') 
+		.callback_top
+			h3 Оставьте контактные данные
+		.callback_form 
+			.callback_input 
+				input(type="text" placeholder="Ваше имя")
+			.callback_input 
+				input(type="tel" placeholder="Ваш телефон")
+			.callback_check 
+				input(type="checkbox" id="callbackCheck")
+				label(for="callbackCheck")!='Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a>' 
+			.callback_btn.btn 
+				button(type="submit") Отправить
+
+.burger.popup 
+	.burger_bg.popup_bg.remove_popup 
+	.burger_main.popup_main
+		.burger_close.remove_popup 
+			+icon('close')
+		.burger_top 
+			.burger_logo 
+				a(href="#")
+					img(src="i/global/logo.png", alt="")
+		nav.burger_nav
+			ul
+				-for(i = 0; i < 6; i++)
+					- var navTitle = ['Услуги', 'О нас', 'Партнеры', 'Документы', 'Отзывы', 'Контакты']
+					- var navLink = ['service', 'about', 'partners', 'document', 'reviews', 'contacts']
+						li 
+							a(href=navLink[i] )=navTitle[i]
+		ul.contacts_list 
+			li 
+				p Телефон:
+				a(href="#") +7 (987) 715-04-16
+			li 
+				p Адрес:
+				span г. Йошкар-Ола, ул. Эшкинина, 10Б, офис 112
+			li 
+				p Почта:
+				ul 
+					li 
+						a(href="#") 7150416@gmail.com
+					li 
+						a(href="#") pcurist@mail.ru
+		ul.burger_social.contacts_social 
+			each item in ['tg', 'wa']
+				li 
+					a(href="#")
+						+icon(item)

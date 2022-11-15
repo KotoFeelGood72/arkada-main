@@ -1,6 +1,6 @@
 // Global 
-$header: 7rem;
-$footer: 27rem;
+$header: 6.6rem;
+$footer: 8.8rem;
 
 // Mobile
 $header_mob: 6rem;
@@ -9,9 +9,9 @@ $footer_mob: 10rem;
 $pbm: 8rem;
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Arial-Regular', sans-serif;
-$font_2: 'Arial-Bold', serif;
-$font_3: 'Nunito', sans-serif;
+$font_1: 'OpenSans-Regular', sans-serif;
+$font_2: 'OpenSans-SemiBold', serif;
+$font_3: 'Ubuntu-Medium', sans-serif;
 
 $font_size_base: 2rem;
 //---------------------------------------------fonts###
@@ -19,7 +19,9 @@ $font_size_base: 2rem;
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
-$dark: #313131;
+$dark: #353535;
+$red: #E22547;
+$trans: transparent;
 
 
 
@@ -39,7 +41,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 144rem;
+$page_width: 132rem;
 
 //---------------------------------------------layout###
 

@@ -6,37 +6,65 @@ img {
 }
 
 h1 {
-	font-size: 4.8rem;
-	font-family: $font_2;
-	color: $dark;
+	font-size: 5.5rem;
+	font-family: $font_3;
+	color: $white;
+	font-weight: 500;
+	@include bp($point_2) {
+		font-size: 3rem;
+	}
 }
 // End
-h2 {
-	font-size: 3.2rem;
-	font-family: $font_2;
+h2, h3, h4, h5, h6 {
+	font-size: 4.5rem;
+	font-family: $font_3;
 	color: $dark;
+	font-weight: 500;
+	@include bp($point_2) {
+		font-size: 2.6rem;
+	}
 }
-// End
-h3 {
-	font-size: 2.4rem;
-	font-family: $font_2;
-	color: $dark;
+
+.global_txt {
+	p, ul, ol, span {
+		@include bp($point_2) {
+			font-size: 1.6rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+	li {
+		@include bp($point_2) {
+			font-size: 1.4rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+		padding-left: 1rem;
+		position: relative;
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '-';
+		}
+	}
 }
-// End
-h4 {
-	font-size: 2rem;
-	color: $dark;
+
+.wave {
+  background: rgba(255, 255, 255, .4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: wave .5s linear;
+  pointer-events: none;
+  position: absolute;
 }
-// End
-h5 {
-	font-size: 1.8rem;
-	font-family: $font_1;
-	color: $dark;
+
+@keyframes wave {
+  100% {
+   transform: scale(2);
+   opacity: 0;
+  }
 }
-// End
-h6 {
-	font-size: 1.8rem;
-	font-family: $font_1;
-	color: $dark;
-}
-// End
+

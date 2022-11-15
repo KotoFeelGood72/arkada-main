@@ -3,3 +3,196 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
+	section.hero
+		.hero_bg 
+			img(src="i/hero_bg.jpg", alt="")
+		.section_in 
+			.hero_main 
+				.hero_content
+					.hero_content_top 
+						.hero_title 
+							h1 Деловые консультации по недвижимости
+						ul.hero_service_list
+							each item in ['Оценка имущества за 24 часа;', 'Скидка на групповые консультации от 1500 руб.;', 'Работаем по всей России.']
+								li
+									.hero_service_icon 
+										+icon('check')
+									p=item
+					ul.hero_social 
+						each item in ['tg', 'wa']
+							li 
+								a(href="#")
+									+icon(item) 
+				.hero_form_w 
+					.hero_form_top 
+						p!='Запишитесь на <span>БЕСПЛАТНУЮ</span> консультацию прямо сейчас!'
+					form(action="").hero_form
+						.hero_form_input 
+							input(type="text" placeholder="Ваше имя")
+						.hero_form_input 
+							input(type="tel" placeholder="Ваш телефон")
+						.hero_form_check 
+							input(type="checkbox" id="heroCheck")
+							label(for="heroCheck")!='Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a>'
+						.hero_form_btn.btn.btn_popup 
+							button(type="submit") Отправить
+	section.company 
+		.section_in 
+			.company_main 
+				.company_img 
+					img(src="i/company_1.jpg", alt="" id="company_img")
+				.company_content 
+					.company_title 
+						h2 Преимущества нашей компании:
+					ul.company_list
+						-for(i = 1; i < 4; i++)
+							- var cTitle = ['', 'Мы обслужили более 12 тысяч клиентов за 10 лет работы на рынке;', 'Нам доверяют известные клиенты: муниципальные органы и крупные предприятия республики;', 'Наш офис в Йошкар-Оле удобно расположен, а также клиентам доступны консультации онлайн.']
+								if i === 1
+									li.company_item(data-src=`i/company_${i}.jpg` class="active") 
+										span.comp_counter!=`0${i}`
+										p!=cTitle[i]
+								else 
+									li.company_item(data-src=`i/company_${i}.jpg`) 
+										span.comp_counter!=`0${i}`
+										p!=cTitle[i]
+	section.service#service
+		.section_in 
+			.service_main 
+				.service_title 
+					h3 Выберити услугу:
+				ul.service_grid 
+					-for(i = 0; i < 4; i++)
+						li.service_grid_item 
+							.service_item_img 
+								img(src=`i/service_${i}.jpg`, alt="")
+							.service_item_content 
+								h3 Оценка и страхование недвижимости
+								.service_item_txt.global_txt 
+									p Купили квартиру в ипотеку и нужна оценка? За какую цену могу продать земельный участок с домом? Сколько стоит Ваш бизнес? Что делать, если я хочу уменьшить налоговую нагрузку?
+									p Эти и другие вопросы разберем при оценке стоимости.
+								.service_item_link.btn.btn_small.btn_popup 
+									button(type="button") Узнать стоимость
+	section.action
+		.action_bg 
+			img(src="i/action_bg.jpg", alt="")
+		.section_in 
+			.action_main 
+				.action_main_top 
+					.action_title 
+						h4 Оценим ваше имущество за 24 часа!
+					.action_txt 
+						p Оставьте заявку, и мы свяжемся с вами в ближайшее время.
+				.action_form
+					.action_form_group
+						.action_input 
+							input(type="text" placeholder="Ваше имя")
+						.action_input 
+							input(type="tel" placeholder="Ваш телефон")
+						.action_btn.btn 
+							button(type="button") Отправить
+					.action_form_check 
+						input(type="checkbox" id="actionCheck")
+						label(for="actionCheck")!='Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a>' 
+	section.about#about 
+		.section_in 
+			.about_main
+				.about_content 
+					.about_title 
+						h4 О компании “Деловые консультации”
+					.about_txt.global_txt 
+						p Мы команда квалифицированных экспертов в области оценки имущества с более чем 10-летним опытом.
+						p Защищаем права граждан более 10 лет.
+						p Мы оказываем юридические услуги как физлицам, так и юрлицам. Компания с признанной репутацией: к нам обращаются муниципальные органы и крупные предприятия республики.
+					.about_link.btn.btn_popup 
+						button(type="button") Оставить заявку
+				.about_img 
+					img(src="i/about.jpg", alt="")
+	section.partners#partners 
+		.section_in 
+			.partners_main
+				.partners_title 
+					h4 Наши партнёры
+				ul.partners_grid
+					-for(i = 0; i < 8; i++)
+						li 
+							img(src=`i/par_${i}.jpg`, alt="")
+	section.document#document 
+		.section_in 
+			.document_main 
+				.document_main_head 
+					.document_title 
+						h5 Документы и сертификаты
+					.global_nav.document_slider_nav 
+						.document_nav_btn.left_btn 
+							button(type="button")
+								+icon('left')
+						.document_nav_btn.right_btn 
+							button(type="button")
+								+icon('right')
+				.document_slider_w 
+					.document_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 4; i++) 
+								.swiper-slide 
+									.document_slide
+										.document_img 
+											a(href=`i/doc_${i}.jpg` data-fancybox)
+												img(src=`i/doc_${i}.jpg`, alt="") 
+	section.reviews#reviews 
+		.section_in 
+			.reviews_main 
+				.reviews_head 
+					.reviews_title 
+						h5 Отзывы клиентов
+					.global_nav.reviews_slider_nav
+						.reviews_nav_btn.left_btn 
+							button(type="button")
+								+icon('left')
+						.reviews_nav_btn.right_btn 
+							button(type="button")
+								+icon('right')
+				.reviews_slider_w 
+					.reviews_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 12; i++) 
+								.swiper-slide 
+									.reviews_slide 
+										.reviews_slide_head 
+											p Алла
+											span Оценка дома и зем. уч.
+										.reviews_slide_txt.global_txt 
+											p Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.
+										.reviews_txt_more Показать весь отзыв
+										.reviews_icon 
+											+icon('reviews')
+	section.contacts#contacts
+		.contacts_bg 
+			img(src="i/contacts_bg.jpg", alt="") 
+		.section_in 
+			.contacts_main 
+				.contacts_card 
+					h6 Контакты
+					ul.contacts_list 
+						li 
+							p Телефон:
+							a(href="#") +7 (987) 715-04-16
+						li 
+							p Адрес:
+							span г. Йошкар-Ола, ул. Эшкинина, 10Б, офис 112
+						li 
+							p Почта:
+							ul 
+								li 
+									a(href="#") 7150416@gmail.com
+								li 
+									a(href="#") pcurist@mail.ru
+					.contacts_card_bottom 
+						.contacts_btn_link.btn.btn_popup 
+							button(type="button") Оставить заявку
+						ul.contacts_social 
+							each item in ['tg', 'wa']
+								li 
+									a(href="#")
+										+icon(item) 
+
+				

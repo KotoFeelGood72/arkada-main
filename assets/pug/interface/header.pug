@@ -1,24 +1,26 @@
 header.header 
 	.section_in 
-		.header_row
-			.header_col_left
+		.header_main
+			.header_col_left 
 				.header_logo 
 					a(href="#")
-						img(src="i/global/logo.png", alt="Logotype website")
-				nav.header_nav
-					ul
-						-for(i = 0; i < 6; i++)
-							- var navTitle = ['Услуги', 'О нас', 'Партнеры', 'Документы', 'Отзывы', 'Контакты']
-							- var navLink = ['#service', '#about', '#partners', '#document', '#reviews', '#contacts']
-								li 
-									a(href=navLink[i] )=navTitle[i]
+						img(src="i/logo.svg", alt="")
+						img(src="i/logo_mobile.svg", alt="" class="mobile_logo" )
+				nav.header_nav 
+					ul 
+						each item in ['Услуги', 'Преимущества', 'Контакты']
+							li 
+								a(href="#")=item
 			.header_col_right 
-				.header_number 
-					a(href="tel:+79877150416")
-						.header_number_icon
-							+icon('phone') 
-						p +7 (987) 715-04-16
-			.burger_trigger
-				span 
-				span 
-				span 
+				.header_phone 
+					a(href="#")
+						.header_icon 
+							+icon('wa')
+						p +7 (982) 623-73-59
+				.header_call.btn.small
+					a(href="#") Заказать звонок
+				.header_burger 
+					span 
+					span 
+					span 
+				

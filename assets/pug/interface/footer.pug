@@ -1,17 +1,32 @@
 footer.footer 
 	.section_in 
-		.footer_row
-			.footer_col_left 
-				.footer_logo 
-					a(href="#")
-						img(src="i/global/logo.png", alt="")
+		.footer_main 
+			.header_main
+				.header_col_left 
+					.header_logo 
+						a(href="#")
+							img(src="i/logo.svg", alt="")
+							img(src="i/logo_mobile.svg", alt="" class="mobile_logo" )
+					nav.header_nav 
+						ul 
+							each item in ['Услуги', 'Преимущества', 'Контакты']
+								li 
+									a(href="#")=item
+				.header_col_right 
+					.header_phone
+						a(href="#")
+							.header_icon 
+								+icon('wa')
+							p +7 (982) 623-73-59
+					.header_call.btn.small
+						a(href="#") Заказать звонок
+			.footer_bottom 
 				.footer_copyright © Все права защищены, 2022
-			.footer_col_right 
-				.footer_policy 
-					a(href="#") Политика конфиденциальности
-				.footer_arkada_brand 
-					a(href="#")
-						p Разработано arkada-web.ru
-						.footer_arkada_icon 
-							img(src="i/global/favicon.png", alt="")
-		
+				.footer_col_right 
+					.footer_policy 
+						a(href="#") Политика конфиденциальности
+					.arkada_link 
+						a(href="#")
+							p Разработано arkada-web.ru
+							.arkada_logo
+								img(src="i/global/favicon.png", alt="")

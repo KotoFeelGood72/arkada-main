@@ -22,12 +22,15 @@ $(window).on('load', function () {
 	loadFunc();
 	// allDefautAnim();
 	burgerMobile();
-	changeTabImg();
+	// changeTabImg();
 	if(windowWidth > mediaPoint1) {
-		popupForms('14px');
+		// popupForms('14px');
+		maps('улица Металлургов, 44а', 'Екатеринбург', [40, 53])
 	} else {
-		popupForms('0px');
+		// popupForms('0px');
+		maps('улица Металлургов, 44а', 'Екатеринбург', [40, 53])
 	}
+	
 });
 
 $(window).on('resize', function () {
@@ -140,205 +143,140 @@ $(document).ready(function() {
 
 const btnSubmit = document.querySelectorAll('button[type="submit"]')
 Array.from(btnSubmit).map((item) => {
-	item.addEventListener('click', () => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
 		succes('.succes')
 	})
 })
 
 
-function allDefautAnim(bottom = false, start = '-=30% center', end = 'bottom') {
-	const paralaxWrapper = Array.from(document.querySelectorAll('.sec_anim')).map(function(el) {
-		const arr = Array.from(el.querySelectorAll('.el_anim')).map(function (item, index) {
-			const tl = gsap.timeline();
-			ScrollTrigger.create({
-				animation: tl,
-				trigger: el,
-				start: start,
-				end: end,
-				ease: 'none',
-			})
-			tl.fromTo(item, {
-				y: 100, 
-				duration: .4,
-				autoAlpha: 0,
-			}, {
-				y: 0,
-				autoAlpha: 1,
-				delay: 0.1 + (0.1 * index),
-			});
-		});
-	});
-}
+// function allDefautAnim(bottom = false, start = '-=30% center', end = 'bottom') {
+// 	const paralaxWrapper = Array.from(document.querySelectorAll('.sec_anim')).map(function(el) {
+// 		const arr = Array.from(el.querySelectorAll('.el_anim')).map(function (item, index) {
+// 			const tl = gsap.timeline();
+// 			ScrollTrigger.create({
+// 				animation: tl,
+// 				trigger: el,
+// 				start: start,
+// 				end: end,
+// 				ease: 'none',
+// 			})
+// 			tl.fromTo(item, {
+// 				y: 100, 
+// 				duration: .4,
+// 				autoAlpha: 0,
+// 			}, {
+// 				y: 0,
+// 				autoAlpha: 1,
+// 				delay: 0.1 + (0.1 * index),
+// 			});
+// 		});
+// 	});
+// }
 
-function popupForms(pr) {
+// function popupForms(pr) {
 
-	let popupForms = document.querySelector('.callback')
-	let popupFormsTrigger = document.querySelectorAll('.btn_popup')
-	let popupFormsClose = document.querySelectorAll('.remove_popup')
-	let popupFormsSubmit = popupForms.querySelector('button[type="submit"]')
-	const burgerPopup = document.querySelector('.burger')
+// 	let popupForms = document.querySelector('.callback')
+// 	let popupFormsTrigger = document.querySelectorAll('.btn_popup')
+// 	let popupFormsClose = document.querySelectorAll('.remove_popup')
+// 	let popupFormsSubmit = popupForms.querySelector('button[type="submit"]')
+// 	const burgerPopup = document.querySelector('.burger')
 	
-	Array.from(popupFormsTrigger).map((item) => {
-		item.addEventListener('click', () => {
-			popupForms.classList.add('active');
-			win.style.overflow = "hidden";
-			win.style.paddingRight = pr; 
-			burgerPopup.classList.remove('active')
-		})
-	})
+// 	Array.from(popupFormsTrigger).map((item) => {
+// 		item.addEventListener('click', () => {
+// 			popupForms.classList.add('active');
+// 			win.style.overflow = "hidden";
+// 			win.style.paddingRight = pr; 
+// 			burgerPopup.classList.remove('active')
+// 		})
+// 	})
 
 
-	Array.from(popupFormsClose).map((item) => {
-		item.addEventListener('click', () => {
-			popupForms.classList.remove('active')
-			win.style.overflow = "";
-			win.style.paddingRight = ""; 
-		})
-	})
+// 	Array.from(popupFormsClose).map((item) => {
+// 		item.addEventListener('click', () => {
+// 			popupForms.classList.remove('active')
+// 			win.style.overflow = "";
+// 			win.style.paddingRight = ""; 
+// 		})
+// 	})
 
-	popupFormsSubmit.addEventListener('click', () => {
-		popupForms.classList.remove('active')
-		win.style.overflow = "";
-		win.style.paddingRight = ""; 
-		succes('.succes')
-	})
-}
+// 	popupFormsSubmit.addEventListener('click', () => {
+// 		popupForms.classList.remove('active')
+// 		win.style.overflow = "";
+// 		win.style.paddingRight = ""; 
+// 		succes('.succes')
+// 	})
+// }
 
 function burgerMobile() {
-	const triggerBurger = document.querySelector('.burger_trigger')
+	const triggerBurger = document.querySelector('.header_burger')
 	const burgerPopup = document.querySelector('.burger')
-	const burgerFail = document.querySelectorAll('.remove_popup')
+	const burgerFail = document.querySelectorAll('.remove')
 	
 	triggerBurger.addEventListener('click', () => {
 		burgerPopup.classList.add('active')
+		triggerBurger.classList.add('active')
 		win.style.overflow = "hidden";
 	})
 
 	Array.from(burgerFail).map((item) => {
 		item.addEventListener('click', () => {
 			burgerPopup.classList.remove('active')
+			triggerBurger.classList.remove('active')
 			win.style.overflow = "";
 		})
 	})
 
 }
 
-$(document).ready(function() {
 
-	$(".forms_action input").on("blur input focus", function() {
-		var $field = $(this).closest("li");
-		if (this.value) {
-			$field.addClass("filled");
-		} else {
-			$field.removeClass("filled");
-		}
-	});
-	
-	$(".forms_action input").on("focus", function() {
-		var $field = $(this).closest("li");
-		if (this) {
-			$field.addClass("filled");
-		} else {
-			$field.removeClass("filled");
-		}
-	});
+
+
+
+
+
+$(document).ready(function()  {
+
+	var inputsTel = document.querySelectorAll('input[type="tel"]');
+	Inputmask({
+		"mask": "+7 (999) 999-99-99",
+		showMaskOnHover: false
+	}).mask(inputsTel);
 })
 
 
-function changeTabImg() {
-	let img = document.querySelector('#company_img')
-	let itemLink = document.querySelectorAll('.company_item')
 
-	itemLink.forEach((el) => {
-		el.addEventListener('click', function(e) {
-			itemLink.forEach(item => {
-				item.classList.remove('active')
-			})
-			el.classList.add('active')
-			img.src = e.currentTarget.dataset.src
-		})
-	})
+async function maps(street, city, size) {
+
+	function init() {
+		const geocoder = ymaps.geocode(`${street} ${city}`);
+		geocoder.then(
+			async function (res) {
+				var myMapMobile = await new ymaps.Map('map', {
+						center: res.geoObjects.get(0).geometry.getCoordinates(),
+						zoom: 16,
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
+					myPlacemark = new ymaps.Placemark(myMapMobile.getCenter(), {
+						balloonContent: `${street} ${city}`
+					}, {
+						iconLayout: 'default#image',
+						iconImageHref: '/i/global/map.svg',
+						iconImageSize: size,
+						iconImageOffset: [-5, -38]
+					});
+
+				myMapMobile.geoObjects
+					.add(myPlacemark)
+				myMapMobile.behaviors.disable('scrollZoom')
+			}
+		);
+	}
+	await ymaps.ready(init);
 
 }
 
-const sliderDocuments = new Swiper('.document_slider', {
-	// loop: true,
-	speed: 600,
-	watchOverflow : true,
-	breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-			freeMode: false,
-    },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 50,
-			freeMode: false,
-    },
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 25
-    }
-	},
-	navigation: {
-		nextEl: '.document_slider_nav .right_btn',
-		prevEl: '.document_slider_nav .left_btn'
-	}
-});
-
-const reviewsSlider = new Swiper('.reviews_slider', {
-	centeredSlides: true,
-	centeredSlidesBounds: true,
-	allowTouchMove: true,
-	speed: 700,
-	autoHeight: true,
-	breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 50,
-			freeMode: false,
-    },
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 50,
-			freeMode: false,
-    },
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 30
-    }
-	},
-	navigation: {
-		nextEl: '.reviews_slider_nav .right_btn',
-		prevEl: '.reviews_slider_nav .left_btn'
-	}
-});
-
-
-
-
-$(document).ready(function() {
-	const items = document.querySelectorAll(".reviews_slide");
-	const state = "active";
-	
-	
-	items.forEach(function (item, index) {
-		const eCta = item.querySelector('.reviews_txt_more')
-		eCta.onclick = function () {
-			this.classList.toggle(state);
-			this.previousElementSibling.classList.toggle(state);
-			this.innerHTML = 'Скрыть весь отзыв';
-			if (this.classList.contains('active')) {
-				this.innerHTML = 'Скрыть весь отзыв';	
-			}
-			else  {
-				this.innerHTML = 'Показать весь отзыв';	
-			}
-			
-		};
-	});
-})
 
 
 

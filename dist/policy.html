@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -12,30 +13,28 @@
   <body>
     <header class="header"> 
       <div class="section_in"> 
-        <div class="header_row">
-          <div class="header_col_left">
-            <div class="header_logo"> <a href="#"><img src="i/global/logo.png" alt="Logotype website"></a></div>
-            <nav class="header_nav">
-              <ul>
-                <li> <a href="#service">Услуги</a></li>
-                <li> <a href="#about">О нас</a></li>
-                <li> <a href="#partners">Партнеры</a></li>
-                <li> <a href="#document">Документы</a></li>
-                <li> <a href="#reviews">Отзывы</a></li>
-                <li> <a href="#contacts">Контакты</a></li>
+        <div class="header_main">
+          <div class="header_col_left"> 
+            <div class="header_logo"> <a href="#"><img src="i/logo.svg" alt=""><img class="mobile_logo" src="i/logo_mobile.svg" alt=""></a></div>
+            <nav class="header_nav"> 
+              <ul> 
+                <li> <a href="#">Услуги</a></li>
+                <li> <a href="#">Преимущества</a></li>
+                <li> <a href="#">Контакты</a></li>
               </ul>
             </nav>
           </div>
           <div class="header_col_right"> 
-            <div class="header_number"> <a href="tel:+79877150416">
-                <div class="header_number_icon">
-                  <svg class="icon icon-phone ">
-                    <use xlink:href="i/sprite/sprite.svg#phone"></use>
+            <div class="header_phone"> <a href="#">
+                <div class="header_icon"> 
+                  <svg class="icon icon-wa ">
+                    <use xlink:href="i/sprite/sprite.svg#wa"></use>
                   </svg>
                 </div>
-                <p>+7 (987) 715-04-16</p></a></div>
+                <p>+7 (982) 623-73-59</p></a></div>
+            <div class="header_call btn small"><a href="#">Заказать звонок</a></div>
+            <div class="header_burger"> <span> </span><span> </span><span> </span></div>
           </div>
-          <div class="burger_trigger"><span> </span><span> </span><span> </span></div>
         </div>
       </div>
     </header>
@@ -236,16 +235,37 @@
       </div>
       <footer class="footer"> 
         <div class="section_in"> 
-          <div class="footer_row">
-            <div class="footer_col_left"> 
-              <div class="footer_logo"> <a href="#"><img src="i/global/logo.png" alt=""></a></div>
-              <div class="footer_copyright">© Все права защищены, 2022</div>
+          <div class="footer_main"> 
+            <div class="header_main">
+              <div class="header_col_left"> 
+                <div class="header_logo"> <a href="#"><img src="i/logo.svg" alt=""><img class="mobile_logo" src="i/logo_mobile.svg" alt=""></a></div>
+                <nav class="header_nav"> 
+                  <ul> 
+                    <li> <a href="#">Услуги</a></li>
+                    <li> <a href="#">Преимущества</a></li>
+                    <li> <a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header_col_right"> 
+                <div class="header_phone"><a href="#">
+                    <div class="header_icon"> 
+                      <svg class="icon icon-wa ">
+                        <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                      </svg>
+                    </div>
+                    <p>+7 (982) 623-73-59</p></a></div>
+                <div class="header_call btn small"><a href="#">Заказать звонок</a></div>
+              </div>
             </div>
-            <div class="footer_col_right"> 
-              <div class="footer_policy"> <a href="#">Политика конфиденциальности</a></div>
-              <div class="footer_arkada_brand"> <a href="#">
-                  <p>Разработано arkada-web.ru</p>
-                  <div class="footer_arkada_icon"> <img src="i/global/favicon.png" alt=""></div></a></div>
+            <div class="footer_bottom"> 
+              <div class="footer_copyright">© Все права защищены, 2022</div>
+              <div class="footer_col_right"> 
+                <div class="footer_policy"> <a href="#">Политика конфиденциальности</a></div>
+                <div class="arkada_link"> <a href="#">
+                    <p>Разработано arkada-web.ru</p>
+                    <div class="arkada_logo"><img src="i/global/favicon.png" alt=""></div></a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -259,82 +279,34 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
-    <div class="callback popup"> 
-      <div class="callback_bg remove_popup popup_bg"> </div>
-      <div class="callback_main popup_main">
-        <div class="callback_back remove_popup">
-          <button type="button">
-            <svg class="icon icon-close ">
-              <use xlink:href="i/sprite/sprite.svg#close"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="callback_top">
-          <h3>Оставьте контактные данные</h3>
-        </div>
-        <div class="callback_form"> 
-          <div class="callback_input"> 
-            <input type="text" placeholder="Ваше имя">
-          </div>
-          <div class="callback_input"> 
-            <input type="tel" placeholder="Ваш телефон">
-          </div>
-          <div class="callback_check"> 
-            <input type="checkbox" id="callbackCheck">
-            <label for="callbackCheck">Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a></label>
-          </div>
-          <div class="callback_btn btn"> 
-            <button type="submit">Отправить</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="burger popup"> 
-      <div class="burger_bg popup_bg remove_popup"> </div>
-      <div class="burger_main popup_main">
-        <div class="burger_close remove_popup"> 
+    <div class="burger"> 
+      <div class="burger_bg remove"> </div>
+      <div class="burger_main">
+        <div class="burger_close remove">
           <svg class="icon icon-close ">
             <use xlink:href="i/sprite/sprite.svg#close"></use>
           </svg>
         </div>
-        <div class="burger_top"> 
-          <div class="burger_logo"> <a href="#"><img src="i/global/logo.png" alt=""></a></div>
-        </div>
-        <nav class="burger_nav">
-          <ul>
-            <li> <a href="service">Услуги</a></li>
-            <li> <a href="about">О нас</a></li>
-            <li> <a href="partners">Партнеры</a></li>
-            <li> <a href="document">Документы</a></li>
-            <li> <a href="reviews">Отзывы</a></li>
-            <li> <a href="contacts">Контакты</a></li>
+        <div class="burger_logo"> <a href="#"><img src="i/logo.svg" alt=""></a></div>
+        <nav class="burger_nav"> 
+          <ul> 
+            <li class="remove"> <a href="#">Услуги</a></li>
+            <li class="remove"> <a href="#">Преимущества</a></li>
+            <li class="remove"> <a href="#">Контакты</a></li>
           </ul>
         </nav>
         <ul class="contacts_list"> 
           <li> 
-            <p>Телефон:</p><a href="#">+7 (987) 715-04-16</a>
+            <p>Телефон</p><a href="#">+7 (982) 623-73-59</a>
           </li>
           <li> 
-            <p>Адрес:</p><span>г. Йошкар-Ола, ул. Эшкинина, 10Б, офис 112</span>
+            <p>Почта</p><a href="#">sotnikov2611@gmail.com</a>
           </li>
           <li> 
-            <p>Почта:</p>
-            <ul> 
-              <li> <a href="#">7150416@gmail.com</a></li>
-              <li> <a href="#">pcurist@mail.ru</a></li>
-            </ul>
+            <p>Адрес</p><span>Екатеринбург, улица Металлургов, 44а</span>
           </li>
         </ul>
-        <ul class="burger_social contacts_social"> 
-          <li> <a href="#">
-              <svg class="icon icon-tg ">
-                <use xlink:href="i/sprite/sprite.svg#tg"></use>
-              </svg></a></li>
-          <li> <a href="#">
-              <svg class="icon icon-wa ">
-                <use xlink:href="i/sprite/sprite.svg#wa"></use>
-              </svg></a></li>
-        </ul>
+        <div class="burger_call btn small remove"><a href="#">Заказать звонок</a></div>
       </div>
     </div>
     <div class="succes">

@@ -1,33 +1,34 @@
 // Global 
-$header: 6.6rem;
-$footer: 8.8rem;
+$header: 6rem;
+$footer: 22.8rem;
 
 // Mobile
 $header_mob: 6rem;
 $footer_mob: 10rem;
 
-$pbm: 8rem;
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'OpenSans-Regular', sans-serif;
-$font_2: 'OpenSans-SemiBold', serif;
-$font_3: 'Ubuntu-Medium', sans-serif;
+$font_1: 'Roboto-Light', sans-serif;
+$font_11: 'Roboto-Regular', sans-serif;
+$font_2: 'Roboto-Medium', serif;
+$font_3: 'Roboto-Bold', serif;
 
-$font_size_base: 2rem;
+$font_size_base: 1.8rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
-$dark: #353535;
-$red: #E22547;
+$dark: #282828;
+$red: #FF0000;
+$bordo: #B50000;
 $trans: transparent;
 
 
 
-$color_text_base: $dark;
-$color_link_base: $dark;
-$body_bg: $white;
+$color_text_base: $white;
+$color_link_base: $white;
+$body_bg: $dark;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
@@ -41,7 +42,7 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 132rem;
+$page_width: 132.1rem;
 
 //---------------------------------------------layout###
 
@@ -65,8 +66,8 @@ $input_height: 4rem;
 $input_offset: 0 2rem;
 $input_font_size: $font_size_base;
 $input_border_color: #ccc;
-$input_border_color_active: $black;
-$input_placeholder_color: rgba($black, .4);
-$input_text_color: $black;
+$input_border_color_active: $dark;
+$input_placeholder_color: rgba($dark, .5);
+$input_text_color: $dark;
 $input_radius: $gl_radius;
 //---------------------------------------------forms###

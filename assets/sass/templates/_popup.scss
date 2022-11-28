@@ -1,107 +1,12 @@
-.popup {
-	@include absolute;
+.burger {
 	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	@include z-index(popup);
-	@include flex-center;
 	opacity: 0;
 	visibility: hidden;
-	transition: all .3s ease;
-	&.active {
-		opacity: 1;
-		visibility: visible;
-		.callback_main {
-			transform: translateY(0)
-		}
-	}
-}
-.popup_bg {
-	@include absolute;
-	background: rgba(53, 53, 53, 0.7);
-}
-
-.callback_back {
-	position: absolute;
-	top: 2rem;
-	right: 2.5rem;
-	width: 2.4rem;
-	@include bp($point_2) {
-		width: 1.5rem;
-		height: 1.5rem
-	}
-	button {
-		@include flex-center;
-		width: 100%;
-		height: 100%;
-		color: $red;
-		transition: all .3s ease;
-		&:hover {
-			color: $dark;
-		}
-	}
-}
-
-.popup_main {
-	position: relative;
-	background-color: $white;
-	transition: all .3s ease;
-}
-.callback {
-	@include bp($point_2) {
-		padding: 2rem;
-	}
-}
-.remove_popup {
-}
-.callback_main {
-	padding: 6rem 9.3rem 6rem;
-	box-shadow: 0 .4rem 4rem rgba(0, 6, 60, 0.11);
-	border-radius: 3rem;
-	transform: translateY(-5rem);
-	@include bp($point_2) {
-		padding: 4rem 2rem;
-		border-radius: 1rem;
-	}
-}
-.callback_back {
-}
-.icon {
-}
-.icon-close {
-}
-.callback_top {
-
-	h3 {
-		font-size: 3rem;
-		@include bp($point_2) {
-			font-size: 2.2rem;
-		}
-	}
-	margin-bottom: 3.5rem;
-	@include bp($point_2) {
-		text-align: center;
-		margin-bottom: 2rem;
-	}
-}
-.callback_form {
-}
-.callback_input {
-	@include input;
-	margin-bottom: 2rem;
-}
-.callback_check {
-	@include check;
-	margin-bottom: 3.5rem;
-	label {
-		max-width: 43rem;
-	}
-}
-.callback_btn {
-	@include btn;
-	position: relative;
-	z-index: 3;
-}
-.burger {
-	display: block;
 	transition: all .3s ease;
 	&.active {
 		opacity: 1;
@@ -111,38 +16,58 @@
 		}
 	}
 }
-.burger_bg {
+
+
+.burger_bg  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+	opacity: .5;
 }
 .burger_main {
+	background-color: $dark;
+	padding: 2rem 3rem;
+	max-width: 35rem;
 	position: relative;
-	background-color: $white;
-	height: 100%;
-	width: 100%;
-	max-width: 32rem;
-	padding: 2rem 2rem 3rem 2rem; 
-	overflow-y: auto;
 	max-height: 100%;
-	transition: all .3s ease;
+	overflow-y: auto;
 	transform: translateX(-100%);
+	transition: all .3s ease;
+}
 
+.burger_logo {
+	max-width: 20rem;
+	max-height: 6rem;
+	margin-bottom: 3rem;
+	a {
+		@include flex-center;
+	}
+}
+
+.burger_main {
+	height: 100%;
 	.contacts_list {
-		margin-bottom: 3rem;
-		&>li {
-			&:not(:last-child) {
-				margin-bottom: 2rem;
-			}
+		margin-bottom: 4rem;
+	}
+}
 
-			ul {
-				li {
-					&:not(:last-child) {
-						margin-bottom: 0.5rem;
-					}
-				}
+.burger_nav {
+	ul {
+		margin-bottom: 4rem;
+		li {
+			margin-bottom: 1rem;
+			border-bottom: .1rem solid #e5e5e533;
+			padding-bottom: 1rem;
+			a {
+				font-size: 1.6rem;
+				text-transform: uppercase;
+				font-family: $font_3;
 			}
 		}
 	}
-}
-.burger_top {
 }
 
 .burger_close  {
@@ -150,60 +75,4 @@
 	top: 3rem;
 	right: 2rem;
 	@include flex-center;
-	width: 2rem;
-	height: 2rem;
-	color: $red;
-}
-.burger_logo {
-	width: 5rem;
-	margin-bottom: 2rem;
-	a {
-		@include flex-center;
-	}
-}
-.burger_nav {
-	ul {
-		margin-bottom: 4rem;
-		li {
-			&:not(:last-child) {
-				margin-bottom: 1rem;
-				border-bottom: .1rem solid #eeeeee;
-				padding-bottom: 1rem;
-			}
-			a {
-				font-size: 1.8rem;
-				text-transform: uppercase;
-				position: relative;
-				&:before {
-					position: absolute;
-					left: 0;
-					top: 0;
-					border-left: .3rem solid $red;
-					content: '';
-					width: .3rem;
-					height: 100%;
-					transform: translateX(-1rem);
-					transition: all .3s ease;
-					opacity: 0;
-					visibility: hidden;
-				}
-				&:hover {
-					padding-left: 1.4rem;
-					&:before {
-						opacity: 1;
-						visibility: visible;
-						transform: translateX(0);
-					}
-				}
-			}
-		}
-	}
-}
-.contacts_list {
-}
-.burger_social {
-}
-.icon-tg {
-}
-.icon-wa {
 }

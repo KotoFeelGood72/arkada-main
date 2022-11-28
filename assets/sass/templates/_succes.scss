@@ -36,13 +36,13 @@
   }
 }
 .succes_main {
-  background-color: $dark;
+  background-color: $white;
   padding: 2rem 4rem;
   border-radius: .5rem;
   @include flex-start;
   transform: translateY(-2rem);
   transition: all .3s ease;
-	color: $white;
+	color: $dark;
 	p {
 		font-size: 1.8rem;
 		margin-right: 2rem;

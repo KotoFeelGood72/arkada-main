@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -12,593 +13,510 @@
   <body>
     <header class="header"> 
       <div class="section_in"> 
-        <div class="header_row">
-          <div class="header_col_left">
-            <div class="header_logo"> <a href="#"><img src="i/global/logo.png" alt="Logotype website"></a></div>
-            <nav class="header_nav">
-              <ul>
-                <li> <a href="#service">Услуги</a></li>
-                <li> <a href="#about">О нас</a></li>
-                <li> <a href="#partners">Партнеры</a></li>
-                <li> <a href="#document">Документы</a></li>
-                <li> <a href="#reviews">Отзывы</a></li>
-                <li> <a href="#contacts">Контакты</a></li>
+        <div class="header_main">
+          <div class="header_col_left"> 
+            <div class="header_logo"> <a href="#"><img src="i/logo.svg" alt=""><img class="mobile_logo" src="i/logo_mobile.svg" alt=""></a></div>
+            <nav class="header_nav"> 
+              <ul> 
+                <li> <a href="#">Услуги</a></li>
+                <li> <a href="#">Преимущества</a></li>
+                <li> <a href="#">Контакты</a></li>
               </ul>
             </nav>
           </div>
           <div class="header_col_right"> 
-            <div class="header_number"> <a href="tel:+79877150416">
-                <div class="header_number_icon">
-                  <svg class="icon icon-phone ">
-                    <use xlink:href="i/sprite/sprite.svg#phone"></use>
+            <div class="header_phone"> <a href="#">
+                <div class="header_icon"> 
+                  <svg class="icon icon-wa ">
+                    <use xlink:href="i/sprite/sprite.svg#wa"></use>
                   </svg>
                 </div>
-                <p>+7 (987) 715-04-16</p></a></div>
+                <p>+7 (982) 623-73-59</p></a></div>
+            <div class="header_call btn small"><a href="#">Заказать звонок</a></div>
+            <div class="header_burger"> <span> </span><span> </span><span> </span></div>
           </div>
-          <div class="burger_trigger"><span> </span><span> </span><span> </span></div>
         </div>
       </div>
     </header>
     <div class="wrapper">
       <div class="base">
-        <section class="hero">
-          <div class="hero_bg"> <img src="i/hero_bg.jpg" alt=""></div>
+        <section class="hero"> 
           <div class="section_in"> 
             <div class="hero_main"> 
-              <div class="hero_content">
-                <div class="hero_content_top"> 
-                  <div class="hero_title"> 
-                    <h1>Деловые консультации по недвижимости</h1>
-                  </div>
-                  <ul class="hero_service_list">
-                    <li>
-                      <div class="hero_service_icon"> 
-                        <svg class="icon icon-check ">
-                          <use xlink:href="i/sprite/sprite.svg#check"></use>
-                        </svg>
-                      </div>
-                      <p>Оценка имущества за 24 часа;</p>
-                    </li>
-                    <li>
-                      <div class="hero_service_icon"> 
-                        <svg class="icon icon-check ">
-                          <use xlink:href="i/sprite/sprite.svg#check"></use>
-                        </svg>
-                      </div>
-                      <p>Скидка на групповые консультации от 1500 руб.;</p>
-                    </li>
-                    <li>
-                      <div class="hero_service_icon"> 
-                        <svg class="icon icon-check ">
-                          <use xlink:href="i/sprite/sprite.svg#check"></use>
-                        </svg>
-                      </div>
-                      <p>Работаем по всей России.</p>
-                    </li>
-                  </ul>
+              <div class="hero_content"> 
+                <div class="hero_title section_title"> 
+                  <h1>Помощь на дорогах в Екатеринбурге 24/7</h1>
                 </div>
-                <ul class="hero_social"> 
-                  <li> <a href="#">
-                      <svg class="icon icon-tg ">
-                        <use xlink:href="i/sprite/sprite.svg#tg"></use>
-                      </svg></a></li>
-                  <li> <a href="#">
-                      <svg class="icon icon-wa ">
-                        <use xlink:href="i/sprite/sprite.svg#wa"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-              <div class="hero_form_w"> 
-                <div class="hero_form_top"> 
-                  <p>Запишитесь на <span>БЕСПЛАТНУЮ</span> консультацию прямо сейчас!</p>
+                <div class="form_w">
+                  <form action="">
+                    <div class="form_input"> 
+                      <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form_input"> 
+                      <input type="tel" placeholder="Ваш телефон">
+                    </div>
+                    <div class="form_policy">Отправляя форму, вы соглашаетесь c <a href="#" target="_blank" >политикой конфиденциальности.</a></div>
+                    <div class="form_btn btn"> 
+                      <button type="submit">Оставить заявку</button>
+                    </div>
+                  </form>
                 </div>
-                <form class="hero_form" action="">
-                  <div class="hero_form_input"> 
-                    <input type="text" placeholder="Ваше имя">
-                  </div>
-                  <div class="hero_form_input"> 
-                    <input type="tel" placeholder="Ваш телефон">
-                  </div>
-                  <div class="hero_form_check"> 
-                    <input type="checkbox" id="heroCheck">
-                    <label for="heroCheck">Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a></label>
-                  </div>
-                  <div class="hero_form_btn btn btn_popup"> 
-                    <button type="submit">Отправить</button>
-                  </div>
-                </form>
               </div>
+              <div class="hero_img"> <img src="i/hero.svg" alt=""></div>
             </div>
           </div>
         </section>
-        <section class="company"> 
+        <section class="services"> 
           <div class="section_in"> 
-            <div class="company_main"> 
-              <div class="company_img"> <img src="i/company_1.jpg" alt="" id="company_img"></div>
-              <div class="company_content"> 
-                <div class="company_title"> 
-                  <h2>Преимущества нашей компании:</h2>
-                </div>
-                <ul class="company_list">
-                  <li class="company_item active" data-src="i/company_1.jpg"> <span class="comp_counter">01</span>
-                    <p>Мы обслужили более 12 тысяч клиентов за 10 лет работы на рынке;</p>
-                  </li>
-                  <li class="company_item" data-src="i/company_2.jpg"> <span class="comp_counter">02</span>
-                    <p>Нам доверяют известные клиенты: муниципальные органы и крупные предприятия республики;</p>
-                  </li>
-                  <li class="company_item" data-src="i/company_3.jpg"> <span class="comp_counter">03</span>
-                    <p>Наш офис в Йошкар-Оле удобно расположен, а также клиентам доступны консультации онлайн.</p>
-                  </li>
-                </ul>
-              </div>
+            <div class="services_title section_title"> 
+              <h2>Наши услуги</h2>
+            </div>
+            <div class="services_grid_w"> 
+              <ul class="services_grid"> 
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_0.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_1.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_2.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_3.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_4.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_5.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_6.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_7.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_8.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/services_9.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
-        <section class="service" id="service">
+        <section class="services"> 
+          <div class="section_in"> 
+            <div class="services_title section_title"> 
+              <h2>Для грузовых авто</h2>
+            </div>
+            <div class="services_grid_w"> 
+              <ul class="services_grid"> 
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/gruz_0.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/gruz_1.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+                <li class="services_item">
+                  <div class="services_item_img"> <img src="i/service/gruz_2.jpg" alt=""></div>
+                  <div class="services_item_content"> 
+                    <h3>Вскрытие автомобиля</h3>
+                    <p>Откроем вашу машину, багажник, капот. Условия уточняйте по телефону.</p>
+                    <div class="services_item_price">от 500 руб.</div>
+                  </div>
+                  <div class="services_btn_group">
+                    <div class="services_item_btn btn"> <a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-call ">
+                            <use xlink:href="i/sprite/sprite.svg#call"></use>
+                          </svg>
+                        </div>
+                        <p>Позвонить</p></a></div>
+                    <div class="services_item_btn btn mod_wa"><a href="#">
+                        <div class="service_call_icon"> 
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg>
+                        </div>
+                        <p>написать Whatsapp</p></a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="service"> 
           <div class="section_in"> 
             <div class="service_main"> 
-              <div class="service_title"> 
-                <h3>Выберити услугу:</h3>
+              <div class="services_title section_title"> 
+                <h3>Преимущества</h3>
               </div>
               <ul class="service_grid"> 
-                <li class="service_grid_item"> 
-                  <div class="service_item_img"> <img src="i/service_0.jpg" alt=""></div>
+                <li class="service_item"> 
+                  <div class="service_item_icon"> <img src="i/service/icon_1.svg" alt=""></div>
                   <div class="service_item_content"> 
-                    <h3>Оценка и страхование недвижимости</h3>
-                    <div class="service_item_txt global_txt"> 
-                      <p>Купили квартиру в ипотеку и нужна оценка? За какую цену могу продать земельный участок с домом? Сколько стоит Ваш бизнес? Что делать, если я хочу уменьшить налоговую нагрузку?</p>
-                      <p>Эти и другие вопросы разберем при оценке стоимости.</p>
-                    </div>
-                    <div class="service_item_link btn btn_small btn_popup"> 
-                      <button type="button">Узнать стоимость</button>
-                    </div>
+                    <h4>15 мин.</h4>
+                    <p>Время прибытия к вам</p>
                   </div>
                 </li>
-                <li class="service_grid_item"> 
-                  <div class="service_item_img"> <img src="i/service_1.jpg" alt=""></div>
+                <li class="service_item"> 
+                  <div class="service_item_icon"> <img src="i/service/icon_2.svg" alt=""></div>
                   <div class="service_item_content"> 
-                    <h3>Оценка и страхование недвижимости</h3>
-                    <div class="service_item_txt global_txt"> 
-                      <p>Купили квартиру в ипотеку и нужна оценка? За какую цену могу продать земельный участок с домом? Сколько стоит Ваш бизнес? Что делать, если я хочу уменьшить налоговую нагрузку?</p>
-                      <p>Эти и другие вопросы разберем при оценке стоимости.</p>
-                    </div>
-                    <div class="service_item_link btn btn_small btn_popup"> 
-                      <button type="button">Узнать стоимость</button>
-                    </div>
+                    <h4>100%</h4>
+                    <p>Гарантированный результат</p>
                   </div>
                 </li>
-                <li class="service_grid_item"> 
-                  <div class="service_item_img"> <img src="i/service_2.jpg" alt=""></div>
+                <li class="service_item"> 
+                  <div class="service_item_icon"> <img src="i/service/icon_3.svg" alt=""></div>
                   <div class="service_item_content"> 
-                    <h3>Оценка и страхование недвижимости</h3>
-                    <div class="service_item_txt global_txt"> 
-                      <p>Купили квартиру в ипотеку и нужна оценка? За какую цену могу продать земельный участок с домом? Сколько стоит Ваш бизнес? Что делать, если я хочу уменьшить налоговую нагрузку?</p>
-                      <p>Эти и другие вопросы разберем при оценке стоимости.</p>
-                    </div>
-                    <div class="service_item_link btn btn_small btn_popup"> 
-                      <button type="button">Узнать стоимость</button>
-                    </div>
-                  </div>
-                </li>
-                <li class="service_grid_item"> 
-                  <div class="service_item_img"> <img src="i/service_3.jpg" alt=""></div>
-                  <div class="service_item_content"> 
-                    <h3>Оценка и страхование недвижимости</h3>
-                    <div class="service_item_txt global_txt"> 
-                      <p>Купили квартиру в ипотеку и нужна оценка? За какую цену могу продать земельный участок с домом? Сколько стоит Ваш бизнес? Что делать, если я хочу уменьшить налоговую нагрузку?</p>
-                      <p>Эти и другие вопросы разберем при оценке стоимости.</p>
-                    </div>
-                    <div class="service_item_link btn btn_small btn_popup"> 
-                      <button type="button">Узнать стоимость</button>
-                    </div>
+                    <h4>24/7</h4>
+                    <p>Наш режим работы</p>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <section class="action">
-          <div class="action_bg"> <img src="i/action_bg.jpg" alt=""></div>
+        <section class="action"> 
           <div class="section_in"> 
             <div class="action_main"> 
-              <div class="action_main_top"> 
-                <div class="action_title"> 
-                  <h4>Оценим ваше имущество за 24 часа!</h4>
+              <div class="action_form_w"> 
+                <div class="action_form_head"> 
+                  <h5>Оставьте заявку</h5>
                 </div>
-                <div class="action_txt"> 
-                  <p>Оставьте заявку, и мы свяжемся с вами в ближайшее время.</p>
+                <div class="action_form"> 
+                  <div class="form_w">
+                    <form action="">
+                      <div class="form_input"> 
+                        <input type="text" placeholder="Ваше имя">
+                      </div>
+                      <div class="form_input"> 
+                        <input type="tel" placeholder="Ваш телефон">
+                      </div>
+                      <div class="form_policy">Отправляя форму, вы соглашаетесь c <a href="#" target="_blank" >политикой конфиденциальности.</a></div>
+                      <div class="form_btn btn"> 
+                        <button type="submit">Оставить заявку</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-              <div class="action_form">
-                <div class="action_form_group">
-                  <div class="action_input"> 
-                    <input type="text" placeholder="Ваше имя">
-                  </div>
-                  <div class="action_input"> 
-                    <input type="tel" placeholder="Ваш телефон">
-                  </div>
-                  <div class="action_btn btn"> 
-                    <button type="button">Отправить</button>
-                  </div>
-                </div>
-                <div class="action_form_check"> 
-                  <input type="checkbox" id="actionCheck">
-                  <label for="actionCheck">Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a></label>
-                </div>
-              </div>
+              <div class="action_img"> <img src="i/form_image.jpg" alt=""></div>
             </div>
           </div>
         </section>
-        <section class="about" id="about"> 
+        <section class="contacts"> 
           <div class="section_in"> 
-            <div class="about_main">
-              <div class="about_content"> 
-                <div class="about_title"> 
-                  <h4>О компании “Деловые консультации”</h4>
-                </div>
-                <div class="about_txt global_txt"> 
-                  <p>Мы команда квалифицированных экспертов в области оценки имущества с более чем 10-летним опытом.</p>
-                  <p>Защищаем права граждан более 10 лет.</p>
-                  <p>Мы оказываем юридические услуги как физлицам, так и юрлицам. Компания с признанной репутацией: к нам обращаются муниципальные органы и крупные предприятия республики.</p>
-                </div>
-                <div class="about_link btn btn_popup"> 
-                  <button type="button">Оставить заявку</button>
-                </div>
+            <div class="contacts_main"> 
+              <div class="contacts_title section_title">
+                <h6>Контакты</h6>
               </div>
-              <div class="about_img"> <img src="i/about.jpg" alt=""></div>
-            </div>
-          </div>
-        </section>
-        <section class="partners" id="partners"> 
-          <div class="section_in"> 
-            <div class="partners_main">
-              <div class="partners_title"> 
-                <h4>Наши партнёры</h4>
-              </div>
-              <ul class="partners_grid">
-                <li> <img src="i/par_0.jpg" alt=""></li>
-                <li> <img src="i/par_1.jpg" alt=""></li>
-                <li> <img src="i/par_2.jpg" alt=""></li>
-                <li> <img src="i/par_3.jpg" alt=""></li>
-                <li> <img src="i/par_4.jpg" alt=""></li>
-                <li> <img src="i/par_5.jpg" alt=""></li>
-                <li> <img src="i/par_6.jpg" alt=""></li>
-                <li> <img src="i/par_7.jpg" alt=""></li>
+              <ul class="contacts_list"> 
+                <li> 
+                  <p>Телефон</p><a href="#">+7 (982) 623-73-59</a>
+                </li>
+                <li> 
+                  <p>Почта</p><a href="#">sotnikov2611@gmail.com</a>
+                </li>
+                <li> 
+                  <p>Адрес</p><span>Екатеринбург, улица Металлургов, 44а</span>
+                </li>
               </ul>
             </div>
           </div>
         </section>
-        <section class="document" id="document"> 
-          <div class="section_in"> 
-            <div class="document_main"> 
-              <div class="document_main_head"> 
-                <div class="document_title"> 
-                  <h5>Документы и сертификаты</h5>
-                </div>
-                <div class="global_nav document_slider_nav"> 
-                  <div class="document_nav_btn left_btn"> 
-                    <button type="button">
-                      <svg class="icon icon-left ">
-                        <use xlink:href="i/sprite/sprite.svg#left"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="document_nav_btn right_btn"> 
-                    <button type="button">
-                      <svg class="icon icon-right ">
-                        <use xlink:href="i/sprite/sprite.svg#right"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="document_slider_w"> 
-                <div class="document_slider swiper"> 
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"> 
-                      <div class="document_slide">
-                        <div class="document_img"> <a href="i/doc_0.jpg" data-fancybox><img src="i/doc_0.jpg" alt=""></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="document_slide">
-                        <div class="document_img"> <a href="i/doc_1.jpg" data-fancybox><img src="i/doc_1.jpg" alt=""></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="document_slide">
-                        <div class="document_img"> <a href="i/doc_2.jpg" data-fancybox><img src="i/doc_2.jpg" alt=""></a></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="document_slide">
-                        <div class="document_img"> <a href="i/doc_3.jpg" data-fancybox><img src="i/doc_3.jpg" alt=""></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="reviews" id="reviews"> 
-          <div class="section_in"> 
-            <div class="reviews_main"> 
-              <div class="reviews_head"> 
-                <div class="reviews_title"> 
-                  <h5>Отзывы клиентов</h5>
-                </div>
-                <div class="global_nav reviews_slider_nav">
-                  <div class="reviews_nav_btn left_btn"> 
-                    <button type="button">
-                      <svg class="icon icon-left ">
-                        <use xlink:href="i/sprite/sprite.svg#left"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="reviews_nav_btn right_btn"> 
-                    <button type="button">
-                      <svg class="icon icon-right ">
-                        <use xlink:href="i/sprite/sprite.svg#right"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews_slider_w"> 
-                <div class="reviews_slider swiper"> 
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"> 
-                      <div class="reviews_slide"> 
-                        <div class="reviews_slide_head"> 
-                          <p>Алла</p><span>Оценка дома и зем. уч.</span>
-                        </div>
-                        <div class="reviews_slide_txt global_txt"> 
-                          <p>Очень понравилось качество предоставляемых услуг, специалисты данной компании консультируют по всем вопросам недвижимости, очень компетентные и отзывчивые люди, т.к я не из этого региона то не знала где находятся бти и мфц, помогли где найти, все время подсказывали куда обратиться и взять документы.</p>
-                        </div>
-                        <div class="reviews_txt_more">Показать весь отзыв</div>
-                        <div class="reviews_icon"> 
-                          <svg class="icon icon-reviews ">
-                            <use xlink:href="i/sprite/sprite.svg#reviews"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="contacts" id="contacts">
-          <div class="contacts_bg"> <img src="i/contacts_bg.jpg" alt=""></div>
-          <div class="section_in"> 
-            <div class="contacts_main"> 
-              <div class="contacts_card"> 
-                <h6>Контакты</h6>
-                <ul class="contacts_list"> 
-                  <li> 
-                    <p>Телефон:</p><a href="#">+7 (987) 715-04-16</a>
-                  </li>
-                  <li> 
-                    <p>Адрес:</p><span>г. Йошкар-Ола, ул. Эшкинина, 10Б, офис 112</span>
-                  </li>
-                  <li> 
-                    <p>Почта:</p>
-                    <ul> 
-                      <li> <a href="#">7150416@gmail.com</a></li>
-                      <li> <a href="#">pcurist@mail.ru</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <div class="contacts_card_bottom"> 
-                  <div class="contacts_btn_link btn btn_popup"> 
-                    <button type="button">Оставить заявку</button>
-                  </div>
-                  <ul class="contacts_social"> 
-                    <li> <a href="#">
-                        <svg class="icon icon-tg ">
-                          <use xlink:href="i/sprite/sprite.svg#tg"></use>
-                        </svg></a></li>
-                    <li> <a href="#">
-                        <svg class="icon icon-wa ">
-                          <use xlink:href="i/sprite/sprite.svg#wa"></use>
-                        </svg></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section class="map"> 
+          <div id="map"></div>
         </section>
       </div>
       <footer class="footer"> 
         <div class="section_in"> 
-          <div class="footer_row">
-            <div class="footer_col_left"> 
-              <div class="footer_logo"> <a href="#"><img src="i/global/logo.png" alt=""></a></div>
-              <div class="footer_copyright">© Все права защищены, 2022</div>
+          <div class="footer_main"> 
+            <div class="header_main">
+              <div class="header_col_left"> 
+                <div class="header_logo"> <a href="#"><img src="i/logo.svg" alt=""><img class="mobile_logo" src="i/logo_mobile.svg" alt=""></a></div>
+                <nav class="header_nav"> 
+                  <ul> 
+                    <li> <a href="#">Услуги</a></li>
+                    <li> <a href="#">Преимущества</a></li>
+                    <li> <a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="header_col_right"> 
+                <div class="header_phone"><a href="#">
+                    <div class="header_icon"> 
+                      <svg class="icon icon-wa ">
+                        <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                      </svg>
+                    </div>
+                    <p>+7 (982) 623-73-59</p></a></div>
+                <div class="header_call btn small"><a href="#">Заказать звонок</a></div>
+              </div>
             </div>
-            <div class="footer_col_right"> 
-              <div class="footer_policy"> <a href="#">Политика конфиденциальности</a></div>
-              <div class="footer_arkada_brand"> <a href="#">
-                  <p>Разработано arkada-web.ru</p>
-                  <div class="footer_arkada_icon"> <img src="i/global/favicon.png" alt=""></div></a></div>
+            <div class="footer_bottom"> 
+              <div class="footer_copyright">© Все права защищены, 2022</div>
+              <div class="footer_col_right"> 
+                <div class="footer_policy"> <a href="#">Политика конфиденциальности</a></div>
+                <div class="arkada_link"> <a href="#">
+                    <p>Разработано arkada-web.ru</p>
+                    <div class="arkada_logo"><img src="i/global/favicon.png" alt=""></div></a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -612,82 +530,34 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
-    <div class="callback popup"> 
-      <div class="callback_bg remove_popup popup_bg"> </div>
-      <div class="callback_main popup_main">
-        <div class="callback_back remove_popup">
-          <button type="button">
-            <svg class="icon icon-close ">
-              <use xlink:href="i/sprite/sprite.svg#close"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="callback_top">
-          <h3>Оставьте контактные данные</h3>
-        </div>
-        <div class="callback_form"> 
-          <div class="callback_input"> 
-            <input type="text" placeholder="Ваше имя">
-          </div>
-          <div class="callback_input"> 
-            <input type="tel" placeholder="Ваш телефон">
-          </div>
-          <div class="callback_check"> 
-            <input type="checkbox" id="callbackCheck">
-            <label for="callbackCheck">Отправляя форму, вы соглашаетесь с <a target="_blank" href="/">политикой конфиденциальности.</a></label>
-          </div>
-          <div class="callback_btn btn"> 
-            <button type="submit">Отправить</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="burger popup"> 
-      <div class="burger_bg popup_bg remove_popup"> </div>
-      <div class="burger_main popup_main">
-        <div class="burger_close remove_popup"> 
+    <div class="burger"> 
+      <div class="burger_bg remove"> </div>
+      <div class="burger_main">
+        <div class="burger_close remove">
           <svg class="icon icon-close ">
             <use xlink:href="i/sprite/sprite.svg#close"></use>
           </svg>
         </div>
-        <div class="burger_top"> 
-          <div class="burger_logo"> <a href="#"><img src="i/global/logo.png" alt=""></a></div>
-        </div>
-        <nav class="burger_nav">
-          <ul>
-            <li> <a href="service">Услуги</a></li>
-            <li> <a href="about">О нас</a></li>
-            <li> <a href="partners">Партнеры</a></li>
-            <li> <a href="document">Документы</a></li>
-            <li> <a href="reviews">Отзывы</a></li>
-            <li> <a href="contacts">Контакты</a></li>
+        <div class="burger_logo"> <a href="#"><img src="i/logo.svg" alt=""></a></div>
+        <nav class="burger_nav"> 
+          <ul> 
+            <li class="remove"> <a href="#">Услуги</a></li>
+            <li class="remove"> <a href="#">Преимущества</a></li>
+            <li class="remove"> <a href="#">Контакты</a></li>
           </ul>
         </nav>
         <ul class="contacts_list"> 
           <li> 
-            <p>Телефон:</p><a href="#">+7 (987) 715-04-16</a>
+            <p>Телефон</p><a href="#">+7 (982) 623-73-59</a>
           </li>
           <li> 
-            <p>Адрес:</p><span>г. Йошкар-Ола, ул. Эшкинина, 10Б, офис 112</span>
+            <p>Почта</p><a href="#">sotnikov2611@gmail.com</a>
           </li>
           <li> 
-            <p>Почта:</p>
-            <ul> 
-              <li> <a href="#">7150416@gmail.com</a></li>
-              <li> <a href="#">pcurist@mail.ru</a></li>
-            </ul>
+            <p>Адрес</p><span>Екатеринбург, улица Металлургов, 44а</span>
           </li>
         </ul>
-        <ul class="burger_social contacts_social"> 
-          <li> <a href="#">
-              <svg class="icon icon-tg ">
-                <use xlink:href="i/sprite/sprite.svg#tg"></use>
-              </svg></a></li>
-          <li> <a href="#">
-              <svg class="icon icon-wa ">
-                <use xlink:href="i/sprite/sprite.svg#wa"></use>
-              </svg></a></li>
-        </ul>
+        <div class="burger_call btn small remove"><a href="#">Заказать звонок</a></div>
       </div>
     </div>
     <div class="succes">

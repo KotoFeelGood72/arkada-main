@@ -13,8 +13,8 @@
 @import "templates/footer";
 @import "templates/popup";
 @import "templates/succes";
-@import "templates/close";
-@import "templates/action";
+@import "templates/failed";
+@import "templates/btn";
 
 
 // icons
@@ -28,5 +28,5 @@
 
 // plugins
 @import "plugins/swiper-bundle";
-@import "plugins/fancybox";
+// @import "plugins/fancybox";
 // @import "plugins/simplebar";

@@ -5,10 +5,10 @@ function succes(success) {
 		}, 3000)
 }
 
-function close(closes) {
-	$(closes).toggleClass('active');
+function failed(failed) {
+	$(failed).toggleClass('active');
 		setTimeout(function() {
-			$(closes).removeClass('active')
+			$(failed).removeClass('active')
 		}, 3000)
 }
 

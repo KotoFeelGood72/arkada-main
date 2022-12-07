@@ -149,26 +149,6 @@
 	}
 }
 
-@mixin divi {
-	position: relative;
-	margin-bottom: 11.4rem;
-	@include bp($point_2) {
-		margin-bottom: 0;
-	}
-	&:before {
-		position: absolute;
-		bottom: -11.4rem;
-		width: 100%;
-		border-radius: 6rem;
-		height: 17.1rem;
-		content: '';
-		background-color: $white;
-		@include bp($point_2) {
-			display: none
-		}
-	}
-}
-
 @mixin input {
 	input {
 		@include app;

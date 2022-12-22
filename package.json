@@ -39,6 +39,7 @@
     "gulp-cwebp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-image": "^6.1.0",
+    "gulp-srcset-lazy": "^0.1.4",
     "sass": "^1.47.0"
   },
   "scripts": {

@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 	postcss = require('gulp-postcss'),
 	assets = require('postcss-assets'),
 	notify = require('gulp-notify'),
-	webp = require('gulp-webp');
+	webp = require('gulp-webp')
 
 let productionStatus;
 
@@ -148,6 +148,10 @@ gulp.task('imageSync', function () {
 		.pipe(browserSync.stream({ once: true }));
 });
 
+
+
+
+
 gulp.task('fontsSync', function () {
 	return gulp
 		.src(assetsDir + 'fonts/**/*')
@@ -228,6 +232,8 @@ gulp.task('imgBuild', function () {
 		)
 		.pipe(gulp.dest(buildDir + 'i/'));
 });
+
+
 
 //copy sprite.svg
 gulp.task('copySprite', function () {
@@ -520,3 +526,5 @@ gulp.task('build', taskArray['production']);
 // 		console.log(`Chrome debugging port running on ${chrome.port}`);
 // 	});
 // })
+
+

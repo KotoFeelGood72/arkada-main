@@ -95,6 +95,8 @@ input[type="text"], textarea {
 
 input,
 textarea {
+	color: $input_text_color;
+	font-size: $input_font_size;
 	border-radius: 0;
 	box-sizing: border-box;
 

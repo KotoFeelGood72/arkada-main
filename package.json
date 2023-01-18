@@ -5,7 +5,6 @@
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-concat": "^2.6.1",
@@ -36,10 +35,12 @@
     "stylelint": "^10.0.1"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-cwebp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-image": "^6.1.0",
     "gulp-srcset-lazy": "^0.1.4",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "sass": "^1.47.0"
   },
   "scripts": {

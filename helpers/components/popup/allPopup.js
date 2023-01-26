@@ -14,60 +14,45 @@ function failed(failed) {
 
 
 
-
-$(document).ready(function() {
-
-	let popup = $('.popup');
-	$('.header_delivery').click(function() {
-		$('.address_popup').each(function() {
-				$(this).toggleClass('active');
-				console.log('Good', this);
-				$(this).each(function() {
-					$('.close_btn').click(function() {
-						$(this).closest('.popup').removeClass('active');
-						console.log(this)
-					})
-					$('.popup_bg').click(function() {
-						$(this).closest('.popup').removeClass('active');
-						console.log(this)
-					})
-				})
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			
+			popup.forEach((el) => {
+				isRemove(el)
+				console.log('Good')
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
 		})
 	})
-	/////////////
-	$('.header_burger').click(function() {
-			$(popup).removeClass('active')
-		$('.burger_popup').each(function() {
-				$(this).toggleClass('active');
-				console.log('Good', this);
-				$(this).each(function() {
-					$('.close').click(function() {
-						$(this).closest('.popup').removeClass('active');
-						console.log(this)
-					})
-					$('.popup_bg').click(function() {
-						$(this).closest('.popup').removeClass('active');
-						console.log(this)
-					})
-				})
-		})
-	})
+	
 
-	$('.lisence_type--list li:first').trigger('click');
-	$('.action_btn, .popup_sub--btn').click(function() {
-		$(popup).removeClass('active');
-		succes('.succes');
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
 	})
-	/////////////
-	$('.trigger_details').click(function() {
-		$('.products_detailsContentWrapper ').each(function() {
-				$(this).toggleClass('active');
-				$(this).each(function() {
-					$('.productsDetails_bg').click(function() {
-						$(this).closest('.products_detailsContentWrapper').removeClass('active');
-					})
-				})
-		})
-	})
+}
 
-})
+
+
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
+}

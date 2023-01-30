@@ -14,7 +14,6 @@ let $body,
 
 $(document).ready(function ($) {
 	$body = $('body');
-	
 });
 
 $(window).on('load', function () {

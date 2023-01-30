@@ -32,7 +32,8 @@
     "postcss-scss": "^2.0.0",
     "rimraf": "^2.6.3",
     "sass": "^1.25.0",
-    "stylelint": "^10.0.1"
+    "stylelint": "^10.0.1",
+    "sweetalert2": "^11.7.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

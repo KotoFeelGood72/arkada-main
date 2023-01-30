@@ -191,7 +191,7 @@ gulp.task('watch', function () {
 var plugins = {
 	browserSync: {
 		options: {
-			port: 1337,
+			port: 3030,
 			server: {
 				baseDir: outputDir,
 			},

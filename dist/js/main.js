@@ -197,26 +197,6 @@ $(document).ready(function() {
 // 	})
 // }
 
-function burgerMobile() {
-	const triggerBurger = document.querySelector('.header_burger')
-	const burgerPopup = document.querySelector('.burger')
-	const burgerFail = document.querySelectorAll('.remove')
-	
-	triggerBurger.addEventListener('click', () => {
-		burgerPopup.classList.add('active')
-		triggerBurger.classList.add('active')
-		win.style.overflow = "hidden";
-	})
-
-	Array.from(burgerFail).map((item) => {
-		item.addEventListener('click', () => {
-			burgerPopup.classList.remove('active')
-			triggerBurger.classList.remove('active')
-			win.style.overflow = "";
-		})
-	})
-
-}
 
 
 

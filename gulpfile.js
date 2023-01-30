@@ -195,7 +195,7 @@ var plugins = {
 			server: {
 				baseDir: outputDir,
 			},
-			tunnel: 'arkada-host',
+			tunnel: '',
 		},
 	},
 };

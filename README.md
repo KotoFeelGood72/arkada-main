@@ -1,67 +1,69 @@
-# Welcome 
+# Добро пожаловать в developer
 
-## Get started
+## Старт
 
-1.  Install [node.js](https://nodejs.org/),[python(2 version)](https://www.python.org/downloads/release/python-2710/),[Microsoft Visual Studio C++ 2013](https://support.microsoft.com/ru-ru/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)
+1.  Устанавливаем [node.js](https://nodejs.org/),[python(2 version)](https://www.python.org/downloads/release/python-2710/),[Microsoft Visual Studio C++ 2013](https://www.microsoft.com/en-gb/download/details.aspx?id=44914)
 
-2.  Install npm packages. If you have problems in browser-sync install on Windows look [here](http://www.browsersync.io/docs/#windows-users)
+2.  Устанавливаем npm-пакеты. Если есть проблемы с установкой browser-sync на Windows посмотрите [сюда](http://www.browsersync.io/docs/#windows-users)
 
         npm i
 
-    If you use link of global packages:
+    Если вы используете линк глобальных пакетов:
 
         npm install gulp rimraf gulp-pug gulp-sass@4.1.1 gulp-inline-image gulp-autoprefixer gulp-plumber gulp-directory-sync browser-sync gulp-concat gulp-cssfont64 gulp-purifycss gulp-terser gulp-image imagemin-pngquant gulp-csso gulp-sourcemaps postcss gulp-postcss postcss-assets postcss-reporter stylelint postcss-scss gulp-sequence gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace gulp-notify gulp-webp -g
 
         npm link gulp rimraf gulp-pug gulp-sass gulp-inline-image gulp-autoprefixer gulp-plumber gulp-directory-sync browser-sync gulp-concat gulp-cssfont64 gulp-purifycss gulp-terser gulp-image imagemin-pngquant gulp-csso gulp-sourcemaps gulp-postcss postcss-assets postcss-reporter stylelint postcss-scss gulp-sequence gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace gulp-notify gulp-webp
 
-3.  Let's code!
+
+3.  Начинаем кодить!
 
         gulp
 
-4.  Edit files in assets folder, see result in dist folder. If you want to build optimized version of project run :
+4.  В папке `/assets` редактируем файлы, в папке `/dist` - получаем готовые. Чтобы запустить конечную минифицированную сборку проекта запускаем:
 
         gulp build
 
-5.  Command for html validation
+5.  Команда для валидации html
 
         gulp validation
 
-6.  Lint your styles
+6.  Линтинг стилей
 
         gulp cssLint
 
-## How to work with js
+Более подробно о том, как работать с gulp вы можете прочитать в статье на нашем блоге - [Начинаем работать с gulp.js](http://glivera-team.github.io/sass/2016/01/07/gulp.html)
 
-Create all your main scripts in `/assets/js`. Create all your additional scripts (jquery,plugins, и т.д) in `/assets/js/all`. Gulp will concat all your additional scripts into `all.js`
+## Как работать с js
 
-## How to make iconfont
+Все ваши основные скрипты создавайте в папке `/assets/js`. Все вспомогательные скрипты (jquery,plugins, и т.д) помещайте в папку `/assets/js/all`. В итоге gulp соединяет все вспомогательные скрипты в `all.js`
 
-1.  Install packages
+## Как сделать иконочный шрифт
+
+1.  Установите зависимости и залинкуйте
 
         npm install gulp-iconfont@4.0.0 gulp-iconfont-css -D
 
-2.  Put your icons to `/assets/i/icons` folder
-3.  Change variable 'fontName' in gulpfile.js ('iconfont' by default).
-4.  Uncomment iconfont task and run
+2.  Положите ваши иконки в папку `/assets/i/icons`
+3.  В gulpfile.js измените переменную 'fontName' на имя вашего шрифта (по умолчанию 'iconfont').
+4.  Раскомменитируете таск iconfont и запустите его
 
         gulp iconfont
 
-5.  Pic your font in `/assets/fonts/icons` and font extends(%placeholders) in `/assets/sass/_icons.scss`
-6.  Edit your font on [iconmoon](https://icomoon.io)
+5.  Получайте шрифт в папке `/assets/fonts/icons` и font extends(%placeholders) в `/assets/sass/_icons.scss`
+6.  Редактируйте шрифт на [iconmoon](https://icomoon.io)
 
-## How to make svg-sprite
+Более подробно процедура описана на нашем блоге в статье [Иконочные шрифты](http://glivera-team.github.io/svg/2016/01/06/iconfonts.html)
 
-1.  Install packages
+## Как сделать svg-спрайт
 
-        npm install gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace -g
+1.  Установите зависимости и залинкуйте
 
-        npm link gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace
+        npm install gulp-svg-sprite gulp-svgmin gulp-cheerio gulp-replace -D
 
-2.  Put your icons into `/assets/i/icons` folder
-3.  Uncomment task `svgSpriteBuild`
-4.  Run task `svgSpriteBuild`
-5.  Now you have `sprite.svg` in `/assets/i/sprite` folder. By default you have `svg4everybody` script in your js. Also you have scss file `_sprite.scss` for styling sprite.
-6.  Add `svg4everybody` in your `main.js` file. For including icons use pug mixin "icon"
+2.  Положите ваши иконки в папку `/assets/i/icons`
+3.  Раскомментируйте таск `svgSpriteBuild` и запустите его
+4.  Теперь у вас есть `sprite.svg` в папке `/assets/i/sprite`. По умолчанию скрипт `svg4everybody` включен в ваши скрипты. Также теперь scss файл `_sprite.scss` лежит в папке `sass`.
+5.  Вызовите `svg4everybody` в главном `main.js` файле. Для подключения в разметку используйте pug миксин "icon"
 
 ```
 $(document).ready(function () {
@@ -69,7 +71,9 @@ $(document).ready(function () {
 });
 ```
 
-## Working with images with PostCSS:
+Более подробно процедура описана на нашем блоге в статье [Как мы используем SVG-спрайты](http://glivera-team.github.io/svg/2015/12/08/svg-sprites.html)
+
+## Работа с картинками через PostCSS:
 
 ```
 .test_block {
@@ -80,16 +84,15 @@ $(document).ready(function () {
 }
 ```
 
-## How to test
+## Как тестировать
 
-1.  Install packages
+1.  Установите зависимости и залинкуйте
 
         npm i chrome-launcher fs http node-static path pixelmatch pngjs puppeteer -g
 
         npm link chrome-launcher fs http node-static path pixelmatch pngjs puppeteer
 
-2.  Open `gulpfile.js`. Add all names of tested pages to array `pageList`
+2.  В `gulpfile.js` внесите в массив `pageList` имена тестируемых страниц
 
-3.  Run task `gulp test-init` to create reference screenshots from your pages or put your images manually into `test/before/` folder
-
-4.  Run task `gulp test-compare` to compare current state of the pages with the reference
+3.  Запустите `gulp test-init` для создания эталонных скриншотов из ваших страниц или перенесите свои изображения вручную в папку `test/before/`
+4.  Запустите `gulp test-compare` для сравнения текущего состояния страниц с эталонным

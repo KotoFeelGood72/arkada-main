@@ -17,6 +17,7 @@ var gulp = require('gulp'),
 	assets = require('postcss-assets'),
 	notify = require('gulp-notify'),
 	webp = require('gulp-webp')
+	imagemin = require('gulp-imagemin')
 
 let productionStatus;
 
@@ -24,7 +25,7 @@ let productionStatus;
 var purify = require('gulp-purifycss'),
 	terser = require('gulp-terser'),
 	image = require('gulp-image'),
-	pngquant = require('imagemin-pngquant'),
+	// pngquant = require('imagemin-pngquant'),
 	csso = require('gulp-csso');
 
 //plugins for testing
@@ -375,6 +376,7 @@ let taskArray = {
 			'pug',
 			'sass',
 			// 'imgWebp',
+			'imageBuild',
 			'imageSync',
 			'fontsSync',
 			'fontsConvert',

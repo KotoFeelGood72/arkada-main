@@ -1,4 +1,15 @@
 header.header 
 	.section_in 
 		.header_main
-				
+			.header_logo 
+				a(href="#")
+					img(src="i/global/logo.svg", alt="Logotype website")
+			.header_right 
+				ul.header_info 
+					each item in ['+7 (926) 684 57 00', 'info@designkopov.ru']
+						li 
+							a(href="#")=item
+				.burger_w 
+					.burger 
+						span 
+						span 

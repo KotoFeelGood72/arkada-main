@@ -1,0 +1,51 @@
+.quote {
+	background-color: $dark;
+	padding: 9rem 0 12rem 0;
+	text-align: center;
+	* {
+		color: $white;
+	}
+
+	.quote_title {
+		position: relative;
+		margin-bottom: 9rem;
+		z-index: 2;
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -100%;
+			width: 400%;
+			border-bottom: .1rem solid $white;
+			content: '';
+			z-index: 1;
+		}
+		h3 {
+			padding: 0 $m6;
+			background-color: $dark;
+			position: relative;
+			z-index: 2;
+			display: inline-flex;
+			&:before {
+				width: .7rem;
+				height: .7rem;
+				background-color: $white;
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%) rotate(45deg);
+			}
+			&:after {
+				width: .7rem;
+				height: .7rem;
+				background-color: $white;
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%) rotate(45deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+section.brand 
+	+nav({
+		mod: 'brand',
+	})
+	.section_in 
+		.brand_main 
+			h3 Партнеры
+			.brand_slider_w
+				.brand_slider_body 
+					.brand_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 30; i++) 
+								.swiper-slide 
+									img(src="i/global/brand.jpg", alt="")

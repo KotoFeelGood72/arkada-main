@@ -1,0 +1,36 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Название проекта'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	+block-about({
+		img: 'about-1',
+		top: `
+		<h2>Описание проекта</h2>
+		<p>В интерьерах всё меньше встречается чистый выверенный стиль, во многом потому, что проектирование домов и квартир — это вообще не про стиль, это про человека. Про его мечты, привычки и воспоминания. Детали внутренней жизни, которые мы стараемся отразить, могут приобрести совершенно разные формы в интерьере.<p>
+		<p>Поэтому наш стиль – это авторское интерьерное решение, созданное на основе наших знаний, опыта и пожеланий заказчика.</p>
+		`,
+		btn: true,
+		nameBtn: 'Узнать цену проекта',
+	})
+	.gallery 
+		.section_in 
+			.gallery_main 
+				h3 Фотогалерея проекта
+				.gallery_slider_w 
+					+nav({
+						mod: 'gallery',
+					})
+					.gallery_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; ii < 4; i++) 
+								.swiper-slide 
+									a(href="#")
+										img(src=`i/gallery/gallery-${i}.jpg`, alt="") 
+					.gallery_scrollbar.global_scrollbar 
+	include global/application

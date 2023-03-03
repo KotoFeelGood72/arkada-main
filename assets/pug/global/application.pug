@@ -1,0 +1,25 @@
+section.application 
+	.section_in 
+		.application_main 
+			.application_form 
+				h5 Оставьте заявку
+				p Мы свяжемся с вами в ближайшее время!
+				form.contacts-form(action="#")
+					+input({
+						class: 'app_form'
+					})
+					+input({
+						place: 'Ваш номер телефона',
+						type: 'tel',
+						class: 'app_form'
+					})
+					.global_input.global_textarea 
+						textarea(name="comments", cols="30", rows="10" placeholder="Ваш комментарий (необязательно)") 
+					+input({
+						type: 'submit',
+						class: 'global_btn_submit',
+						val: 'Оставить заявку'
+					})
+					.form_notice!='Отправляя данные, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности</a>'
+			.application_img 
+				img(src="i/global/application.jpg", alt="")

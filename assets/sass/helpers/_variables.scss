@@ -1,6 +1,6 @@
 // Global 
-$header: 6rem;
-$footer: 22.8rem;
+$header: 11rem;
+$footer: 35.9rem;
 
 // Mobile
 $header_mob: 6rem;
@@ -8,24 +8,37 @@ $footer_mob: 10rem;
 
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'Roboto-Light', sans-serif;
-$font_11: 'Roboto-Regular', sans-serif;
-$font_2: 'Roboto-Medium', serif;
-$font_3: 'Roboto-Bold', serif;
+$font_1: 'Mulish-Light', sans-serif;
+$font_2: 'Mulish-Regular', sans-serif;
+$font_3: 'Mulish-Medium', sans-serif;
+$font_4: 'Mulish-SemiBold', sans-serif;
 
-$font_size_base: 1.8rem;
+// Font size
+$fz16: 1.6rem;
+$fz18: 1.8rem; 
+$fz20: 2rem; 
+$fz23: 2.3rem; 
+$fz25: 2.5rem; 
+$fz30: 3rem; 
+$fz45: 4.5rem; 
+$fz50: 5rem; 
+
+
+// End
+$font_size_base: $fz20;
+
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
-$dark: #282828;
+$dark: #222222;
 $trans: transparent;
 
 
 
-$color_text_base: $black;
-$color_link_base: $black;
+$color_text_base: $dark;
+$color_link_base: $dark;
 $body_bg: $white;
 //---------------------------------------------colors###
 
@@ -40,12 +53,12 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 132.1rem;
+$page_width: 152rem;
 
 //---------------------------------------------layout###
 
 //---------------------------------------------global values
-$gl_radius: 2.4rem;
+$gl_radius: 1.5rem;
 //---------------------------------------------global values###
 
 //---------------------------------------------media points
@@ -68,3 +81,12 @@ $input_placeholder_color: rgba($dark, .5);
 $input_text_color: $dark;
 
 //---------------------------------------------forms###
+
+// MB
+
+
+$m5: 5rem;
+$m13: 13rem;
+$m10: 10rem;
+$m6: 6rem;
+// end

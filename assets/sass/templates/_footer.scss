@@ -4,5 +4,69 @@
 	flex: 0 0 auto;
 	will-change: transform;
 	position: relative;
-	display: none;
+	background-color: $dark;
+	color: $white;
+	padding: 3rem 0;
+	a {
+		color: inherit;
+	}
+}
+
+.footer {
+}
+.section_in {
+}
+.footer_main_w {
+}
+.footer_top {
+	@include flex-space;
+	margin-bottom: 7rem;
+}
+.footer_logo {
+}
+.footer_info {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -2rem -5rem 0 0;
+	li {
+		padding: 2rem 5rem 0 0 ;
+		a {
+			font-family: $font_3;
+		}
+	}
+}
+.footer_nav {
+	margin-bottom: $m10;
+}
+.footer_nav_list {
+	@include flex-space;
+	flex-wrap: wrap;
+	margin: -2rem -6.3rem 0 0;
+	li {
+		padding: 2rem 6.3rem 0 0;
+		a {
+			font-family: $font_3;
+		}
+	}
+}
+.footer_bottom {
+	@include flex-space;
+	font-size: 1.6rem;
+	flex-wrap: wrap;
+}
+.footer_left {
+	@include flex-start;
+	&>a {
+		font-size: inherit;
+		display: block;
+		margin-right: 5rem;
+	}
+}
+.footer_copyright {
+	margin-right: 7.5rem;
+
+}
+.footer_brand {
+	max-width: 26.1rem;
+	display: block;
 }

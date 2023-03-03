@@ -1,0 +1,85 @@
+.workTab_main {
+	h2, h3, h4, h5, h6 {
+		margin-bottom: $m10;
+	}
+}
+
+.workTab_list--link {
+	@include flex-space;
+	border-bottom: .1rem solid rgba(34, 34, 34, 0.2);
+	margin-bottom: 7.5rem;
+	li {
+		width: 33%;
+		text-align: center;
+		cursor: pointer;
+		font-size: $fz25;
+		font-family: $font_4;
+		padding-bottom: 2rem;
+		position: relative;
+		&.active_tab {
+			&:before {
+				width: 100%;
+			}
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&:before {
+			position: absolute;
+			bottom: -.1rem;
+			left: 0;
+			width: 0%;
+			border-bottom: .1rem solid $dark;
+			content: '';
+			transform-origin: left;
+			transition: all .4s ease;
+		}
+		&:after {
+			position: absolute;
+			bottom: -.4rem;
+			left: 50%;
+			transform: translateX(-50%) rotate(45deg);
+			width: .7rem;
+			height: .7rem;
+			background-color: $dark;
+			content: '';
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.workTab_content_item {
+	@include flex-start;
+	align-items: flex-start;
+	display: none;
+	&.active_tab {
+		display: flex;
+	}
+
+	h2, h3, h4, h5, h6 {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.workTab_slider_w {
+	max-width: 77.2rem;
+	position: relative;
+	padding-bottom: 3rem;
+}
+
+.workTab_txt {
+	p, ul, li, ol, span, b, strong, i {
+		padding: 1rem 0;
+	}
+}
+
+.workTab_content_txt {
+	margin-right: 9rem;
+}
+
+.workTab_scrollbar {
+	width: 100%;
+}

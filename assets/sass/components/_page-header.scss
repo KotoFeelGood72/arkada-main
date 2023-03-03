@@ -1,0 +1,69 @@
+.custom-hero {
+	position: relative;
+	height: 33.1rem;
+	margin:  -$header 0 6.5rem 0;
+	img {
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		@include z-index(el);
+	}
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		background: rgba(34, 34, 34, 0.8);
+		z-index: 1;
+	}
+}
+
+
+
+.custom_hero_main {
+	padding: calc($header + 2.5rem) 0 0;
+	position: relative;
+	z-index: 3;
+}
+
+.breadcrumb__list {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -2rem -3.6rem 3rem 0;
+	li {
+		padding: 2rem 3.6rem 0 0;
+		color: $white;
+		position: relative;
+		font-size: 1.8rem;
+		&:not(:last-child) {
+			&:after {
+				content: '';
+				position: absolute;
+				top: calc(50% + 1.1rem);
+				transform: translateY(-50%);
+				right: 1.8rem;
+				width: .6rem;
+				height: 1rem;
+				background: url('../../i/global/arrow-bread.svg') center/cover no-repeat;
+			}
+		}
+		a {
+			color: inherit;
+			opacity: .7;
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		span {
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+	}
+}

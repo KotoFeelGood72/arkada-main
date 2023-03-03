@@ -1,0 +1,88 @@
+.block_about--top {
+	@include flex-start;
+	align-items: flex-start;
+}
+
+.block_about_img {
+	margin-right: 6rem;
+	flex: 100%;
+	max-width: 67.2rem;
+}
+
+.global-small_img {
+	max-width: 52.4rem;
+}
+
+.small-area_txt {
+	max-width: 76.3rem;
+}
+
+.block_txt_main {
+	max-height: 63.6rem;
+	overflow: auto;
+	padding-right: 4.5rem;
+
+	&::-webkit-scrollbar {
+		width: .2rem;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: rgba(34, 34, 34, 0.200);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $dark;
+	}
+}
+
+.block_txt {
+	h2, h3, h4, h5, h6 {
+		padding: 1.5rem 0;
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	& b{
+		padding: 1.5rem 0;
+		display: block;
+	}
+	p, span {
+		display: block;
+		padding: 1rem 0;
+	}
+
+	ul {
+		&>li {
+			position: relative;
+			padding-left: 1.5rem;
+			&:before {
+				position: absolute;
+				top: 1rem;
+				left: 0;
+				content: '';
+				width: .5rem;
+				height: .5rem;
+				background-color: $dark;
+				border-radius: 100%;
+			}
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+		&.people_list {
+			li {
+				padding: 1.5rem 0;
+				margin-bottom: 0;
+				&:before {
+					display: none;
+				}
+				b {
+					padding: 1rem 0;
+				}
+	
+			}
+		}
+
+	}
+
+}

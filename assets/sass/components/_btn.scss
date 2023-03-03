@@ -1,0 +1,49 @@
+.btn {
+	position: relative;
+	overflow: hidden;
+	display: inline-flex;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 5rem;
+		width: 1rem;
+		height: 1.7rem;
+		background: url('../../i/global/arrow.svg') center/cover no-repeat;
+		content: '';
+		pointer-events: none;
+	}
+	input[type="submit"], button {
+		@include app;
+	}
+	button, input[type="submit"], a {
+		padding: 1.9rem 8rem 1.9rem 5rem;
+		color: $white;
+		border: 0.1rem solid rgba(255, 255, 255, 0.35);
+		border-radius: $gl_radius;
+		font-size: 2rem;
+		transition: all .3s ease;
+
+		&:hover {
+			background-color: $dark;
+			border-color: $dark;
+		}
+	}
+
+	&.dark {
+		button, input[type="submit"], a {
+			border: .1rem solid rgba(34, 34, 34, 0.2);
+			color: $dark;
+			&:hover {
+				background-color: $trans;
+				color: $dark;
+				opacity: .7;
+			}
+		}
+
+		&:before {
+			background: url('../../i/global/arrow-dark.svg') center/cover no-repeat;
+		}
+	}
+}

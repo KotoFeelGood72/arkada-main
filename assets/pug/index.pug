@@ -3,8 +3,93 @@ extends _layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
 block content_block
-	section.start(style="background: url('../i/start.jpg') center/cover no-repeat") 
+	section.hero
+		+nav({
+			mod: 'hero',
+		})
+		.hero_slider.swiper
+			.swiper-wrapper 
+				.swiper-slide
+					.hero_slide_img(background-image="i/home/hero.jpg") 
+					.section_in 
+						.hero_slide_content 
+							h1 Текст для заголовка / акции
+							+btn({
+								name: 'Подробнее'
+							})
+	+block-about({
+		img: 'about-1',
+		small: 'global-small_img',
+		top: `
+		<h2>О нас</h2>
+		<b>Миссия– «_____» это не просто бизнес. Это компания будущего, которая воплощает искусство в своих проектах, наполняя интерьер особым смыслом, и помогает своим клиентам достигать результатов каждый день.</b>
+		<ul class="people_list">
+			<li>
+				<b>Макс</b>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</li>
+			<li>
+				<b>Алиса</b>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</li>
+			<li>
+				<b>Алексей</b>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</li>
+		</ul>
+		`,
+		bottom: `
+			<h2>Уникальные решения</h2>
+			<p>Мы подбираем уникальные решения для каждой проблемы клиента, избегая шаблонных проектов, определяем основные векторы для работы, находим подходящий вариант для реализации идеи заказчика. Наша компания дает возможность не тратить свое время на бытовые трудности в создании визуального образа дома, квартиры или коммерческого помещения.</p>
+			<p>Вы можете спокойно проводить время с семьей, решать рабочие вопросы, посвящать время себе, пока специалисты занимаются выбором декора, формированием нужной цветовой гаммы, поиском комплектующих, чтобы создать идеально подходящий под ваши потребности интерьер. Уютная домашняя обстановка или продающий дизайн бизнес-помещения - мы справимся с любой поставленной задачей, ориентируясь на индивидуальность клиента и его потребности, ведь интерьер – это не безликая обстановка, а яркое отражение личности человека.</p>
+		`
+	})
+	+creative-block({title: 'Что мы предлагаем'})
+	section.block-work.padding-block 
+		.block_work--top 
+			.section_in 
+				h3 Портфолио
+				+btn({
+					name: 'Все проекты',
+					mod: 'dark'
+				})
+		.block_work_main 
+			ul.work_grid--big.grid-4
+				-for(i = 1; i < 9; i++)
+					li.work_item_w
+						+work-item({
+							img: `work-${i}`
+						})
+			+btn({
+				name: '3D туры по реализованным объектам',
+			})
+	include global/brand
+	section.reviews.padding-block 
 		.section_in 
-			.start_row 
-				h1 Start development by Arkada Web Studio
-	
+			.reviews_main
+				h5 Отзывы клиентов
+				.reviews_slider_w
+					+nav({
+						mod: 'double',
+					}) 
+					.reviews_slider.swiper.double_slider
+						.swiper-wrapper 
+							.swiper-slide
+								.reviews_slide 
+									.reviews_slide_img 
+										img(src="i/global/reviews.png", alt="")
+									.reviews_slide_content 
+										.reviews_slide_top 
+											p Имя Фамилия
+											span 31/12/2022
+										.reviews_slide_txt!='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+										.reviews_slide_more 
+											button(type="button") Показать больше
+					.reviews_scrollbar.global_scrollbar.double_scrollbar
+	+contacts-block({
+		img: 'application',
+		class: 'dark-block mt-block'
+	})

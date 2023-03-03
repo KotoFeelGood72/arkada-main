@@ -1,0 +1,14 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Контакты'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	+contacts-block({
+		img: 'contacts',
+		class: 'white-block'
+	})

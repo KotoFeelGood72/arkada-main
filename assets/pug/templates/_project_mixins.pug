@@ -1,0 +1,295 @@
+// Btn mixin 
+
+
+mixin btn(data)
+	.btn(class=data.mod)
+		if data.link
+			if data.download
+				a(href=data.link download)=data.name
+			else 
+				a(href=data.link)=data.name
+		else if data.submit
+			input(type="submit" value=data.name)
+		else
+			button(type="button" data-target=data.target)=data.name
+// End
+
+// Mixin slider navigation
+
+mixin nav(data)
+	.slider_nav(class=`slider_nav_${data.mod}`) 
+		.slider_nav_btn(class=`slider_${data.mod}_prev`) 
+			+icon(`arrow-slide-next`)
+		.slider_nav_btn(class=`slider_${data.mod}_next`) 
+			+icon(`arrow-slide-next`)
+
+// End
+
+
+// Mixin about and hero about
+mixin block-about(data)
+	section.block-about
+		.section_in 
+			.block_about--top.padding-block 
+				.block_about_img(class=data.small) 
+					img(src=`i/about/${data.img}.jpg`, alt="")
+				.block_about_content(class=data.txtClass) 
+					+global-txt({txt: data.top})
+					if data.btn 
+						+btn({
+							name: data.nameBtn,
+							link: data.link
+						})
+			.block_about--bottom.padding-block
+				+global-txt({txt: data.bottom})
+
+
+// End
+
+// Global txt block
+mixin global-txt(data)
+	.block_txt
+		if data.block 
+			.section_in 
+				.block_txt_main!=data.txt 
+		else 
+			.block_txt_main!=data.txt
+
+
+
+// End global txt block
+
+// Dark block
+
+
+mixin creative-block(data)
+	section.creative.m-block 
+		.section_in 
+			.creative_main 
+				h2=data.title
+				.creative_list_w
+					.creative_center_decoration 
+						.creative_logo 
+							img(src="i/global/logo.svg", alt="")
+						ul.creative_line_list
+							-for(i = 0; i < 5; i++)
+								if i < 4
+									li.line_item 
+										img(src=`i/global/standart-line.svg`, alt="")
+								else 
+									li.line_item.long_line_item 
+										img(src="i/global/long-line.svg", alt="")
+					ul.creative_list
+						- let title = ['Дизайн проекты под ключ', 'Авторский надзор', 'Архитектурное проектирование', 'Генеральный подрядчик', 'Комплектация']
+						-let txt = ['Разработаем концепцию-идею жилого объекта и сформируем полный дизайн-проект под Ваш образ жизни и вкус.', 'Возьмём на себя реализацию проекта и освободим ваше время. Использование услуги застрахует вас от непредвиденных обстоятельств со стороны поставщиков и ремонтной бригады, сроки ремонта не будут срываться.', 'Спроектируем коттедж любой сложности со всей строительной и сметной документацией', 'Мы возьмем на себя управление всеми процессами на строительной площадке. Выполним контроль всех этапов строительства объекта. Несем ответственность за достижение результатов и конечное качество работ.', 'Команда дизайнеров подберет для вашего интерьера все материалы, мебель, сантехнику, освещение и элементы декора, которые необходимы для воплощения проекта в жизнь. Все материалы будут доставлены в срок и будут отвечать всем требованиям. Сотрудничество с большим количеством компаний дает преимущество в виде выгодных цен и проверенных материалов']
+						-for(i = 0; i < 5; i++)
+							li.creative_item
+								p=title[i]
+								span=txt[i]
+	+btn({
+		link: true,
+		download: true,
+		name: 'Скачать пример проекта'
+	})
+
+// End dark block
+
+// Work grid
+
+mixin work-item(data)
+	.work_item 
+		a(href="#")
+			.work_item_img 
+				img(src=`i/work/${data.img}.jpg`, alt="")
+			.work_item_title 
+				h3 Название проекта
+				.work_item_icon
+					+icon('arrow-right')
+
+// End work
+
+// Hero page
+
+mixin custom-hero(data)
+	section.custom-hero
+		img(src=`i/page-hero/global.jpg`, alt="") 
+		.section_in 
+			.custom_hero_main 
+				+bread([data.item], data.current, {visible: data.visible})
+
+// End
+
+// Mixin animattion-card
+
+mixin anim-card(data)
+	.animation-card
+		.animation_card_front.anim-card_rotate 
+			.animation_card_img 
+				img(src=`i/card/${data.img}.jpg`, alt="")
+			.animation_head_front 
+				h3=data.name
+				if data.subtitle
+					p=data.subtitle
+				+icon('arrow-right')
+		.animation_card_back.anim-card_rotate
+			.animation_back_top 
+				h3=data.name
+				if data.subtitle
+					p=data.subtitle
+			.animation_back_body 
+				if data.cardTxt
+					p - Имеет удостоверение о повышении квалификации по программе "Autodesk 3DS max, интерьерная визуализация". 2019г. - Получен сертификат "Колористика для дизайна интерьеров" - 2013 г. - 2018 г. работал старшим дизайнером для нужд МО РФ. -В 2012 г. получил второе Высшее образование в Московском гуманитарном университете, МосГУ.
+				else 
+					ul
+						-for(idx = 0; idx < 5; idx++)
+							- let label = ['Офис', 'Ресторан', 'Кафе', 'Отель', 'Шоурум']
+								li 
+									.label=label[idx]
+									.val от 7000 руб./м2
+
+
+// End card
+
+// workTab
+
+
+mixin workTab(data)
+	- let links = []
+	- let workTabs = []
+	section.workTab.padding-block
+		.section_in 
+			.workTab_main 
+				h3=data.title 
+				ul.workTab_list--link 
+					each item, i in data.links
+						if i === 0
+							li(data-tab=item.attr class="active_tab")=item.link
+						else 
+							li(data-tab=item.attr)=item.link
+				ul.workTab_content
+					each items, idx in data.workTabs
+						if idx === 0
+							li.workTab_content_item(data-tab=items.attr class="active_tab")
+								.workTab_content_txt 
+									h4=items.title
+									.workTab_txt!=`<p>1. Работа начинается с поиска гармонии между внешнем и внутренним пространством: интерьер зависит от архитектуры, архитектура от ландшафта, который зависит от климата.</p> <p>2. Мы анализируем особенности проекта и стилистические предпочтения клиента, после чего предлагаем концепцию, где каждый сантиметр продуман до мелочей.</p> <p>3. Высочайший уровень 3D-визуализации, позволяет создать образ максимально приближенный к реальности.</p>`
+								.workTab_slider_w 
+									.worTab_slider.swiper.double_slider 
+										.swiper-wrapper
+											-for(i = 0; i < 12; i++)
+												.swiper-slide 
+													img(src=`i/global/workTab.jpg`, alt="")
+									.workTab_scrollbar.global_scrollbar.double_slider
+						else 
+							li.workTab_content_item(data-tab=items.attr)
+								.workTab_content_txt 
+									h4=items.title
+									.workTab_txt!=`<p>1. Работа начинается с поиска гармонии между внешнем и внутренним пространством: интерьер зависит от архитектуры, архитектура от ландшафта, который зависит от климата.</p> <p>2. Мы анализируем особенности проекта и стилистические предпочтения клиента, после чего предлагаем концепцию, где каждый сантиметр продуман до мелочей.</p> <p>3. Высочайший уровень 3D-визуализации, позволяет создать образ максимально приближенный к реальности.</p>`
+								.workTab_slider_w 
+									.worTab_slider.swiper.double_slider 
+										.swiper-wrapper
+											-for(i = 0; i < 12; i++)
+												.swiper-slide 
+													img(src=`i/global/workTab.jpg`, alt="")
+									.workTab_scrollbar.global_scrollbar.double_slider
+
+// End workTab
+
+
+
+
+// Block analogy card team and services
+
+mixin sliderCard(data)
+	section.sliderCard.padding-block 
+		.section_in 
+			.sliderCard_main 
+				h3=data.title
+				.sliderCard_slider_w
+					+nav({
+						mod: 'slideCard',
+					})
+					.sliderCard_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 3; i++)
+								- let name = data.name
+								- let subtitle = data.subtitle
+								- let imgList = data.imgList
+								.swiper-slide
+									if !subtitle
+										+anim-card({
+											img: imgList[i],
+											name: name[i],
+											cardTxt: data.team
+										})
+									else 
+										+anim-card({
+											img: imgList[i],
+											name: name[i],
+											subtitle: subtitle[i],
+											cardTxt: data.team
+										})
+				if data.team 
+					+global-txt({
+						txt: `
+						<h3>Почему мы?</h3>
+						<p>Кто мы и что можем сказать о себе? ____ - это уверенная команда, которая знает что нужно именно вам и поможет воплотить все идеи в эксклюзивном интерьере. ____ - это чуткие люди, готовые оказать дружескую поддержку и не дать сойти с пути во время длительного ремонта. ______ - это специалисты, которые способны проектировать осмысленный дизайн, делать счастливыми и успешными тех, кто выбирает нас. И, наконец, _______ - это те, кто говорит на одном языке со своими заказчиками, ценит оказанное доверие и всегда его оправдывает.</p>
+						<p>Студия держит высокую планку качества на объектах любой площади и без труда поможет обустроить как однокомнатную квартиру, так и крупный ресторан или офис. Комфорт, успех, искренние эмоции людей и эстетика – наши главные ориентиры. Говоря о себе, мы привыкли быть честными. Чуткость и индивидуальный подход – атрибуты бренда, за которыми стоит огромная работа.</p>
+						<p>При создании интерьера важна каждая деталь: на выбор штор и положение кровати влияет то, любите вы поспать подольше или встаете с первыми лучами. С нами функционал кухонь точно не будет одинаковым для всех проектов, ведь кто-то очень ценит свое время и предпочитает готовую еду, а кто-то считает готовку искусством и раскрывается в нем, не замечая времени.</p>
+						`
+					})
+
+// End development block
+
+// Gallery block and txt
+
+mixin galleryImg(data)
+	section.blockImg
+		.section_in 
+			.block_img_main 
+				h2 Блок текст и много фото 3
+				p Кто мы и что можем сказать о себе? ____ - это уверенная команда, которая знает что нужно именно вам и поможет воплотить все идеи в эксклюзивном интерьере. ____ - это чуткие люди, готовые оказать дружескую поддержку и не дать сойти с пути во время длительного ремонта. ______ - это специалисты, которые способны проектировать осмысленный дизайн, делать счастливыми и успешными тех, кто выбирает нас. И, наконец, _______ - это те, кто говорит на одном языке со своими заказчиками, ценит оказанное доверие и всегда его оправдывает.
+				ul 
+					-for(i = 0; i < 4; i++)
+						li 
+							a(href="i/about/single-news.jpg")
+								img(src="i/about/single-news.jpg", alt="") 
+
+
+// End block
+
+// Mixin contacts block
+
+mixin contacts-block(data)
+	section.contacts(class=data.class) 
+		.section_in 
+			.contacts_main 
+				.contacts_content
+					.contacts_content_info 
+						h5 Контакты
+						ul.contacts_list 
+							each item in ['+7 (926) 684 57 00', 'info@designkopov.ru']
+								li 
+									a(href="#")=item 
+						ul.contacts_list--social
+							each items in ['wa', 'tg', 'vk', 'be', 'pin']
+								li 
+									a(href="#")
+										+icon(items) 
+					+btn({
+						name: 'Оставить заявку'
+					})
+				.contacts_img 
+					img(src=`i/global/${data.img}.jpg`, alt="")
+
+// End mixin contacts block
+
+// Mixin input
+
+
+mixin input(data)
+	.global_input(class=data.class ? data.class : data.class="form_input")
+		input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="Ваше имя")
+
+
+// End mixin 

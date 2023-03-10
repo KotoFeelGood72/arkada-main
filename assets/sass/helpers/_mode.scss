@@ -1,0 +1,135 @@
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+	}
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
+}
+
+.mode-btn_global {
+	margin-top: 3rem;
+}
+
+.customClass_sliderCard {
+	@include bp($point_2) {
+		padding-bottom: 0!important;
+	}
+	.slider_nav {
+		top: 53%!important;
+	}
+}
+
+.custom_mb {
+	margin-bottom: $m13!important;
+	@include bp($point_2) {
+		margin-bottom: 8rem!important;
+	}
+}
+
+input[type="submit"], button {
+	@include app;
+}
+
+
+.showMoreTxt.visible {
+	max-height: 100%;
+	-webkit-line-clamp: 100;
+	overflow: visible!important;
+}
+
+.burger_nav, .footer_nav_list {
+	li {
+		a  {
+			position: relative;
+			@include flex-start;
+			&:hover, &:focus, &.active {
+				padding-left: 2rem;
+				&:before {
+					opacity: 1;
+					visibility: visible;
+					transform: translateX(0);
+				}
+			}
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				transform: translateX(-2rem);
+				width: .7rem;
+				height: .7rem;
+				background-color: $white;
+				content: '';
+				opacity: 0;
+				visibility: hidden;
+				transition: all .4s ease;
+			}
+		}
+	}
+}
+
+.footer_nav_list li a:before {
+	top: 38%;
+}
+
+
+.dark-block, .white-block {
+	.contacts_list--social {
+		li {
+			.icon {
+				transition: all .3s ease;
+			}
+			&:hover {
+				.icon {
+					transform: rotateZ(25deg);
+				}
+			}
+		}
+	}
+}
+.link-accent {
+	position: relative;
+	display: inline-flex;
+
+	&.dark-accent {
+		&:before {
+			border-bottom: .1rem solid $dark;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		bottom: -.3rem;
+		left: 0;
+		width: 100%;
+		border-bottom: .1rem solid $white;
+		content: '';
+		opacity: 0;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all .4s ease;
+		transform-origin: left;
+	}
+	&:hover {
+		&:before {
+			opacity: 1;
+			visibility: visible;
+			transform: scaleX(1);
+		}
+	}
+}
+
+.sticky_scroll {
+	padding-top: 6.5rem;
+	@include bp($point_2) {
+		padding-top: 4rem;
+	}
+}

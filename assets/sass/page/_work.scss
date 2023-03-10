@@ -1,0 +1,43 @@
+.portfolio_main_top {
+	@include flex-space;
+	margin-bottom: 9rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 6rem;
+	}
+	a {
+		line-height: 2.3rem;
+		height: 6.3rem;
+	}
+}
+
+.portfolio_list_link {
+	@include flex-start;
+	flex-wrap: wrap;
+	margin: -1.5rem -1.5rem 0 0;
+	@include bp($point_2) {
+		margin-bottom: 1.5rem;
+
+	}
+	li {
+		padding: 1.5rem 1.5rem 0 0;
+		a {
+			border: .1rem solid rgba(34, 34, 34, 0.2);
+			border-radius: 1.5rem;
+			@include flex-center;
+			padding: 1.5rem 5rem;
+			&:hover {
+				opacity: .7;
+			}
+			&.current-page-item {
+				background-color: $dark;
+				color: $white;
+				pointer-events: none;
+			}
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

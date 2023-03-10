@@ -1,0 +1,20 @@
+.gallery_main {
+	h2, h3, h4, h5, h6 {
+		margin-bottom: 6rem;
+	}
+}
+
+.gallery {
+	position: relative;
+	margin-bottom: 13rem;
+	.gallery_main {
+		padding: 6.5rem 0 6rem 0;
+	}
+
+	.slider_nav_gallery {
+		top: 65%;
+		@include bp($point_2) {
+			display: none;
+		}
+	}
+}

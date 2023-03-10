@@ -1,0 +1,17 @@
+.block_img_main {
+	padding: 6.5rem 0;
+	@include bp($point_2) {
+		padding: 4rem 0;
+	}
+	h2, h3, h4, h5, h6 {
+		margin-bottom: 3rem;
+	}
+
+	ul {
+		padding: 6rem 0;
+		grid-gap: .4rem;
+		@include bp($point_2) {
+			padding: 4rem 0;
+		}
+	}
+}

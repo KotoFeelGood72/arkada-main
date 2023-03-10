@@ -2,6 +2,7 @@
 	position: relative;
 	overflow: hidden;
 	display: inline-flex;
+	border-radius: $gl_radius;
 
 	&:before {
 		position: absolute;
@@ -13,9 +14,9 @@
 		background: url('../../i/global/arrow.svg') center/cover no-repeat;
 		content: '';
 		pointer-events: none;
-	}
-	input[type="submit"], button {
-		@include app;
+		@include bp($point_2) {
+			display: none;
+		}
 	}
 	button, input[type="submit"], a {
 		padding: 1.9rem 8rem 1.9rem 5rem;
@@ -24,26 +25,42 @@
 		border-radius: $gl_radius;
 		font-size: 2rem;
 		transition: all .3s ease;
-
+		font-family: $font_2;
+		@include bp($point_2) {
+			padding: 1.9rem 3rem;
+		}
+	}
+	&.white {
+		&:before {
+			background: url('../../i/global/arrow.svg') center/cover no-repeat;
+		}
 		&:hover {
-			background-color: $dark;
-			border-color: $dark;
+			&:before {
+				background: url('../../i/global/arrow-dark.svg') center/cover no-repeat;
+			}
+			button, input[type="submit"], a {
+				background-color: $white;
+				color: $dark;
+			 }
 		}
 	}
 
 	&.dark {
+		&:before {
+			background: url('../../i/global/arrow-dark.svg') center/cover no-repeat;
+		}
+		&:hover {
+			&:before {
+				background: url('../../i/global/arrow.svg') center/cover no-repeat;
+			}
+			button, input[type="submit"], a {
+				background-color: $dark;
+				color: $white;
+			 }
+		}
 		button, input[type="submit"], a {
 			border: .1rem solid rgba(34, 34, 34, 0.2);
 			color: $dark;
-			&:hover {
-				background-color: $trans;
-				color: $dark;
-				opacity: .7;
-			}
-		}
-
-		&:before {
-			background: url('../../i/global/arrow-dark.svg') center/cover no-repeat;
 		}
 	}
 }

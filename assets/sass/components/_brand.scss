@@ -6,6 +6,10 @@
 
 .brand_slider_body {
 	overflow: hidden;
+	@include bp($point_2) {
+		max-width: 90%;
+		margin: 0 auto;
+	}
 }
 
 .brand_slider {
@@ -19,8 +23,9 @@
 		width: 100%;
 	}
 	.swiper-slide {
-		padding: 3rem 15rem 3rem 0 ;
+		padding: 3rem 15rem 3rem 0;
 		@include flex-center;
+
 		&:before {
 			position: absolute;
 			right: 7.5rem;

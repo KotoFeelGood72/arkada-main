@@ -1,0 +1,20 @@
+.burger_window.popup(data-id="burger") 
+	.burger_bg.remove 
+	.burger_main 
+		.burger_close.remove
+			+icon('close')
+		nav.burger_nav 
+			ul 
+				each item in ['Главная', 'О нас', 'Услуги и цены', 'Портфолио', 'Реализованные объекты', '3D туры', 'О дизайне', 'Обучение', 'Контакты']
+					li 
+						a(href="#")=item
+		.burger_info 
+			ul.contacts_list 
+				each item in ['+7 (926) 684 57 00', 'info@designkopov.ru']
+					li 
+						a(href="#")=item 
+			ul.contacts_list--social
+				each items in ['wa', 'tg', 'vk', 'be', 'pin']
+					li 
+						a(href="#")
+							+icon(items)

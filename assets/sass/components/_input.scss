@@ -1,0 +1,71 @@
+.global_input  {
+	margin-bottom: 1.5rem;
+	input, textarea {
+		@include app;
+		color: $white;
+		border: .1rem solid rgba(255, 255, 255, 0.349);
+		padding: 1.9rem 3rem;
+		width: 100%;
+		border-radius: 1.5rem;
+
+		&:-ms-input-placeholder {
+			color: $white;
+			opacity: .7;
+		}
+		&::-webkit-input-placeholder {
+			color: $white;
+			opacity: .7;
+		}
+	}
+
+	input[type="submit"] {
+		background-color: $white;
+		color: $dark;
+		font-family: $font_2;
+		cursor: pointer;
+	}
+
+	&.dark-input {
+		input, textarea {
+			border-color: #22222259;
+			&:-ms-input-placeholder {
+				color: $dark;
+			}
+			&::-webkit-input-placeholder {
+				color: $dark;
+			}
+		}
+	}
+
+}
+
+.global_btn_submit {
+	position: relative;
+	transition: all .3s ease;
+	&.dark-mode {
+		input {
+			background-color: $dark;
+			color: $white;
+		}
+		&:before {
+			background: url('../../i/global/arrow.svg') center/cover no-repeat;
+		}
+	}
+	&:hover {
+		opacity: .8;
+	}
+	&:before {
+		position: absolute;
+		top: 52%;
+		right: 28%;
+		transform: translateY(-50%);
+		background: url('../../i/global/arrow-dark.svg') center/cover no-repeat;
+		content: '';
+		width: 1rem;
+		height: 1.7rem;
+		pointer-events: none;
+		@include bp($point_2) {
+			display: none;
+		}
+	}
+}

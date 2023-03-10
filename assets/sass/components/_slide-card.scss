@@ -7,6 +7,9 @@
 .sliderCard {
 	.block_txt {
 		padding: 6.5rem 0;
+		@include bp($point_2) {
+			padding: 4rem 0 0 0;
+		}
 	}
 }
 
@@ -14,6 +17,9 @@
 	background-color: $trans;
 	position: relative;
 	padding: 6rem 0!important;
+	@include bp($point_2) {
+		padding: 4rem 0!important;
+	}
 }
 
 .animation_back_top {
@@ -87,6 +93,7 @@
 	width: 100%;
 	padding: 1.5rem 2.5rem;
 	pointer-events: none;
+	min-height: 8.8rem;
 	h2, h3, h4, h5, h6 {
 		font-size: 2rem;
 		color: $white;
@@ -125,5 +132,66 @@
 	position: relative;
 	.slider_nav_slideCard {
 		top: 32%;
+		@include bp($point_2) {
+			top: 24%;
+			padding: 0 4rem;
+		}
+
+		div {
+			@include bp($point_2) {
+				width: 5rem;
+				height: 5rem;
+				@include flex-center;
+				background-color: #ffffff5d;
+				border-radius: 10rem;
+				opacity: .8;
+			}
+		}
+	}
+}
+
+.service_anim  {
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 95%;
+		height: 97%;
+		content: '';
+		border: .1rem solid rgba(255, 255, 255, 0.5);
+		content: '';
+		pointer-events: none;
+	}
+
+	.animation_back_top {
+		border: none;
+		padding: 0;
+		h2, h3, h4, h5, h6 {
+			font-size: 2.5rem;
+		}
+	}
+
+	.animation_back_body {
+		ul {
+			li {
+				a {
+					@include flex-start;
+					color: $white;
+					padding: 1.5rem;
+					border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
+					transition: all .3s ease;
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.1);
+						border-bottom: .1rem solid $trans;
+					}
+				}
+
+				.label  {
+					flex-grow: 1;
+				}
+			}
+		}
 	}
 }

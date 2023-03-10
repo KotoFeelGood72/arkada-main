@@ -1,0 +1,12 @@
+.error_main {
+	padding: 15.5rem 0 44.2rem;
+	height: calc(100vh - 33.1rem);
+	@include bp($point_2) {
+		padding: 15rem 0;
+		height: auto;
+	}
+
+	h2 {
+		margin-bottom: $m6;
+	}
+}

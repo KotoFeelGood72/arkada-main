@@ -1,0 +1,73 @@
+.contacts {
+	&.white-block {
+		padding: 6.5rem 0 $m13 0;
+		@include bp($point_2) {
+			padding: 0;
+		}
+		h2, h3, h4, h5, h6, a {
+			color: $dark;
+		}
+
+		.contacts_list--social li a {
+			background-color: $dark;
+			color: $white!important;
+		}
+		.contacts_list--social {
+			position: relative;
+			padding-top: 4.5rem;
+			&:before {
+				content: 'Соцсети:';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: auto;
+				font-family: $font_3;
+				opacity: .5;
+			}
+		}
+
+		.contacts_img {
+			position: static;
+			max-width: 90.1rem;
+			height: auto;
+		}
+		.contacts_content {
+			margin-right: 20rem;
+			width: 100%;
+			padding: 0;
+		}
+		.contacts_main {
+			justify-content: space-between;
+			align-items: flex-start;
+			min-height: auto;
+			@include bp($point_2) {
+				padding-top: 4rem;
+			}
+		}
+
+		.contacts_list {
+			li {
+				position: relative;
+				padding-top: 4.5rem;
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					font-family: $font_3;
+					opacity: .5;
+				}
+				&:nth-child(1) {
+					&:before {
+						content: 'Телефон:';
+					}
+				}
+				&:nth-child(2) {
+					&:before {
+						content: 'Почта:';
+					}
+				}
+			}
+		}
+	}
+}

@@ -8,6 +8,9 @@
 	@include flex-space;
 	border-bottom: .1rem solid rgba(34, 34, 34, 0.2);
 	margin-bottom: 7.5rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
 	li {
 		width: 33%;
 		text-align: center;
@@ -16,6 +19,9 @@
 		font-family: $font_4;
 		padding-bottom: 2rem;
 		position: relative;
+		@include bp($point_2) {
+			font-size: 1.8rem;
+		}
 		&.active_tab {
 			&:before {
 				width: 100%;
@@ -54,6 +60,9 @@
 	@include flex-start;
 	align-items: flex-start;
 	display: none;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
 	&.active_tab {
 		display: flex;
 	}
@@ -67,7 +76,43 @@
 .workTab_slider_w {
 	max-width: 77.2rem;
 	position: relative;
-	padding-bottom: 3rem;
+	@include bp($point_2) {
+		max-width: 100%;
+	}
+	.worTab_slider  {
+		&:hover {
+			.slider_nav_double {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	.slider_nav_double {
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease;
+		transform: translate(-50%, -70%);
+		@include bp($point_2) {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(-50%, -50%);
+		}
+		&:hover {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(-50%, -50%);
+		}
+		div {
+			background-color: #ffffffa6;
+			width: 4rem;
+			height: 4rem;
+			@include flex-center;
+			padding: 1.5rem;
+			border-radius: 100%;
+		}
+	}
 }
 
 .workTab_txt {
@@ -78,8 +123,9 @@
 
 .workTab_content_txt {
 	margin-right: 9rem;
+	@include bp($point_2) {
+		margin: 0 0 4rem 0;
+	}
 }
 
-.workTab_scrollbar {
-	width: 100%;
-}
+

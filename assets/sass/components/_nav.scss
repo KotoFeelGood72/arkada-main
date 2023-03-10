@@ -4,13 +4,19 @@
 	left: 50%;
 	width: 100%;
 	transform: translate(-50%, -50%);
-	z-index: 11;
+	z-index: 18;
 	@include flex-space;
 	padding: 0 4rem;
+	pointer-events: none;
+
+	@include bp($point_2) {
+		padding: 0 2rem;
+	}
 
 	div {
 		color: $dark;
 		cursor: pointer;
+		pointer-events: all;
 		&:first-child {
 			transform: rotate(180deg);
 		}

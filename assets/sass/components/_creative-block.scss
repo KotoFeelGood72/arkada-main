@@ -2,6 +2,9 @@
 	text-align: center;
 	background-color: $dark;
 	padding: 9rem 0 12rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 	* {
 		color: $white;
 	}
@@ -10,11 +13,20 @@
 .creative_main {
 	h2, h3, h4, h5, h6 {
 		margin-bottom: $m10;
+		@include bp($point_2) {
+			margin-bottom: $m6;
+		}
 	}
 }
 
 .creative_list_w {
 	position: relative;
+}
+
+.creative_center_decoration {
+	@include bp($point_2) {
+		display: none;
+	}
 }
 
 .creative_logo {
@@ -26,7 +38,6 @@
 }
 
 .creative_line_list {
-	// display: none;
 	position: absolute;
 	top: 21.5rem;
 	left: 50%;
@@ -60,6 +71,9 @@
 			transform: translateX(-50%);
 			top: 13.7rem;
 			height: 35.6rem;
+			img {
+				height: 100%;
+			}
 		}
 	}
 }
@@ -68,12 +82,18 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
 	grid-gap: 18.9rem 21.4rem;
+	@include bp($point_2) {
+		grid-gap: 2rem;
+	}
 	li {
 		background: rgba(255, 255, 255, 0.03);
 		border-radius: 2rem;
 		text-align: left;
 		padding: 3rem;
 		min-height: 21.7rem;
+		@include bp($point_2) {
+			padding: 2rem;
+		}
 
 		p {
 			margin-bottom: 2rem;
@@ -88,6 +108,14 @@
 			max-width: 101.6rem;
 			margin: 0 auto;
 			margin-top: -6.9rem;
+			@include bp($point_2) {
+				margin-top: 0;
+			}
 		}
  	}
+}
+
+.creative_w {
+	text-align: center;
+	margin-bottom: 4rem;
 }

@@ -10,6 +10,7 @@ block content_block
 	})
 	+block-about({
 		img: 'service',
+		txtClass: 'small-area_txt',
 		top: `
 		<h2>Описание услуги</h2>
 		<p>Наша компания - это не просто бизнес; это компания будущего, которая воплощает искусство в своих проектах, наполняя интерьер особяркая индивидуальность.</p>
@@ -57,23 +58,26 @@ block content_block
 	})
 	section.tarif 
 		.section_in 
-			.tarif_main 
-				ul.tarif_list 
+			.tarif_main
+				h4 Выберите тариф
+				ul.tarif_list.grid-3 
 					-for(i = 0; i < 3; i++)
 						- let tarifTitle = ['Чертежный', 'Эскизный', 'Полный']
-							li.tarif_card 
+							li.tarif_card.showMoreBlock 
 								.tarif_card_top 
 									h3=tarifTitle[i]
 								.tarif_card_body 
 									p Состав проекта:
-									ul.tarif_sublist 
+									ul.tarif_sublist.showMoreTxt 
 										each item in ['Техническое задание', 'Ведомость рабочих чертежей', 'Обмерный план', 'План демонтажа', 'План перепланировки', 'План расстановки мебели', 'План отделки полов', 'План потолков', 'План размещения светильников', 'План групп включения', 'План групп включения', 'План отделки полов', 'План размещения светильников']
 											li=item 
-									button(type="button" id="list_more") Показать больше
+									button(type="button" class="showMoreBtn") Показать больше
 								.tarif_card_bottom 
 									p Итого:
 									span!='8 900 руб/м2'
-								+btn({
-									name: 'Заказать проект'
-								})
+								.tarif_card--btn
+									+btn({
+										name: 'Заказать проект',
+										target: 'form',
+									})
 				p Авторский надзор рассчитывается отдельно.

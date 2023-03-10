@@ -10,6 +10,7 @@ block content_block
 	})
 	+block-about({
 		img: 'about-1',
+		txtClass: 'small-area_txt',
 		top: `
 		<h2>Описание проекта</h2>
 		<p>В интерьерах всё меньше встречается чистый выверенный стиль, во многом потому, что проектирование домов и квартир — это вообще не про стиль, это про человека. Про его мечты, привычки и воспоминания. Детали внутренней жизни, которые мы стараемся отразить, могут приобрести совершенно разные формы в интерьере.<p>
@@ -17,6 +18,7 @@ block content_block
 		`,
 		btn: true,
 		nameBtn: 'Узнать цену проекта',
+		btnMode: 'dark mode-btn_global'
 	})
 	.gallery 
 		.section_in 
@@ -28,9 +30,9 @@ block content_block
 					})
 					.gallery_slider.swiper 
 						.swiper-wrapper
-							-for(i = 0; ii < 4; i++) 
-								.swiper-slide 
-									a(href="#")
+							-for(i = 0; i < 4; i++) 
+								.swiper-slide.animated-blur 
+									a(href=`i/gallery/gallery-${i}.jpg` data-fancybox="gallerySlider")
 										img(src=`i/gallery/gallery-${i}.jpg`, alt="") 
 					.gallery_scrollbar.global_scrollbar 
 	include global/application

@@ -29,11 +29,15 @@ $(document).ready(function ($) {
 		pageWidget(['single-portfolio']);
 		pageWidget(['single-service']);
 		pageWidget(['tours']);
+		pageWidget(['404']);
 		getAllClasses('html', '.elements_list');
 	}
 });
 
 $(window).on('load', function () {
+	modal();
+	animatedCard();
+	showMoreText();
 	// updateSizes();
 	// loadFunc();
 });
@@ -273,13 +277,13 @@ const brandSlider = new Swiper('.brand_slider', {
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 4,
+			slidesPerView: 2,
 		},
 		768: {
-			
+			slidesPerView: 3,
 		},
 		1024: {
-			
+			slidesPerView: 4,
 		},
 		1200: {
 			slidesPerView: 5,
@@ -296,41 +300,71 @@ sliders.forEach(function(slider) {
     spaceBetween: 30,
     speed: 500,
     loop: true,
-    observer: true,
     navigation: {
       nextEl: slider.querySelector('.slider_double_next'),
       prevEl: slider.querySelector('.slider_double_prev'),
     },
-    scrollbar: {
-      el: slider.querySelector('.double_scrollbar'),
-      draggable: true,
-    }
   });
 });
 
+
 const slideCard = new Swiper('.sliderCard_slider', {
 	loop: true,
-	slidesPerView: 4,
 	spaceBetween: 25,
 	navigation: {
 		nextEl: '.slider_slideCard_next',
 		prevEl: '.slider_slideCard_prev',
 	},
-	// breakpoints: {
-	// 	320: {
-	// 		slidesPerView: 1,
-	// 	},
-	// 	768: {
-			
-	// 	},
-	// 	1024: {
-			
-	// 	},
-	// 	1200: {
-	// 		slidesPerView: 4,
-	// 		spaceBetween: 25,
-	// 	}
-	// }
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 25,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 25,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 25,
+		},
+		1200: {
+			slidesPerView: 4,
+			spaceBetween: 25,
+		}
+	}
+})
+
+const gallerySlider = new Swiper('.gallery_slider', {
+	loop: true,
+	// slidesPerView: 4,
+	spaceBetween: 25,
+	navigation: {
+		nextEl: '.slider_gallery_next',
+		prevEl: '.slider_gallery_prev',
+	},
+	scrollbar: {
+		el: '.gallery_scrollbar',
+		draggable: true,
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 2,
+			spaceBetween: 25,	
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 25,	
+		},
+		1024: {
+			slidesPerView: 4,
+			spaceBetween: 25,
+		},
+		1200: {
+			slidesPerView: 4,
+			spaceBetween: 25,
+		}
+	}
 })
 
 
@@ -356,40 +390,121 @@ function tabs(link, block) {
 
 tabs('.workTab_list--link>li', '.workTab_content_item');
 
+const smartSlider = new Swiper('.hero_slider', {
+  speed: 1000,
+	loop: true,
+  watchSlidesProgress: true,
+  mousewheelControl: true,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.slider_hero_next',
+    prevEl: '.slider_hero_prev',
+  },
+});
+
+const reviewsSlider = new Swiper('.reviews_slider', {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	speed: 500,
+	// loop: true,
+	navigation: {
+		nextEl: '.slider_reviews_next',
+		prevEl: '.slider_reviews_prev',
+	},
+	scrollbar: {
+		el: '.reviews_scrollbar ',
+	}
+})
 
 
 
+// });
+
+window.onscroll = function showHeader() {
+	var header = document.querySelector('.header');
+	if(window.pageYOffset > 100){
+			header.classList.add('fixed');
+	} else{
+			header.classList.remove('fixed');
+	}
+}
 
 
 
+function animatedCard() {
+
+	const cards = document.querySelectorAll('.animated-blur');
+	
+	cards.forEach(card => {
+		card.addEventListener('mouseover', () => {
+			cards.forEach(c => c.classList.add('blur'));
+			card.classList.remove('blur');
+		});
+	
+		card.addEventListener('mouseout', () => {
+			cards.forEach(c => c.classList.remove('blur'));
+		});
+	});
+}
 
 
 
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			popup.forEach((el) => {
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
 
 
 
+function isOpen(popup) {
+	popup.classList.add('active')
+	document.body.style.overflow = 'hidden'
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.style.overflow = ''
+}
 
 
+function showMoreText() {
+	let showMoreBlock = document.querySelectorAll('.showMoreBlock')
+	Array.from(showMoreBlock).map((item) => {
+		let showMoreBtn = item.querySelector('.showMoreBtn')
+		let showMoreTxt = item.querySelector('.showMoreTxt')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		showMoreBtn.addEventListener('click', function() {
+			showMoreTxt.classList.toggle('visible')
+			if (showMoreTxt.classList.contains('visible')) {
+        this.innerHTML = 'Скрыть';
+      } else {
+        this.innerHTML = 'Показать больше';
+      }
+		})
+	})
+}
 
 
 

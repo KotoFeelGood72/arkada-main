@@ -1,12 +1,18 @@
 .block_about--top {
 	@include flex-start;
 	align-items: flex-start;
+	@include bp($point_2) {
+		flex-direction: column;	
+	}
 }
 
 .block_about_img {
 	margin-right: 6rem;
 	flex: 100%;
 	max-width: 67.2rem;
+	@include bp($point_2) {
+		margin: 0 0 4rem 0;
+	}
 }
 
 .global-small_img {
@@ -21,6 +27,10 @@
 	max-height: 63.6rem;
 	overflow: auto;
 	padding-right: 4.5rem;
+	@include bp($point_2) {
+		max-height: 100%;
+		padding-right: 0;
+	}
 
 	&::-webkit-scrollbar {
 		width: .2rem;

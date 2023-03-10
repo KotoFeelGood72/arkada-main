@@ -11,7 +11,7 @@ mixin btn(data)
 		else if data.submit
 			input(type="submit" value=data.name)
 		else
-			button(type="button" data-target=data.target)=data.name
+			button(type="button" data-target=data.target class="trigger")=data.name
 // End
 
 // Mixin slider navigation
@@ -38,10 +38,13 @@ mixin block-about(data)
 					if data.btn 
 						+btn({
 							name: data.nameBtn,
-							link: data.link
+							link: data.link,
+							mod: data.btnMode,
+							target: 'form'
 						})
-			.block_about--bottom.padding-block
-				+global-txt({txt: data.bottom})
+			if data.bottom
+				.block_about--bottom.padding-block
+					+global-txt({txt: data.bottom})
 
 
 // End
@@ -63,34 +66,36 @@ mixin global-txt(data)
 
 
 mixin creative-block(data)
-	section.creative.m-block 
-		.section_in 
-			.creative_main 
-				h2=data.title
-				.creative_list_w
-					.creative_center_decoration 
-						.creative_logo 
-							img(src="i/global/logo.svg", alt="")
-						ul.creative_line_list
+	.creative_w
+		section.creative.m-block 
+			.section_in 
+				.creative_main 
+					h2=data.title
+					.creative_list_w
+						.creative_center_decoration 
+							.creative_logo 
+								img(src="i/global/logo.svg", alt="")
+							ul.creative_line_list
+								-for(i = 0; i < 5; i++)
+									if i < 4
+										li.line_item 
+											img(src=`i/global/standart-line.svg`, alt="")
+									else 
+										li.line_item.long_line_item 
+											img(src="i/global/long-line.svg", alt="")
+						ul.creative_list
+							- let title = ['Дизайн проекты под ключ', 'Авторский надзор', 'Архитектурное проектирование', 'Генеральный подрядчик', 'Комплектация']
+							-let txt = ['Разработаем концепцию-идею жилого объекта и сформируем полный дизайн-проект под Ваш образ жизни и вкус.', 'Возьмём на себя реализацию проекта и освободим ваше время. Использование услуги застрахует вас от непредвиденных обстоятельств со стороны поставщиков и ремонтной бригады, сроки ремонта не будут срываться.', 'Спроектируем коттедж любой сложности со всей строительной и сметной документацией', 'Мы возьмем на себя управление всеми процессами на строительной площадке. Выполним контроль всех этапов строительства объекта. Несем ответственность за достижение результатов и конечное качество работ.', 'Команда дизайнеров подберет для вашего интерьера все материалы, мебель, сантехнику, освещение и элементы декора, которые необходимы для воплощения проекта в жизнь. Все материалы будут доставлены в срок и будут отвечать всем требованиям. Сотрудничество с большим количеством компаний дает преимущество в виде выгодных цен и проверенных материалов']
 							-for(i = 0; i < 5; i++)
-								if i < 4
-									li.line_item 
-										img(src=`i/global/standart-line.svg`, alt="")
-								else 
-									li.line_item.long_line_item 
-										img(src="i/global/long-line.svg", alt="")
-					ul.creative_list
-						- let title = ['Дизайн проекты под ключ', 'Авторский надзор', 'Архитектурное проектирование', 'Генеральный подрядчик', 'Комплектация']
-						-let txt = ['Разработаем концепцию-идею жилого объекта и сформируем полный дизайн-проект под Ваш образ жизни и вкус.', 'Возьмём на себя реализацию проекта и освободим ваше время. Использование услуги застрахует вас от непредвиденных обстоятельств со стороны поставщиков и ремонтной бригады, сроки ремонта не будут срываться.', 'Спроектируем коттедж любой сложности со всей строительной и сметной документацией', 'Мы возьмем на себя управление всеми процессами на строительной площадке. Выполним контроль всех этапов строительства объекта. Несем ответственность за достижение результатов и конечное качество работ.', 'Команда дизайнеров подберет для вашего интерьера все материалы, мебель, сантехнику, освещение и элементы декора, которые необходимы для воплощения проекта в жизнь. Все материалы будут доставлены в срок и будут отвечать всем требованиям. Сотрудничество с большим количеством компаний дает преимущество в виде выгодных цен и проверенных материалов']
-						-for(i = 0; i < 5; i++)
-							li.creative_item
-								p=title[i]
-								span=txt[i]
-	+btn({
-		link: true,
-		download: true,
-		name: 'Скачать пример проекта'
-	})
+								li.creative_item
+									p=title[i]
+									span=txt[i]
+		+btn({
+			link: true,
+			download: true,
+			name: 'Скачать пример проекта',
+			mod: 'dark'
+		})
 
 // End dark block
 
@@ -131,7 +136,7 @@ mixin anim-card(data)
 				if data.subtitle
 					p=data.subtitle
 				+icon('arrow-right')
-		.animation_card_back.anim-card_rotate
+		.animation_card_back.anim-card_rotate(class=data.customMode)
 			.animation_back_top 
 				h3=data.name
 				if data.subtitle
@@ -143,9 +148,10 @@ mixin anim-card(data)
 					ul
 						-for(idx = 0; idx < 5; idx++)
 							- let label = ['Офис', 'Ресторан', 'Кафе', 'Отель', 'Шоурум']
-								li 
-									.label=label[idx]
-									.val от 7000 руб./м2
+								li
+									a(href="#")  
+										.label=label[idx]
+										.val от 7000 руб./м2
 
 
 // End card
@@ -160,7 +166,7 @@ mixin workTab(data)
 		.section_in 
 			.workTab_main 
 				h3=data.title 
-				ul.workTab_list--link 
+				ul.workTab_list--link
 					each item, i in data.links
 						if i === 0
 							li(data-tab=item.attr class="active_tab")=item.link
@@ -174,24 +180,28 @@ mixin workTab(data)
 									h4=items.title
 									.workTab_txt!=`<p>1. Работа начинается с поиска гармонии между внешнем и внутренним пространством: интерьер зависит от архитектуры, архитектура от ландшафта, который зависит от климата.</p> <p>2. Мы анализируем особенности проекта и стилистические предпочтения клиента, после чего предлагаем концепцию, где каждый сантиметр продуман до мелочей.</p> <p>3. Высочайший уровень 3D-визуализации, позволяет создать образ максимально приближенный к реальности.</p>`
 								.workTab_slider_w 
-									.worTab_slider.swiper.double_slider 
+									.worTab_slider.swiper.double_slider(data-slider-index=idx)
 										.swiper-wrapper
 											-for(i = 0; i < 12; i++)
 												.swiper-slide 
 													img(src=`i/global/workTab.jpg`, alt="")
-									.workTab_scrollbar.global_scrollbar.double_slider
+										+nav({
+											mod: 'double'
+										})
 						else 
 							li.workTab_content_item(data-tab=items.attr)
 								.workTab_content_txt 
 									h4=items.title
 									.workTab_txt!=`<p>1. Работа начинается с поиска гармонии между внешнем и внутренним пространством: интерьер зависит от архитектуры, архитектура от ландшафта, который зависит от климата.</p> <p>2. Мы анализируем особенности проекта и стилистические предпочтения клиента, после чего предлагаем концепцию, где каждый сантиметр продуман до мелочей.</p> <p>3. Высочайший уровень 3D-визуализации, позволяет создать образ максимально приближенный к реальности.</p>`
 								.workTab_slider_w 
-									.worTab_slider.swiper.double_slider 
+									.worTab_slider.swiper.double_slider
 										.swiper-wrapper
 											-for(i = 0; i < 12; i++)
 												.swiper-slide 
 													img(src=`i/global/workTab.jpg`, alt="")
-									.workTab_scrollbar.global_scrollbar.double_slider
+										+nav({
+											mod: 'double'
+										})
 
 // End workTab
 
@@ -201,7 +211,7 @@ mixin workTab(data)
 // Block analogy card team and services
 
 mixin sliderCard(data)
-	section.sliderCard.padding-block 
+	section.sliderCard.padding-block(class=data.customClass) 
 		.section_in 
 			.sliderCard_main 
 				h3=data.title
@@ -220,14 +230,16 @@ mixin sliderCard(data)
 										+anim-card({
 											img: imgList[i],
 											name: name[i],
-											cardTxt: data.team
+											cardTxt: data.team,
+											customMode: data.customChange
 										})
 									else 
 										+anim-card({
 											img: imgList[i],
 											name: name[i],
 											subtitle: subtitle[i],
-											cardTxt: data.team
+											cardTxt: data.team,
+											customMode: data.customChange
 										})
 				if data.team 
 					+global-txt({
@@ -249,10 +261,10 @@ mixin galleryImg(data)
 			.block_img_main 
 				h2 Блок текст и много фото 3
 				p Кто мы и что можем сказать о себе? ____ - это уверенная команда, которая знает что нужно именно вам и поможет воплотить все идеи в эксклюзивном интерьере. ____ - это чуткие люди, готовые оказать дружескую поддержку и не дать сойти с пути во время длительного ремонта. ______ - это специалисты, которые способны проектировать осмысленный дизайн, делать счастливыми и успешными тех, кто выбирает нас. И, наконец, _______ - это те, кто говорит на одном языке со своими заказчиками, ценит оказанное доверие и всегда его оправдывает.
-				ul 
+				ul.grid-4 
 					-for(i = 0; i < 4; i++)
-						li 
-							a(href="i/about/single-news.jpg")
+						li.animated-blur 
+							a(href="i/about/single-news.jpg" data-fancybox)
 								img(src="i/about/single-news.jpg", alt="") 
 
 
@@ -265,20 +277,24 @@ mixin contacts-block(data)
 		.section_in 
 			.contacts_main 
 				.contacts_content
-					.contacts_content_info 
-						h5 Контакты
+					.contacts_content_info
+						if data.title
+							h5=data.title
 						ul.contacts_list 
 							each item in ['+7 (926) 684 57 00', 'info@designkopov.ru']
 								li 
-									a(href="#")=item 
+									a(href="#" target="_blank" class="link-accent dark-accent")=item 
 						ul.contacts_list--social
 							each items in ['wa', 'tg', 'vk', 'be', 'pin']
 								li 
-									a(href="#")
-										+icon(items) 
-					+btn({
-						name: 'Оставить заявку'
-					})
+									a(href="#" target="_blank")
+										+icon(items)
+					if data.btnVisible
+						+btn({
+							name: 'Оставить заявку',
+							mod: 'white',
+							target: 'form'
+						})
 				.contacts_img 
 					img(src=`i/global/${data.img}.jpg`, alt="")
 
@@ -289,7 +305,25 @@ mixin contacts-block(data)
 
 mixin input(data)
 	.global_input(class=data.class ? data.class : data.class="form_input")
-		input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="Ваше имя")
+		if data.type === "submit"
+			input(type=data.type ? data.type : data.type="text" value=data.val ? data.val : data.val="Ваше имя")
+		else
+			input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="Ваше имя")
 
 
 // End mixin 
+mixin brand(data)
+	section.brand(class=data.class) 
+		+nav({
+			mod: 'brand',
+		})
+		.section_in 
+			.brand_main 
+				h3 Партнеры
+				.brand_slider_w
+					.brand_slider_body 
+						.brand_slider.swiper 
+							.swiper-wrapper
+								-for(i = 0; i < 30; i++) 
+									.swiper-slide 
+										img(src="i/global/brand.jpg", alt="")

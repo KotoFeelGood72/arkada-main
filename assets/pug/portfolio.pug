@@ -8,19 +8,20 @@ block content_block
 		item: 'Главная',
 		visible: true,
 	})
-	section.portfolio 
+	section.portfolio.padding-block 
 		.section_in 
 			.porfolio_main
 				.portfolio_main_top 
 					ul.portfolio_list_link 
 						each item, i in ['Все проекты', 'Частные интерьеры', 'Коммерческие интерьеры', 'Архитектура']
 							li
-								a(href="#")=item
+								a(href="#" class="btn dark")=item
 					+btn({
 						name: '3D Туры',
 						link: true,
+						mod: 'btn dark'
 					})
-				ul.work_grid--big
+				ul.work_grid--big.grid-4
 					-for(i = 1; i < 9; i++)
 						li.work_item_w
 							+work-item({
@@ -28,6 +29,7 @@ block content_block
 							})
 	+block-about({
 		img: 'about-1',
+		txtClass: 'small-area_txt',
 		top: `
 		<h2>О проектах</h2>
 		<p>Наша компания - это не просто бизнес; это компания будущего, которая воплощает искусство в своих проектах, наполняя интерьер особым смыслом, и помогает своим клиентам достигать результатов каждый день. Очень важно, чтобы интерьер отражал ваши желания, цели и образ жизни. Мы точно знаем как это сделать.</p>
@@ -36,5 +38,6 @@ block content_block
 		`,
 		btn: true,
 		nameBtn: 'Узнать цену проекта',
+		btnMode: 'dark mode-btn_global'
 	})
 	include global/application

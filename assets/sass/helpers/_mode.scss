@@ -22,6 +22,9 @@
 
 .mode-btn_global {
 	margin-top: 3rem;
+	@include bp($point_4) {
+		margin-top: 1.5rem;
+	}
 }
 
 .customClass_sliderCard {

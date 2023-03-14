@@ -40,6 +40,7 @@
 			margin-bottom: 1rem;
 			white-space: nowrap;
 			min-width: 17rem;
+			border-bottom: .1rem solid rgba(34, 34, 34, 0.2);
 		}
 		&.active_tab {
 			&:before {
@@ -86,9 +87,7 @@
 		flex-direction: column;
 	}
 	@include bp($point_4) {
-		border-top: .1rem solid rgba(34, 34, 34, 0.2);
-		padding-top: 6rem;
-		margin-top: -2.7rem;
+		padding-top: 3rem;
 	}
 	&.active_tab {
 		display: flex;

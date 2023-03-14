@@ -21,13 +21,13 @@ block content_block
 		btnMode: 'dark mode-btn_global'
 	})
 	.gallery 
+		+nav({
+			mod: 'gallery',
+		})
 		.section_in 
 			.gallery_main(data-aos="fade-up") 
 				h3 Фотогалерея проекта
 				.gallery_slider_w 
-					+nav({
-						mod: 'gallery',
-					})
 					.gallery_slider.swiper 
 						.swiper-wrapper
 							-for(i = 0; i < 4; i++) 

@@ -7,6 +7,12 @@
 		margin-bottom: 6rem;
 		text-align: left;
 	}
+
+	.btn {
+		&:before {
+			transform: translateY(-40%) rotate(90deg);
+		}
+	}
 }
 
 .material_grid {
@@ -35,6 +41,9 @@
 			height: 100%;
 			object-fit: cover;
 			transition: all 1s ease;
+			@include bp($point_2) {
+				height: auto;
+			}
 		}
 	}
 }
@@ -60,7 +69,20 @@
 		}
 	}
 }
-
+.news_main {
+	text-align: center;
+	ul {
+		margin-bottom: 6rem;
+		@include bp($point_4) {
+			mbb: 3rem;
+		}
+	}
+	.btn {
+		&:before {
+			transform: translateY(-40%) rotate(90deg);
+		}
+	}
+}
 .material_grid {
 	margin-bottom: $m6;
 	@include bp($point_4) {

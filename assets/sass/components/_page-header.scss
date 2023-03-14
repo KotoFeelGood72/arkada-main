@@ -2,6 +2,7 @@
 	position: relative;
 	height: 33.1rem;
 	margin:  -$header 0 6.5rem 0;
+	overflow: hidden;
 	@include bp($point_2) {
 		height: 29rem;
 		margin:  -$header 0 4rem 0;

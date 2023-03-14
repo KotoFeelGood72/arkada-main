@@ -1,15 +1,30 @@
 .gallery_main {
 	h2, h3, h4, h5, h6 {
 		margin-bottom: 6rem;
+		@include bp($point_4) {
+			margin-bottom: 3rem;
+		}
 	}
 }
 
 .gallery {
 	position: relative;
 	margin-bottom: 13rem;
+	@include bp($point_4) {
+		margin-bottom: 8rem;
+	}
 	.gallery_main {
 		padding: 6.5rem 0 6rem 0;
+		@include bp($point_4) {
+			padding: 3rem 0;
+		}
 	}
+
+	// .gallery_scrollbar  {
+	// 	@include bp($point_4) {
+	// 		max-width: 100%;
+	// 	}
+	// }
 
 	.slider_nav_gallery {
 		top: 65%;

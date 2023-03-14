@@ -360,7 +360,7 @@ const gallerySlider = new Swiper('.gallery_slider', {
 	breakpoints: {
 		320: {
 			slidesPerView: 2,
-			spaceBetween: 25,	
+			spaceBetween: 10,	
 		},
 		768: {
 			slidesPerView: 2,
@@ -520,7 +520,6 @@ function showMoreText() {
 	})
 }
 
-AOS.init();
 AOS.init({
   disable: 'mobile',
   startEvent: 'DOMContentLoaded', 
@@ -530,6 +529,8 @@ AOS.init({
   once: true,
   anchorPlacement: 'top-bottom', 
 });
+
+
 
 
 

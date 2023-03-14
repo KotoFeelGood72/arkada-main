@@ -2,6 +2,7 @@
 	padding-top: 6.5rem;
 	h2, h3, h4, h5, h6 {
 		margin-bottom: $m6;
+		text-align: left;
 		@include bp($point_4) {
 			margin-bottom: 4rem;
 		}

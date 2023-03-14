@@ -26,6 +26,7 @@ body {
 
 	height: 100%;
 	font-size: $font_size_base;
+	overflow-x: hidden!important;
 
 	color: $color_text_base;
 	-webkit-text-size-adjust: none;

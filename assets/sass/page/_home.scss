@@ -4,6 +4,9 @@
 	height: calc(100vh + $header - 9rem);
 	top: 0;
 	margin-top: -$header;
+	.swiper-wrapper {
+		height: 100%;
+	}
 
 	.slider_nav {
 		top: calc(55% - $header);
@@ -76,6 +79,10 @@
 	@include flex-end;
 	align-items: flex-start;
 	flex-direction: column;
+
+	@include bp($point_4) {
+		height: calc(100% - 12rem);
+	}
 
 	h1 {
 		margin-bottom: $m5;

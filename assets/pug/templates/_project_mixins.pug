@@ -90,12 +90,13 @@ mixin creative-block(data)
 								li.creative_item
 									p=title[i]
 									span=txt[i]
-		+btn({
-			link: true,
-			download: true,
-			name: 'Скачать пример проекта',
-			mod: 'dark'
-		})
+		if !data.visibleBtn
+			+btn({
+				link: true,
+				download: true,
+				name: 'Скачать пример проекта',
+				mod: 'dark'
+			})
 
 // End dark block
 

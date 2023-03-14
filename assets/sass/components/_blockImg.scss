@@ -3,6 +3,9 @@
 	@include bp($point_2) {
 		padding: 4rem 0;
 	}
+	@include bp($point_4) {
+		padding: 3rem 0;
+	}
 	h2, h3, h4, h5, h6 {
 		margin-bottom: 3rem;
 	}
@@ -12,6 +15,9 @@
 		grid-gap: .4rem;
 		@include bp($point_2) {
 			padding: 4rem 0;
+		}
+		@include bp($point_4) {
+			grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
 		}
 	}
 }

@@ -28,7 +28,7 @@ mixin nav(data)
 
 // Mixin about and hero about
 mixin block-about(data)
-	section.block-about
+	section.block-about(data-aos="fade-up")
 		.section_in 
 			.block_about--top.padding-block 
 				.block_about_img(class=data.small) 
@@ -43,7 +43,7 @@ mixin block-about(data)
 							target: 'form'
 						})
 			if data.bottom
-				.block_about--bottom.padding-block
+				.block_about--bottom.padding-block(data-aos="fade-up")
 					+global-txt({txt: data.bottom})
 
 
@@ -51,7 +51,7 @@ mixin block-about(data)
 
 // Global txt block
 mixin global-txt(data)
-	.block_txt
+	.block_txt(data-aos="fade-up")
 		if data.block 
 			.section_in 
 				.block_txt_main!=data.txt 
@@ -69,7 +69,7 @@ mixin creative-block(data)
 	.creative_w
 		section.creative.m-block 
 			.section_in 
-				.creative_main 
+				.creative_main(data-aos="fade-in") 
 					h2=data.title
 					.creative_list_w
 						.creative_center_decoration 
@@ -119,7 +119,7 @@ mixin custom-hero(data)
 	section.custom-hero
 		img(src=`i/page-hero/global.jpg`, alt="") 
 		.section_in 
-			.custom_hero_main 
+			.custom_hero_main(data-aos="fade-in")  
 				+bread([data.item], data.current, {visible: data.visible})
 
 // End
@@ -162,7 +162,7 @@ mixin anim-card(data)
 mixin workTab(data)
 	- let links = []
 	- let workTabs = []
-	section.workTab.padding-block
+	section.workTab.padding-block(class=data.class data-aos="fade-up")
 		.section_in 
 			.workTab_main 
 				h3=data.title 
@@ -211,7 +211,7 @@ mixin workTab(data)
 // Block analogy card team and services
 
 mixin sliderCard(data)
-	section.sliderCard.padding-block(class=data.customClass) 
+	section.sliderCard.padding-block(class=data.customClass data-aos="fade-up") 
 		.section_in 
 			.sliderCard_main 
 				h3=data.title
@@ -241,6 +241,7 @@ mixin sliderCard(data)
 											cardTxt: data.team,
 											customMode: data.customChange
 										})
+						.global_scrollbar.sliderCard_scrollbar
 				if data.team 
 					+global-txt({
 						txt: `
@@ -256,7 +257,7 @@ mixin sliderCard(data)
 // Gallery block and txt
 
 mixin galleryImg(data)
-	section.blockImg
+	section.blockImg(data-aos="fade-up")
 		.section_in 
 			.block_img_main 
 				h2 Блок текст и много фото 3
@@ -273,7 +274,7 @@ mixin galleryImg(data)
 // Mixin contacts block
 
 mixin contacts-block(data)
-	section.contacts(class=data.class) 
+	section.contacts(class=data.class data-aos="fade-in") 
 		.section_in 
 			.contacts_main 
 				.contacts_content
@@ -313,7 +314,7 @@ mixin input(data)
 
 // End mixin 
 mixin brand(data)
-	section.brand(class=data.class) 
+	section.brand(class=data.class data-aos="fade-up") 
 		+nav({
 			mod: 'brand',
 		})

@@ -28,6 +28,12 @@
 	bottom: 0!important;
 	width: 61.3rem;
 	height: .2rem;
+	@include bp($point_4) {
+		width: 100%;
+		max-width: 90%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	&:before {
 		position: absolute;
 		top: 50%;

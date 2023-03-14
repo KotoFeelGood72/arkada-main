@@ -1,15 +1,25 @@
 .workTab_main {
 	h2, h3, h4, h5, h6 {
 		margin-bottom: $m10;
+		@include bp($point_4) {
+			margin-bottom: 6rem;
+		}
 	}
 }
-
+.workTab_list--link::-webkit-scrollbar { width: 0; }
 .workTab_list--link {
 	@include flex-space;
-	border-bottom: .1rem solid rgba(34, 34, 34, 0.2);
 	margin-bottom: 7.5rem;
+	border-bottom: .1rem solid rgba(34, 34, 34, 0.2);
 	@include bp($point_2) {
 		margin-bottom: 4rem;
+	}
+	@include bp($point_5) {
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		border: none;
+		overflow-x: auto;
+		margin-bottom: 0;
 	}
 	li {
 		width: 33%;
@@ -21,6 +31,15 @@
 		position: relative;
 		@include bp($point_2) {
 			font-size: 1.8rem;
+		}
+		
+		@include bp($point_5) {
+			font-size: 1.6rem;
+			width: 100%;
+			padding-bottom: 1rem;
+			margin-bottom: 1rem;
+			white-space: nowrap;
+			min-width: 17rem;
 		}
 		&.active_tab {
 			&:before {
@@ -40,6 +59,9 @@
 			content: '';
 			transform-origin: left;
 			transition: all .4s ease;
+			@include bp($point_4) {
+				bottom: -.1rem;
+			}
 		}
 		&:after {
 			position: absolute;
@@ -63,6 +85,11 @@
 	@include bp($point_2) {
 		flex-direction: column;
 	}
+	@include bp($point_4) {
+		border-top: .1rem solid rgba(34, 34, 34, 0.2);
+		padding-top: 6rem;
+		margin-top: -2.7rem;
+	}
 	&.active_tab {
 		display: flex;
 	}
@@ -70,6 +97,10 @@
 	h2, h3, h4, h5, h6 {
 		font-size: 3rem;
 		margin-bottom: 2rem;
+		@include bp($point_4) {
+			font-size: 2.2rem;
+			margin-bottom: 1rem;
+		}
 	}
 }
 
@@ -94,6 +125,10 @@
 		visibility: hidden;
 		transition: all .3s ease;
 		transform: translate(-50%, -70%);
+		@include bp($point_4) {
+			opacity: 1;
+			visibility: visible;
+		}
 		@include bp($point_2) {
 			opacity: 1;
 			visibility: visible;
@@ -125,6 +160,14 @@
 	margin-right: 9rem;
 	@include bp($point_2) {
 		margin: 0 0 4rem 0;
+	}
+}
+
+.workTab_service {
+	.workTab_content_item  {
+		@include bp($point_4) {
+			padding-top: 3rem;
+		}
 	}
 }
 

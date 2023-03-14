@@ -15,7 +15,7 @@ block content_block
 							.hero_slide_img
 								img(src=imgHero, alt="")
 							.section_in 
-								.hero_slide_content 
+								.hero_slide_content(data-aos="fade-in") 
 									h1 Текст для заголовка / акции
 									+btn({
 										name: 'Подробнее',
@@ -55,14 +55,14 @@ block content_block
 		})
 		+creative-block({title: 'Что мы предлагаем'})
 		section.block-work.padding-block 
-			.block_work--top 
+			.block_work--top(data-aos="fade-up") 
 				.section_in 
 					h3 Портфолио
 					+btn({
 						name: 'Все проекты',
 						mod: 'dark'
 					})
-			.block_work_main 
+			.block_work_main(data-aos="fade-up") 
 				ul.work_grid--big.grid-4
 					-for(i = 1; i < 9; i++)
 						li.work_item_w
@@ -74,7 +74,7 @@ block content_block
 					mod: 'dark'
 				})
 		+brand({})
-		section.reviews.padding-block 
+		section.reviews.padding-block(data-aos="fade-up") 
 			.section_in 
 				.reviews_main
 					h5 Отзывы клиентов

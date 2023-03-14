@@ -8,7 +8,7 @@ block content_block
 		item: 'Главная',
 		visible: true,
 	})
-	section.material
+	section.material(data-aos="fade-in")
 		.section_in 
 			.material_main 
 				h2 Фотоматериалы
@@ -21,14 +21,14 @@ block content_block
 					name: 'Показать больше',
 					mod: 'dark'
 				})
-	section.material
+	section.material(data-aos="fade-in")
 		.section_in 
 			.material_main 
 				h2 Видеоматериалы
 				ul.material_grid.grid-4 
 					-for(i = 0; i < 4; i++)
 						li.animated-blur
-							a(href=`i/material/material-${i}.jpg` data-fancybox="materialVideo")
+							a(href="https://www.youtube.com/watch?v=hMPMUDydTtQ" data-fancybox="materialVideo")
 								img(src=`i/material/material-${i}.jpg` alt="")
 								.icon-play 
 									img(src="i/global/play.svg", alt="")

@@ -19,6 +19,7 @@ block content_block
 	})
 	+workTab({
 		title: 'Этапы работы',
+		class: 'workTab_service',
 		links: [
 			{
 				attr: 'step0',
@@ -58,7 +59,7 @@ block content_block
 	})
 	section.tarif 
 		.section_in 
-			.tarif_main
+			.tarif_main(data-aos="fade-up")
 				h4 Выберите тариф
 				ul.tarif_list.grid-3 
 					-for(i = 0; i < 3; i++)

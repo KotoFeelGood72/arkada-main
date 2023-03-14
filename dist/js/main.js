@@ -267,26 +267,32 @@ async function maps(street, city, size) {
 }
 
 const brandSlider = new Swiper('.brand_slider', {
-	grid: {
-    rows: 2,
-    fill: 'row',
-  },
 	navigation: {
 		nextEl: '.slider_brand_next',
 		prevEl: '.slider_brand_prev',
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 2,
+			slidesPerView: 2.5,
+			spaceBetween: 25,
 		},
 		768: {
 			slidesPerView: 3,
+			spaceBetween: 25,
 		},
 		1024: {
 			slidesPerView: 4,
+				grid: {
+					rows: 2,
+					fill: 'row',
+				},
 		},
 		1200: {
 			slidesPerView: 5,
+				grid: {
+					rows: 2,
+					fill: 'row',
+				},
 		}
 	}
 })
@@ -315,6 +321,10 @@ const slideCard = new Swiper('.sliderCard_slider', {
 		nextEl: '.slider_slideCard_next',
 		prevEl: '.slider_slideCard_prev',
 	},
+	scrollbar: {
+		el: '.sliderCard_scrollbar',
+		draggable: true,
+	},
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -325,7 +335,7 @@ const slideCard = new Swiper('.sliderCard_slider', {
 			spaceBetween: 25,
 		},
 		1024: {
-			slidesPerView: 3,
+			slidesPerView: 2,
 			spaceBetween: 25,
 		},
 		1200: {
@@ -396,6 +406,10 @@ const smartSlider = new Swiper('.hero_slider', {
   watchSlidesProgress: true,
   mousewheelControl: true,
   effect: 'fade',
+	autoplay: {
+		delay: 2000,
+		pauseOnMouseEnter: true,
+	},
   navigation: {
     nextEl: '.slider_hero_next',
     prevEl: '.slider_hero_prev',
@@ -505,6 +519,17 @@ function showMoreText() {
 		})
 	})
 }
+
+AOS.init();
+AOS.init({
+  disable: 'mobile',
+  startEvent: 'DOMContentLoaded', 
+  offset: 120,
+  delay: 300,
+  duration: 600,
+  once: true,
+  anchorPlacement: 'top-bottom', 
+});
 
 
 

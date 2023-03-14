@@ -6,6 +6,9 @@
 		height: 29rem;
 		margin:  -$header 0 4rem 0;
 	}
+	@include bp($point_4) {
+		margin: - $header 0 2rem 0;
+	}
 	img {
 		height: 100%;
 		object-fit: cover;
@@ -57,6 +60,9 @@
 			font-size: 1.6rem;
 			padding: 1rem 2.6rem 0 0;
 		}
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
 		&:not(:last-child) {
 			&:after {
 				content: '';
@@ -81,6 +87,9 @@
 			@include bp($point_2) {
 				font-size: 1.6rem;
 			}
+					@include bp($point_4) {
+			font-size: 1.4rem;
+		}
 			&:hover {
 				opacity: 1;
 			}
@@ -90,6 +99,9 @@
 			line-height: 2.2rem;
 			@include bp($point_2) {
 				font-size: 1.6rem;
+			}
+			@include bp($point_4) {
+				font-size: 1.4rem;
 			}
 		}
 	}

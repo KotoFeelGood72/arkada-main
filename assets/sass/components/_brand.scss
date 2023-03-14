@@ -1,6 +1,9 @@
 .brand_main {
-	h3 {
+	h2, h3, h4, h5, h6 {
 		margin-bottom: $m6;
+		@include bp($point_4) {
+			margin-bottom: 4rem;
+		}
 	}
 }
 
@@ -10,10 +13,16 @@
 		max-width: 90%;
 		margin: 0 auto;
 	}
+	@include bp($point_4) {
+		max-width: 100%;
+	}
 }
 
 .brand_slider {
 	margin: -3rem -15rem -3rem 0!important;
+	@include bp($point_4) {
+		margin: 0!important;
+	}
 	&:before {
 		position: absolute;
 		top: 50%;
@@ -21,10 +30,16 @@
 		content: '';
 		border-bottom: .1rem solid rgba(34, 34, 34, 0.1);
 		width: 100%;
+		@include bp($point_4) {
+			display: none;
+		}
 	}
 	.swiper-slide {
 		padding: 3rem 15rem 3rem 0;
 		@include flex-center;
+		@include bp($point_4) {
+			padding: 0!important;
+		}
 
 		&:before {
 			position: absolute;
@@ -32,10 +47,16 @@
 			content: '';
 			border-right: .1rem solid rgba(34, 34, 34, 0.1);
 			height: 100%;
+			@include bp($point_4) {
+				display: none;
+			}
 		}
 
 		img {
 			max-width: 18.4rem;
+			@include bp($point_4) {
+				max-width: 100%;
+			}
 		}
 	}
 }
@@ -43,9 +64,15 @@
 .brand  {
 	position: relative;
 	margin: 6.5rem 0;
+	@include bp($point_4) {
+		margin: 4rem 0;
+	}
 
 	.slider_nav  {
 		top: calc(50% + 5.5rem);
+		@include bp($point_4) {
+			display: none;
+		}
 	}
 
 }

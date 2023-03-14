@@ -4,12 +4,18 @@
 	@include bp($point_2) {
 		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
 	}
+	@include bp($point_4) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
 }
 
 .grid-3 {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 	@include bp($point_2) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
+	@include bp($point_4) {
 		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 	}
 }
@@ -71,6 +77,10 @@ input[type="submit"], button {
 				opacity: 0;
 				visibility: hidden;
 				transition: all .4s ease;
+
+				@include bp($point_4) {
+					top: 43%;
+				}
 			}
 		}
 	}

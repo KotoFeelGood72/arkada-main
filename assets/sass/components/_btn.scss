@@ -3,6 +3,9 @@
 	overflow: hidden;
 	display: inline-flex;
 	border-radius: $gl_radius;
+	@include bp($point_4) {
+		width: 100%;
+	}
 
 	&:before {
 		position: absolute;
@@ -28,6 +31,11 @@
 		font-family: $font_2;
 		@include bp($point_2) {
 			padding: 1.9rem 3rem;
+		}
+		@include bp($point_4) {
+			padding: 1.5rem 2rem;
+			width: 100%;
+			font-size: 1.6rem;
 		}
 	}
 	&.white {

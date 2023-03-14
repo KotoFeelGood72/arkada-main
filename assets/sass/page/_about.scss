@@ -2,6 +2,9 @@
 	background-color: $dark;
 	padding: 9rem 0 12rem 0;
 	text-align: center;
+	@include bp($point_4) {
+		padding: 8rem 0;
+	}
 	* {
 		color: $white;
 	}
@@ -10,6 +13,9 @@
 		position: relative;
 		margin-bottom: 9rem;
 		z-index: 2;
+		@include bp($point_4) {
+			margin-bottom: 4rem;
+		}
 		&:before {
 			position: absolute;
 			top: 50%;

@@ -7,7 +7,16 @@
 		padding: 1.9rem 3rem;
 		width: 100%;
 		border-radius: 1.5rem;
+		transition: all .3s ease;
 
+		@include bp($point_4) {
+			font-size: 1.6rem;
+			border-radius: .5rem;
+			padding: 1.7rem 2rem;
+		}
+		&:focus {
+			border-color: $white;
+		}
 		&:-ms-input-placeholder {
 			color: $white;
 			opacity: .7;
@@ -28,6 +37,11 @@
 	&.dark-input {
 		input, textarea {
 			border-color: #22222259;
+			color: $dark;
+
+			&:focus {
+				border-color: $dark;
+			}
 			&:-ms-input-placeholder {
 				color: $dark;
 			}

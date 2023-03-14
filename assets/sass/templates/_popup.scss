@@ -28,6 +28,9 @@
 	height: 100%;
 	background-color: $dark;
 	opacity: .35;
+	@include bp($point_4) {
+		opacity: .6;
+	}
 }
 
 .popup_main {
@@ -43,6 +46,10 @@
 	@include bp($point_2) {
 		max-width: 70%;
 		padding: 4rem;
+	}
+	@include bp($point_4) {
+		padding: 4rem 2rem;
+		max-width: 100%;
 	}
 	&::-webkit-scrollbar {
 		background-color: $dark; /* set the color of the track */
@@ -89,6 +96,11 @@
 	stroke-width: .3rem;
 	cursor: pointer;
 	transition: all .3s ease;
+
+	@include bp($point_4) {
+		width: 2rem;
+		height: 2rem;
+	}
 	&:hover {
 		transform: rotate(180deg);
 	}

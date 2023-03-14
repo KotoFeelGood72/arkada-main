@@ -59,6 +59,10 @@
 	@include bp($point_2) {
 		max-width: 50rem;
 	}
+	@include bp($point_4) {
+		max-width: 100%;
+		padding: 4rem 2rem;
+	}
 	&::-webkit-scrollbar {
 		background-color: #ffffff; /* set the color of the track */
 		width: .4rem;
@@ -92,6 +96,10 @@
 		height: 4rem;
 		@include flex-center;
 	}
+	@include bp($point_4) {
+		width: 2rem;
+		height: 2rem;
+	}
 	&:hover {
 		transform: rotate(180deg);
 	}
@@ -99,14 +107,23 @@
 
 .burger_nav {
 	margin-bottom: 11rem;
+	@include bp($point_4) {
+		margin-bottom: 3rem;
+	}
 	li {
 		&:not(:last-child) {
 			margin-bottom: 2.5rem;
+			@include bp($point_4) {
+				margin-bottom: 1.5rem;
+			}
 		}
 		a {
 			color: $white;
 			font-size: 2.5rem;
 			font-family: $font_2;
+			@include bp($point_4) {
+				font-size: 2rem;
+			}
 		}
 	}
 }

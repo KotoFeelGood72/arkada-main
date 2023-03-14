@@ -14,6 +14,9 @@
 		min-height: 100%;
 		margin-top: 8rem;
 	}
+	@include bp($point_4) {
+		margin-top: 4rem;
+	}
 }
 .application_img {
 	position: absolute;

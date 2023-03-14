@@ -2,6 +2,9 @@
 	padding-top: 6.5rem;
 	h2, h3, h4, h5, h6 {
 		margin-bottom: $m6;
+		@include bp($point_4) {
+			margin-bottom: 4rem;
+		}
 	}
 	
 	margin-bottom: $m13;
@@ -27,6 +30,10 @@
 		font-size: 2rem;
 		font-family: $font_4;
 		margin-bottom: 0.5rem;
+
+		@include bp($point_4) {
+			font-size: 1.8rem;
+		}
 	}
 
 	&:hover {
@@ -69,6 +76,9 @@
 	span {
 		font-size: 1.6rem;
 		opacity: .7;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
 	}
 	h2, h3, h4, h5, h6 {
 		color: inherit;

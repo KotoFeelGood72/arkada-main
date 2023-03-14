@@ -5,6 +5,9 @@
 	@include bp($point_2) {
 		padding: 8rem 0;
 	}
+	@include bp($point_4) {
+		padding: 4rem 0;
+	}
 	* {
 		color: $white;
 	}
@@ -15,6 +18,9 @@
 		margin-bottom: $m10;
 		@include bp($point_2) {
 			margin-bottom: $m6;
+		}
+		@include bp($point_4) {
+			margin-bottom: 4rem;
 		}
 	}
 }
@@ -85,6 +91,9 @@
 	@include bp($point_2) {
 		grid-gap: 2rem;
 	}
+	@include bp($point_4) {
+		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	}
 	li {
 		background: rgba(255, 255, 255, 0.03);
 		border-radius: 2rem;
@@ -101,6 +110,9 @@
 		}
 		span {
 			font-size: 1.8rem;
+			@include bp($point_4) {
+				font-size: 1.6rem;
+			}
 		}
 
 		&:last-child {
@@ -118,4 +130,10 @@
 .creative_w {
 	text-align: center;
 	margin-bottom: 4rem;
+
+	.btn {
+		@include bp($point_4) {
+			padding: 0 1.5rem;
+		}
+	}
 }

@@ -42,7 +42,9 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 1.5rem;
+			@include bp($point_2) {
+				margin-bottom: 1.5rem;
+			}
 		}
 		a {
 			font-family: $font_3;

@@ -1,5 +1,8 @@
 .material_main {
 	padding: 6.5rem 0;
+	@include bp($point_2) {
+		padding: 4rem 0;
+	}
 	h2, h3, h4, h5, h6 {
 		margin-bottom: 6rem;
 		text-align: left;
@@ -8,11 +11,17 @@
 
 .material_grid {
 	grid-gap: .4rem;
+	@include bp($point_4) {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	}
 	li {
 		height: 27.5rem;
 		position: relative;
 		overflow: hidden;
 		background-color: $dark;
+		@include bp($point_4) {
+			height: 17rem;
+		}
 		&.blur {
 			img {
 				opacity: .3;
@@ -54,6 +63,9 @@
 
 .material_grid {
 	margin-bottom: $m6;
+	@include bp($point_4) {
+		margin-bottom: 4rem;
+	}
 	.icon-play {
 		position: absolute;
 		top: 0;
@@ -63,16 +75,24 @@
 		background: linear-gradient(0deg, rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7));
 		@include flex-center;
 		transition: all .4s ease;
-			img {
-				border-radius: 1.2rem;
-				overflow: hidden;
+
+		img {
+			border-radius: 1.2rem;
+			overflow: hidden;
+			@include bp($point_4) {
+				border-radius: 0.5rem;
 			}
+		}
 		&:hover {
 			opacity: .7;
 		}
 		img {
 			width: 6.3rem;
 			height: 4.7rem;
+			@include bp($point_4) {
+				width: 4rem;
+				height: 3rem;
+			}
 		}
 	}
 }

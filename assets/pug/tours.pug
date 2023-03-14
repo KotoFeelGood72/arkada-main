@@ -1,0 +1,20 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'3D туры'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	section.tours(data-aos="fade-in") 
+		.section_in 
+			ul.tours_grid.grid-3 
+				-for(i = 0; i < 6; i++)
+					li
+						.tours_iframe
+							img(src="i/work/start.jpg", alt="")
+						h3 Название проекта
+	include global/application
+

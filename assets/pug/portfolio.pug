@@ -1,0 +1,43 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Портфолио'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	section.portfolio.padding-block(data-aos="fade-in") 
+		.section_in 
+			.porfolio_main
+				.portfolio_main_top 
+					ul.portfolio_list_link 
+						each item, i in ['Все проекты', 'Частные интерьеры', 'Коммерческие интерьеры', 'Архитектура']
+							li
+								a(href="#" class="btn dark")=item
+					+btn({
+						name: '3D Туры',
+						link: true,
+						mod: 'btn dark'
+					})
+				ul.work_grid--big.grid-4
+					-for(i = 1; i < 9; i++)
+						li.work_item_w
+							+work-item({
+								img: `work-${i}`
+							})
+	+block-about({
+		img: 'about-1',
+		txtClass: 'small-area_txt',
+		top: `
+		<h2>О проектах</h2>
+		<p>Наша компания - это не просто бизнес; это компания будущего, которая воплощает искусство в своих проектах, наполняя интерьер особым смыслом, и помогает своим клиентам достигать результатов каждый день. Очень важно, чтобы интерьер отражал ваши желания, цели и образ жизни. Мы точно знаем как это сделать.</p>
+		<p>Предоставляя высокое качество услуг, мы создаем те проекты, в которых будет реализована ваша личность, ваша яркая индивидуальность.</p>
+		<p>Мы ценим тех, кто выбирает нас, кто понимает, что интерьер, созданный чуткими профессионалами – это инвестиция в успех, проявление любви к себе и своей жизни, награда за достижения, воплощение лучшего в вас. И именно для тех, кто нам доверяет, мы раскрываемся как самая продуктивная и совершенная команда будущего, для которой не существует невозможных задач.</p>
+		`,
+		btn: true,
+		nameBtn: 'Узнать цену проекта',
+		btnMode: 'dark mode-btn_global'
+	})
+	include global/application

@@ -6,6 +6,18 @@
 html {
 	height: 100%;
 	font: 400 calc(100vw / 1920 * 10)/1.33 $font_1;
+
+	@include bp(1920px, $direction:min) {
+		font-size: 10px;
+	}
+
+	@include bp(1620px) {
+		font: 400 calc(100vw / 1920 * 12)/1.33 $font_1;	
+	}
+
+	@include bp($point_2) {
+		font-size: 10px;
+	}
 }
 
 body {
@@ -14,6 +26,7 @@ body {
 
 	height: 100%;
 	font-size: $font_size_base;
+	overflow-x: hidden!important;
 
 	color: $color_text_base;
 	-webkit-text-size-adjust: none;
@@ -25,8 +38,16 @@ body {
 
 	overflow-x: hidden;
 
+	&.fixed {
+		overflow: hidden;
+	}
+
 	@supports (display: grid) {
 		display: block;
+	}
+
+	@include bp($point_4) {
+		font-size: 1.6rem;
 	}
 }
 
@@ -43,7 +64,7 @@ body {
 .base {
 	width: 100%;
 	position: relative;
-	// padding: $header 0 0;
+	padding: $header 0 0;
 
 	flex: 1 0 auto;
 }

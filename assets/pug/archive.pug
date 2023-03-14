@@ -1,0 +1,28 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Полезное о дизайне'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	section.news 
+		.section_in 
+			.news_main(data-aos="fade-in") 
+				h2 Наши статьи
+				ul.news_grid.grid-4
+					-for(i = 0; i < 8; i++)
+						li.news_item 
+							a(href="#")
+								.news_item_img 
+									img(src="i/news/news.jpg", alt="")
+								.news_item_front 
+									h3 Название статьи
+									span 21.12.2022
+									+icon('arrow-right')
+				+btn({
+					name: 'Показать больше',
+					mod: 'dark'
+				})

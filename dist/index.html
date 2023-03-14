@@ -1,5 +1,31 @@
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script>
+<!-- Btn mixin -->
+<!-- End-->
+<!-- Mixin slider navigation-->
+<!-- End-->
+<!-- Mixin about and hero about-->
+<!-- End-->
+<!-- Global txt block-->
+<!-- End global txt block-->
+<!-- Dark block-->
+<!-- End dark block-->
+<!-- Work grid-->
+<!-- End work-->
+<!-- Hero page-->
+<!-- End-->
+<!-- Mixin animattion-card-->
+<!-- End card-->
+<!-- workTab-->
+<!-- End workTab-->
+<!-- Block analogy card team and services-->
+<!-- End development block-->
+<!-- Gallery block and txt-->
+<!-- End block-->
+<!-- Mixin contacts block-->
+<!-- End mixin contacts block-->
+<!-- Mixin input-->
+<!-- End mixin --><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -11,24 +37,563 @@
     <link rel="stylesheet" media="all" href="styles/main_global.css"/>
   </head>
   <body>
-    <header class="header"> 
+    <header class="header" data-aos="fade-in"> 
       <div class="section_in"> 
-        <div class="header_main"></div>
+        <div class="header_main">
+          <div class="header_logo"> <a href="#"><img src="i/global/logo.svg" alt="Logotype website"></a></div>
+          <div class="header_right"> 
+            <ul class="header_info"> 
+              <li> <a class="link-accent" href="#">+7 (926) 684 57 00</a></li>
+              <li> <a class="link-accent" href="#">info@designkopov.ru</a></li>
+            </ul>
+            <div class="burger_w trigger" data-target="burger"> 
+              <div class="burger"> <span> </span><span> </span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <div class="wrapper">
       <div class="base">
-        <section class="start" style="background: url('../i/start.jpg') center/cover no-repeat"> 
-          <div class="section_in"> 
-            <div class="start_row"> 
-              <h1>Start development by Arkada Web Studio</h1>
+        <section class="hero">
+          <div class="hero_slider swiper">
+            <div class="slider_nav slider_nav_hero"> 
+              <div class="slider_nav_btn slider_hero_prev"> 
+                <svg class="icon icon-arrow-slide-next ">
+                  <use xlink:href="i/sprite/sprite.svg#arrow-slide-next"></use>
+                </svg>
+              </div>
+              <div class="slider_nav_btn slider_hero_next"> 
+                <svg class="icon icon-arrow-slide-next ">
+                  <use xlink:href="i/sprite/sprite.svg#arrow-slide-next"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero_slide_img"><img src="../i/home/hero_0.jpg" alt=""></div>
+                <div class="section_in"> 
+                  <div class="hero_slide_content" data-aos="fade-in"> 
+                    <h1>Текст для заголовка / акции</h1>
+                    <div class="btn white">
+                      <button class="trigger" type="button" data-target="form">Отправить заявку</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero_slide_img"><img src="../i/home/hero_1.jpg" alt=""></div>
+                <div class="section_in"> 
+                  <div class="hero_slide_content" data-aos="fade-in"> 
+                    <h1>Текст для заголовка / акции</h1>
+                    <div class="btn white">
+                      <button class="trigger" type="button" data-target="form">Отправить заявку</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero_slide_img"><img src="../i/home/hero_2.jpg" alt=""></div>
+                <div class="section_in"> 
+                  <div class="hero_slide_content" data-aos="fade-in"> 
+                    <h1>Текст для заголовка / акции</h1>
+                    <div class="btn white">
+                      <button class="trigger" type="button" data-target="form">Отправить заявку</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+        <div class="sticky_scroll">
+          <section class="block-about" data-aos="fade-up">
+            <div class="section_in"> 
+              <div class="block_about--top padding-block"> 
+                <div class="block_about_img global-small_img"> <img src="i/about/about-1.jpg" alt=""/></div>
+                <div class="block_about_content"> 
+                  <div class="block_txt" data-aos="fade-up">
+                    <div class="block_txt_main">
+			<h2>О нас</h2>
+			<b>Миссия– «_____» это не просто бизнес. Это компания будущего, которая воплощает искусство в своих проектах, наполняя интерьер особым смыслом, и помогает своим клиентам достигать результатов каждый день.</b>
+			<ul class="people_list">
+				<li>
+					<b>Макс</b>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</li>
+				<li>
+					<b>Алиса</b>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</li>
+				<li>
+					<b>Алексей</b>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</li>
+			</ul>
+			</div>
+                  </div>
+                </div>
+              </div>
+              <div class="block_about--bottom padding-block" data-aos="fade-up">
+                <div class="block_txt" data-aos="fade-up">
+                  <div class="block_txt_main">
+				<h2>Уникальные решения</h2>
+				<p>Мы подбираем уникальные решения для каждой проблемы клиента, избегая шаблонных проектов, определяем основные векторы для работы, находим подходящий вариант для реализации идеи заказчика. Наша компания дает возможность не тратить свое время на бытовые трудности в создании визуального образа дома, квартиры или коммерческого помещения.</p>
+				<p>Вы можете спокойно проводить время с семьей, решать рабочие вопросы, посвящать время себе, пока специалисты занимаются выбором декора, формированием нужной цветовой гаммы, поиском комплектующих, чтобы создать идеально подходящий под ваши потребности интерьер. Уютная домашняя обстановка или продающий дизайн бизнес-помещения - мы справимся с любой поставленной задачей, ориентируясь на индивидуальность клиента и его потребности, ведь интерьер – это не безликая обстановка, а яркое отражение личности человека.</p>
+			</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="creative_w">
+            <section class="creative m-block"> 
+              <div class="section_in"> 
+                <div class="creative_main" data-aos="fade-in"> 
+                  <h2>Что мы предлагаем</h2>
+                  <div class="creative_list_w">
+                    <div class="creative_center_decoration"> 
+                      <div class="creative_logo"> <img src="i/global/logo.svg" alt=""/></div>
+                      <ul class="creative_line_list">
+                        <li class="line_item"> <img src="i/global/standart-line.svg" alt=""/></li>
+                        <li class="line_item"> <img src="i/global/standart-line.svg" alt=""/></li>
+                        <li class="line_item"> <img src="i/global/standart-line.svg" alt=""/></li>
+                        <li class="line_item"> <img src="i/global/standart-line.svg" alt=""/></li>
+                        <li class="line_item long_line_item"> <img src="i/global/long-line.svg" alt=""/></li>
+                      </ul>
+                    </div>
+                    <ul class="creative_list">
+                      <li class="creative_item">
+                        <p>Дизайн проекты под ключ</p><span>Разработаем концепцию-идею жилого объекта и сформируем полный дизайн-проект под Ваш образ жизни и вкус.</span>
+                      </li>
+                      <li class="creative_item">
+                        <p>Авторский надзор</p><span>Возьмём на себя реализацию проекта и освободим ваше время. Использование услуги застрахует вас от непредвиденных обстоятельств со стороны поставщиков и ремонтной бригады, сроки ремонта не будут срываться.</span>
+                      </li>
+                      <li class="creative_item">
+                        <p>Архитектурное проектирование</p><span>Спроектируем коттедж любой сложности со всей строительной и сметной документацией</span>
+                      </li>
+                      <li class="creative_item">
+                        <p>Генеральный подрядчик</p><span>Мы возьмем на себя управление всеми процессами на строительной площадке. Выполним контроль всех этапов строительства объекта. Несем ответственность за достижение результатов и конечное качество работ.</span>
+                      </li>
+                      <li class="creative_item">
+                        <p>Комплектация</p><span>Команда дизайнеров подберет для вашего интерьера все материалы, мебель, сантехнику, освещение и элементы декора, которые необходимы для воплощения проекта в жизнь. Все материалы будут доставлены в срок и будут отвечать всем требованиям. Сотрудничество с большим количеством компаний дает преимущество в виде выгодных цен и проверенных материалов</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section class="block-work padding-block"> 
+            <div class="block_work--top" data-aos="fade-up"> 
+              <div class="section_in"> 
+                <h3>Портфолио</h3>
+                <div class="btn dark">
+                  <button class="trigger" type="button">Все проекты</button>
+                </div>
+              </div>
+            </div>
+            <div class="block_work_main" data-aos="fade-up"> 
+              <ul class="work_grid--big grid-4">
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-1.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-2.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-3.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-4.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-5.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-6.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-7.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+                <li class="work_item_w">
+                  <div class="work_item"> <a href="#">
+                      <div class="work_item_img"> <img src="i/work/work-8.jpg" alt=""/></div>
+                      <div class="work_item_title"> 
+                        <h3>Название проекта</h3>
+                        <div class="work_item_icon">
+                          <svg class="icon icon-arrow-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </div></a></div>
+                </li>
+              </ul>
+              <div class="btn dark">
+                <button class="trigger" type="button">3D туры по реализованным объектам</button>
+              </div>
+            </div>
+          </section>
+          <section class="brand" data-aos="fade-up"> 
+            <div class="slider_nav slider_nav_brand"> 
+              <div class="slider_nav_btn slider_brand_prev"> 
+                <svg class="icon icon-arrow-slide-next ">
+                  <use xlink:href="i/sprite/sprite.svg#arrow-slide-next"></use>
+                </svg>
+              </div>
+              <div class="slider_nav_btn slider_brand_next"> 
+                <svg class="icon icon-arrow-slide-next ">
+                  <use xlink:href="i/sprite/sprite.svg#arrow-slide-next"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="section_in"> 
+              <div class="brand_main"> 
+                <h3>Партнеры</h3>
+                <div class="brand_slider_w">
+                  <div class="brand_slider_body"> 
+                    <div class="brand_slider swiper"> 
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                        <div class="swiper-slide"> <img src="i/global/brand.jpg" alt=""/></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="reviews padding-block" data-aos="fade-up"> 
+            <div class="section_in"> 
+              <div class="reviews_main">
+                <h5>Отзывы клиентов</h5>
+                <div class="reviews_slider_w">
+                  <div class="slider_nav slider_nav_reviews"> 
+                    <div class="slider_nav_btn slider_reviews_prev"> 
+                      <svg class="icon icon-arrow-slide-next ">
+                        <use xlink:href="i/sprite/sprite.svg#arrow-slide-next"></use>
+                      </svg>
+                    </div>
+                    <div class="slider_nav_btn slider_reviews_next"> 
+                      <svg class="icon icon-arrow-slide-next ">
+                        <use xlink:href="i/sprite/sprite.svg#arrow-slide-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="reviews_slider swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="reviews_slide showMoreBlock"> 
+                          <div class="reviews_slide_img"> <img src="i/global/reviews.png" alt=""></div>
+                          <div class="reviews_slide_content"> 
+                            <div class="reviews_slide_top"> 
+                              <p>Имя Фамилия</p><span>31/12/2022</span>
+                            </div>
+                            <div class="reviews_slide_txt showMoreTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </br></br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                            <div class="reviews_slide_more"> 
+                              <button class="showMoreBtn" type="button">Показать больше</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews_scrollbar global_scrollbar double_scrollbar"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="contacts dark-block mt-block" data-aos="fade-in"> 
+            <div class="section_in"> 
+              <div class="contacts_main"> 
+                <div class="contacts_content">
+                  <div class="contacts_content_info">
+                    <h5>Контакты</h5>
+                    <ul class="contacts_list"> 
+                      <li> <a class="link-accent dark-accent" href="#" target="_blank">+7 (926) 684 57 00</a></li>
+                      <li> <a class="link-accent dark-accent" href="#" target="_blank">info@designkopov.ru</a></li>
+                    </ul>
+                    <ul class="contacts_list--social">
+                      <li> <a href="#" target="_blank">
+                          <svg class="icon icon-wa ">
+                            <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                          </svg></a></li>
+                      <li> <a href="#" target="_blank">
+                          <svg class="icon icon-tg ">
+                            <use xlink:href="i/sprite/sprite.svg#tg"></use>
+                          </svg></a></li>
+                      <li> <a href="#" target="_blank">
+                          <svg class="icon icon-vk ">
+                            <use xlink:href="i/sprite/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li> <a href="#" target="_blank">
+                          <svg class="icon icon-be ">
+                            <use xlink:href="i/sprite/sprite.svg#be"></use>
+                          </svg></a></li>
+                      <li> <a href="#" target="_blank">
+                          <svg class="icon icon-pin ">
+                            <use xlink:href="i/sprite/sprite.svg#pin"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                  <div class="btn white">
+                    <button class="trigger" type="button" data-target="form">Оставить заявку</button>
+                  </div>
+                </div>
+                <div class="contacts_img"> <img src="i/global/application.jpg" alt=""/></div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
       <footer class="footer"> 
         <div class="section_in"> 
-          <div class="footer_main"> </div>
+          <div class="footer_main_w"> 
+            <div class="footer_top"> 
+              <div class="footer_logo"> <a href="#"><img src="i/global/logo.svg" alt=""></a></div>
+              <ul class="footer_info"> 
+                <li> <a class="link-accent" href="#">+7 (926) 684 57 00</a></li>
+                <li> <a class="link-accent" href="#">info@designkopov.ru</a></li>
+              </ul>
+            </div>
+            <nav class="footer_nav">
+              <ul class="footer_nav_list">
+                <li> <a href="#">Главная</a></li>
+                <li> <a href="#">О нас</a></li>
+                <li> <a href="#">Услуги и цены</a></li>
+                <li> <a href="#">Портфолио</a></li>
+                <li> <a href="#">Реализованные объекты</a></li>
+                <li> <a href="#">3D туры</a></li>
+                <li> <a href="#">О дизайне</a></li>
+                <li> <a href="#">Обучение</a></li>
+                <li> <a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="footer_bottom">
+              <div class="footer_left"> 
+                <div class="footer_copyright">© 2022 Все права защищены</div><a class="link-accent" href="#">Политика конфиденциальности</a>
+              </div><a class="footer_brand" href="#" target="_blank"><img src="i/global/arkada.svg" alt="Arkada brand"></a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
@@ -40,6 +605,37 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_form" data-id="form"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main">
+        <div class="popup_close remove"> 
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <div class="popup_head"> 
+          <h3>Оставьте заявку</h3>
+          <p>Мы свяжемся с вами в ближайшее время!</p>
+        </div>
+        <div class="popup_form_w"> 
+          <form class="contacts-form" action="#">
+            <div class="global_input app_form dark-input">
+              <input type="text" placeholder="Ваше имя"/>
+            </div>
+            <div class="global_input app_form dark-input">
+              <input type="tel" placeholder="Ваш номер телефона"/>
+            </div>
+            <div class="global_input global_textarea dark-input"> 
+              <textarea name="comments" rows="3" placeholder="Ваш комментарий (необязательно)"></textarea>
+            </div>
+            <div class="global_input global_btn_submit dark-mode">
+              <input type="submit" value="Оставить заявку"/>
+            </div>
+            <div class="form_notice">Отправляя данные, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>
@@ -52,6 +648,57 @@
         <p>Проверьте правильность полей!</p>
         <div class="alert_icon">
            <svg class="checkmark" class="test-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="3" stroke-dasharray="100"><circle class="alert__circle" cx="26" cy="26" r="25" fill="none"/><path class="icon-path" id="check" d="M 15,15 L 32,33 M 32,15 L 15,33"></path></svg></div>
+      </div>
+    </div>
+    <div class="burger_window popup" data-id="burger"> 
+      <div class="burger_bg remove"> </div>
+      <div class="burger_main"> 
+        <div class="burger_close remove">
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <nav class="burger_nav"> 
+          <ul> 
+            <li> <a href="#">Главная</a></li>
+            <li> <a href="#">О нас</a></li>
+            <li> <a href="#">Услуги и цены</a></li>
+            <li> <a href="#">Портфолио</a></li>
+            <li> <a href="#">Реализованные объекты</a></li>
+            <li> <a href="#">3D туры</a></li>
+            <li> <a href="#">О дизайне</a></li>
+            <li> <a href="#">Обучение</a></li>
+            <li> <a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="burger_info"> 
+          <ul class="contacts_list"> 
+            <li> <a href="#">+7 (926) 684 57 00</a></li>
+            <li> <a href="#">info@designkopov.ru</a></li>
+          </ul>
+          <ul class="contacts_list--social">
+            <li> <a href="#">
+                <svg class="icon icon-wa ">
+                  <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-tg ">
+                  <use xlink:href="i/sprite/sprite.svg#tg"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-vk ">
+                  <use xlink:href="i/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-be ">
+                  <use xlink:href="i/sprite/sprite.svg#be"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-pin ">
+                  <use xlink:href="i/sprite/sprite.svg#pin"></use>
+                </svg></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,22 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Услуги и цены'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	+sliderCard({
+		team: false,
+		name: ['Частные интерьеры', 'Коммерческие интерьеры', 'Архитектурное проектирование'],
+		imgList: ['home-0', 'home-1', 'home-2'],
+		customChange: 'service_anim',
+		title: 'Наши услуги',
+		customClass: 'customClass_sliderCard'
+	})
+	+creative-block({title: 'Комплексный подход', btn: true})
+	+brand({
+		class: 'custom_mb'
+	})

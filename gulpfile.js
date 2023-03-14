@@ -219,6 +219,25 @@ gulp.task('imgBuild', function () {
 		.pipe(gulp.dest(buildDir + 'i/'));
 });
 
+gulp.task('imgMinify', function () {
+	return gulp
+		.src([assetsDir + 'i/**/*', '!' + assetsDir + 'i/sprite/**/*'])
+		.pipe(
+			image({
+				pngquant: true,
+				optipng: false,
+				zopflipng: true,
+				jpegRecompress: false,
+				mozjpeg: true,
+				gifsicle: true,
+				svgo: false,
+				concurrent: 10,
+				quiet: false, // defaults to false
+			})
+		)
+		.pipe(gulp.dest(outputDir + 'i/'));
+});
+
 
 
 //copy sprite.svg
@@ -360,7 +379,7 @@ let taskArray = {
 			'pug',
 			'sass',
 			// 'imgWebp',
-			'imgBuild',
+			'imgMinify',
 			'imageSync',
 			'fontsSync',
 			'fontsConvert',

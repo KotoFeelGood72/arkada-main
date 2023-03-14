@@ -1,0 +1,26 @@
+.popup.popup_form(data-id="form") 
+	.popup_bg.remove 
+	.popup_main
+		.popup_close.remove 
+			+icon('close') 
+		.popup_head 
+			h3 Оставьте заявку
+			p Мы свяжемся с вами в ближайшее время!
+		.popup_form_w 
+			form.contacts-form(action="#")
+				+input({
+					class: 'app_form dark-input'
+				})
+				+input({
+					place: 'Ваш номер телефона',
+					type: 'tel',
+					class: 'app_form dark-input'
+				})
+				.global_input.global_textarea.dark-input 
+					textarea(name="comments" rows="3" placeholder="Ваш комментарий (необязательно)")
+				+input({
+					type: 'submit',
+					class: 'global_btn_submit dark-mode',
+					val: 'Оставить заявку'
+				})
+				.form_notice!='Отправляя данные, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности</a>'

@@ -1,9 +1,35 @@
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script><!DOCTYPE html>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script>
+<!-- Btn mixin -->
+<!-- End-->
+<!-- Mixin slider navigation-->
+<!-- End-->
+<!-- Mixin about and hero about-->
+<!-- End-->
+<!-- Global txt block-->
+<!-- End global txt block-->
+<!-- Dark block-->
+<!-- End dark block-->
+<!-- Work grid-->
+<!-- End work-->
+<!-- Hero page-->
+<!-- End-->
+<!-- Mixin animattion-card-->
+<!-- End card-->
+<!-- workTab-->
+<!-- End workTab-->
+<!-- Block analogy card team and services-->
+<!-- End development block-->
+<!-- Gallery block and txt-->
+<!-- End block-->
+<!-- Mixin contacts block-->
+<!-- End mixin contacts block-->
+<!-- Mixin input-->
+<!-- End mixin --><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>HOME</title>
+    <title>Политика конфиденциальности</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -11,17 +37,43 @@
     <link rel="stylesheet" media="all" href="styles/main_global.css"/>
   </head>
   <body>
-    <header class="header"> 
+    <header class="header" data-aos="fade-in"> 
       <div class="section_in"> 
-        <div class="header_main"></div>
+        <div class="header_main">
+          <div class="header_logo"> <a href="#"><img src="i/global/logo.svg" alt="Logotype website"></a></div>
+          <div class="header_right"> 
+            <ul class="header_info"> 
+              <li> <a class="link-accent" href="#">+7 (926) 684 57 00</a></li>
+              <li> <a class="link-accent" href="#">info@designkopov.ru</a></li>
+            </ul>
+            <div class="burger_w trigger" data-target="burger"> 
+              <div class="burger"> <span> </span><span> </span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <div class="wrapper">
       <div class="base">
+        <section class="custom-hero"><img src="i/page-hero/global.jpg" alt=""/>
+          <div class="section_in"> 
+            <div class="custom_hero_main" data-aos="fade-in"> 
+              <div class="breadcrumb">
+                <div class="section_in">
+                  <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item"><span class="breadcrumb__link-current">Политика конфиденциальности</span></li>
+                  </ul>
+                  <h1>Политика конфиденциальности</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="policy"> 
           <div class="section_in"> 
             <div class="policy_main"> 
-              <h1>Политика в отношении обработки персональных данных</h1>
               <ul class="policy_list"> 
                 <li> 
                   <p>1. Общие положения</p><span>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» (далее - Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Михайловым Иваном Сергеевичем (далее – Оператор).</span>
@@ -212,7 +264,33 @@
       </div>
       <footer class="footer"> 
         <div class="section_in"> 
-          <div class="footer_main"> </div>
+          <div class="footer_main_w"> 
+            <div class="footer_top"> 
+              <div class="footer_logo"> <a href="#"><img src="i/global/logo.svg" alt=""></a></div>
+              <ul class="footer_info"> 
+                <li> <a class="link-accent" href="#">+7 (926) 684 57 00</a></li>
+                <li> <a class="link-accent" href="#">info@designkopov.ru</a></li>
+              </ul>
+            </div>
+            <nav class="footer_nav">
+              <ul class="footer_nav_list">
+                <li> <a href="#">Главная</a></li>
+                <li> <a href="#">О нас</a></li>
+                <li> <a href="#">Услуги и цены</a></li>
+                <li> <a href="#">Портфолио</a></li>
+                <li> <a href="#">Реализованные объекты</a></li>
+                <li> <a href="#">3D туры</a></li>
+                <li> <a href="#">О дизайне</a></li>
+                <li> <a href="#">Обучение</a></li>
+                <li> <a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="footer_bottom">
+              <div class="footer_left"> 
+                <div class="footer_copyright">© 2022 Все права защищены</div><a class="link-accent" href="#">Политика конфиденциальности</a>
+              </div><a class="footer_brand" href="#" target="_blank"><img src="i/global/arkada.svg" alt="Arkada brand"></a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
@@ -224,6 +302,37 @@
     <script src="js/libs.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <div class="popup popup_form" data-id="form"> 
+      <div class="popup_bg remove"> </div>
+      <div class="popup_main">
+        <div class="popup_close remove"> 
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <div class="popup_head"> 
+          <h3>Оставьте заявку</h3>
+          <p>Мы свяжемся с вами в ближайшее время!</p>
+        </div>
+        <div class="popup_form_w"> 
+          <form class="contacts-form" action="#">
+            <div class="global_input app_form dark-input">
+              <input type="text" placeholder="Ваше имя"/>
+            </div>
+            <div class="global_input app_form dark-input">
+              <input type="tel" placeholder="Ваш номер телефона"/>
+            </div>
+            <div class="global_input global_textarea dark-input"> 
+              <textarea name="comments" rows="3" placeholder="Ваш комментарий (необязательно)"></textarea>
+            </div>
+            <div class="global_input global_btn_submit dark-mode">
+              <input type="submit" value="Оставить заявку"/>
+            </div>
+            <div class="form_notice">Отправляя данные, вы соглашаетесь с <a href="/policy/" target="_blank">политикой конфиденциальности</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="alert success">
       <div class="alert_main"> 
         <p>Ваше сообщение успешно отправлено!</p>
@@ -236,6 +345,57 @@
         <p>Проверьте правильность полей!</p>
         <div class="alert_icon">
            <svg class="checkmark" class="test-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="3" stroke-dasharray="100"><circle class="alert__circle" cx="26" cy="26" r="25" fill="none"/><path class="icon-path" id="check" d="M 15,15 L 32,33 M 32,15 L 15,33"></path></svg></div>
+      </div>
+    </div>
+    <div class="burger_window popup" data-id="burger"> 
+      <div class="burger_bg remove"> </div>
+      <div class="burger_main"> 
+        <div class="burger_close remove">
+          <svg class="icon icon-close ">
+            <use xlink:href="i/sprite/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <nav class="burger_nav"> 
+          <ul> 
+            <li> <a href="#">Главная</a></li>
+            <li> <a href="#">О нас</a></li>
+            <li> <a href="#">Услуги и цены</a></li>
+            <li> <a href="#">Портфолио</a></li>
+            <li> <a href="#">Реализованные объекты</a></li>
+            <li> <a href="#">3D туры</a></li>
+            <li> <a href="#">О дизайне</a></li>
+            <li> <a href="#">Обучение</a></li>
+            <li> <a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="burger_info"> 
+          <ul class="contacts_list"> 
+            <li> <a href="#">+7 (926) 684 57 00</a></li>
+            <li> <a href="#">info@designkopov.ru</a></li>
+          </ul>
+          <ul class="contacts_list--social">
+            <li> <a href="#">
+                <svg class="icon icon-wa ">
+                  <use xlink:href="i/sprite/sprite.svg#wa"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-tg ">
+                  <use xlink:href="i/sprite/sprite.svg#tg"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-vk ">
+                  <use xlink:href="i/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-be ">
+                  <use xlink:href="i/sprite/sprite.svg#be"></use>
+                </svg></a></li>
+            <li> <a href="#">
+                <svg class="icon icon-pin ">
+                  <use xlink:href="i/sprite/sprite.svg#pin"></use>
+                </svg></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>

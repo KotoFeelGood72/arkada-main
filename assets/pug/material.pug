@@ -1,0 +1,40 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Реализованные объекты'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	section.material(data-aos="fade-in")
+		.section_in 
+			.material_main 
+				h2 Фотоматериалы
+				ul.material_grid.grid-4 
+					-for(i = 0; i < 12; i++)
+						li.animated-blur
+							a(href=`i/material/material-${i}.jpg` data-fancybox="materialImg")
+								img(src=`i/material/material-${i}.jpg` alt="")
+				+btn({
+					name: 'Показать больше',
+					mod: 'dark'
+				})
+	section.material(data-aos="fade-in")
+		.section_in 
+			.material_main 
+				h2 Видеоматериалы
+				ul.material_grid.grid-4 
+					-for(i = 0; i < 4; i++)
+						li.animated-blur
+							a(href="https://www.youtube.com/watch?v=hMPMUDydTtQ" data-fancybox="materialVideo")
+								img(src=`i/material/material-${i}.jpg` alt="")
+								.icon-play 
+									img(src="i/global/play.svg", alt="")
+				+btn({
+					name: 'Показать больше',
+					mod: 'dark'
+				})
+	include global/application
+			

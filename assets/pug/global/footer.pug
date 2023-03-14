@@ -1,3 +1,22 @@
 footer.footer 
 	.section_in 
-		.footer_main 
+		.footer_main_w 
+			.footer_top 
+				.footer_logo 
+					a(href="#")
+						img(src="i/global/logo.svg", alt="")
+				ul.footer_info 
+					each item in ['+7 (926) 684 57 00', 'info@designkopov.ru']
+						li 
+							a(href="#" class="link-accent")=item
+			nav.footer_nav
+				ul.footer_nav_list
+					each item in ['Главная', 'О нас', 'Услуги и цены', 'Портфолио', 'Реализованные объекты', '3D туры', 'О дизайне', 'Обучение', 'Контакты']
+						li 
+							a(href="#")=item
+			.footer_bottom
+				.footer_left 
+					.footer_copyright © 2022 Все права защищены
+					a(href="#" class="link-accent") Политика конфиденциальности
+				a.footer_brand(href="#" target="_blank")
+					img(src="i/global/arkada.svg", alt="Arkada brand")

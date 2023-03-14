@@ -187,15 +187,25 @@ mixin loop_while_sub(counter)
 			block
 
 //- works
-mixin breadcrumbs(array,add_class)
-	- add_class = add_class || ''
-	ul.breadcrumbs_list(class=add_class)
-		each crumb, index in array
-			li.breadcrumbs_item
-				if (index == array.length - 1)
-					a.breadcrumbs_link.current_mod=crumb.text
+mixin bread(items, last, visible)
+	.breadcrumb
+		.section_in
+			ul.breadcrumb__list&attributes(attributes)
+				each item in items
+					li.breadcrumb__item
+						if (items.length === 0)
+							span.breadcrumb__link= item
+						else
+							a(href="#" title=item).breadcrumb__link= item
+
+				if last
+					li.breadcrumb__item
+						span.breadcrumb__link-current= last
 				else
-					a.breadcrumbs_link(href= crumb.url)= crumb.text
+			if visible
+				h1=last
+			else 
+
 
 //- works
 mixin menu(menuArray)

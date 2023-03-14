@@ -1,0 +1,19 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Ошибка 404'}
+block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
+	section.error(data-aos="fade-in") 
+		.section_in 
+			.error_main 
+				h2 Такой страницы не существует
+				+btn({
+					mod: 'dark',
+					name: 'Вернуться на главную',
+					link: '/',
+				})

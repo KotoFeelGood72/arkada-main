@@ -1,0 +1,228 @@
+.sliderCard_main {
+	h2, h3, h4, h5, h6 {
+		// margin-bottom: 6rem;
+	}
+}
+
+.sliderCard {
+	.block_txt {
+		padding: 6.5rem 0;
+		@include bp($point_2) {
+			padding: 4rem 0 0 0;
+		}
+	}
+}
+
+.sliderCard_slider  {
+	background-color: $trans;
+	position: relative;
+	padding: 6rem 0!important;
+	@include bp($point_2) {
+		padding: 4rem 0!important;
+	}
+}
+
+.animation_back_top {
+	h2, h3, h4, h5, h6 {
+		font-size: 2rem;
+		font-family: $font_4;
+		margin-bottom: .5rem;
+		color: $white;
+		@include bp($point_4) {
+			font-size: 1.8rem;
+		}
+	}
+	p {
+		font-size: $fz16;
+		opacity: .7;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
+	}
+	padding-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.animation_back_body {
+	font-size: $fz16;
+	max-height: 30rem;
+	overflow: auto;
+}
+
+.animation-card {
+	height: 44rem!important;
+	position: relative;
+	transition: transform .7s ease;
+	transform-style: preserve-3d;
+	user-select: none;
+	
+	cursor: pointer;
+	&:hover {
+		.animation_card_front {
+			transform: perspective(600px) rotateY(-180deg);
+		}
+		.animation_card_back {
+			transform: perspective(600px) rotateY(0);
+		}
+	}
+
+}
+
+.animation_card_front {
+	transform: perspective(600px) rotateY(0deg);
+}
+
+.anim-card_rotate {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+	transition: transform .7s ease;
+}
+
+.animation_card_back {
+	background-color: $dark;
+	padding: 2.5rem;
+	color: $white;
+	transform: perspective(600px) rotateY(180deg);
+}
+
+.animation_head_front {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(34, 34, 34, 0.8);
+	width: 100%;
+	padding: 1.5rem 2.5rem;
+	pointer-events: none;
+	min-height: 8.8rem;
+	@include bp($point_4) {
+		@include flex-start;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	h2, h3, h4, h5, h6 {
+		font-size: 2rem;
+		color: $white;
+		font-family: $font_4;
+		margin-bottom: 0.5rem;
+		max-width: 30rem;
+		@include bp($point_4) {
+			font-size: 1.8rem;
+		}
+	}
+	p {
+		font-size: $fz16;
+		color: $white;
+		opacity: .7;
+		max-width: 30rem;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
+	}
+
+	svg {
+		position: absolute;
+		bottom: 1.5rem;
+		right: 2rem;
+		color: $white;
+		width: 1rem;
+		height: 1.7rem;
+		@include bp($point_4) {
+			bottom: auto;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	} 
+}
+
+.animation_card_img {
+	height: 100%;
+	width: 100%;
+	@include z-index(el);
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.sliderCard_scrollbar {
+	display: none;
+	@include bp($point_4) {
+		display: block;
+		max-width: 100%;
+	}
+}
+.sliderCard {
+	position: relative;
+	.slider_nav_slideCard {
+		top: 32%;
+		@include bp($point_2) {
+			top: 24%;
+			padding: 0 4rem;
+		}
+		@include bp($point_4) {
+			display: none;
+		}
+
+		div {
+			@include bp($point_2) {
+				width: 5rem;
+				height: 5rem;
+				@include flex-center;
+				background-color: #ffffff5d;
+				border-radius: 10rem;
+				opacity: .8;
+			}
+		}
+	}
+}
+
+.service_anim  {
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 95%;
+		height: 97%;
+		content: '';
+		border: .1rem solid rgba(255, 255, 255, 0.5);
+		content: '';
+		pointer-events: none;
+	}
+
+	.animation_back_top {
+		border: none;
+		padding: 0;
+		h2, h3, h4, h5, h6 {
+			font-size: 2.5rem;
+		}
+	}
+
+	.animation_back_body {
+		ul {
+			li {
+				a {
+					@include flex-start;
+					color: $white;
+					padding: 1.5rem;
+					border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
+					transition: all .3s ease;
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.1);
+						border-bottom: .1rem solid $trans;
+					}
+				}
+
+				.label  {
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+}

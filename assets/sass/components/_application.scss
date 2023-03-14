@@ -1,0 +1,74 @@
+.application_main {
+	@include flex-start;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
+}
+.application {
+	background-color: $dark;
+	position: relative;
+	min-height: 71.8rem;
+	border-bottom: .1rem solid rgba(255, 255, 255, 0.25);
+	margin-top: 6.5rem;
+	@include bp($point_2) {
+		min-height: 100%;
+		margin-top: 8rem;
+	}
+	@include bp($point_4) {
+		margin-top: 4rem;
+	}
+}
+.application_img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 110.7rem;
+	@include bp($point_2) {
+		// position: static;
+		right: auto;
+		left: 0;
+		top: 0;
+		max-width: 100%;
+		opacity: .3;
+	}
+	img {
+		height: 100%;
+		object-fit: cover;
+
+	}
+}
+
+.application_form {
+	padding: 8rem 0 9rem 0;
+	max-width: 48.3rem;
+
+	@include bp($point_2) {
+		position: relative;
+		z-index: 2;
+	}
+	h2, h3, h4, h5, h6, p {
+		color: $white;
+	}
+	p {
+		margin-bottom: 4rem;
+	}
+}
+
+.form_notice {
+	color: $white;
+	font-size: 1.6rem;
+	opacity: .7;
+	transition: all .3s ease;
+	&:hover {
+		opacity: 1;
+	}
+	a {
+		color: inherit;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

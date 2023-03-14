@@ -1,12 +1,16 @@
 extends _layout
 
 block vars
-	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Политика конфиденциальности'}
 block content_block
+	+custom-hero({
+		current: array.title_inner,
+		item: 'Главная',
+		visible: true,
+	})
 	section.policy 
 		.section_in 
 			.policy_main 
-				h1 Политика в отношении обработки персональных данных
 				ul.policy_list 
 					li 
 						p 1. Общие положения

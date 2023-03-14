@@ -16,6 +16,7 @@ var gulp = require('gulp'),
 	postcss = require('gulp-postcss'),
 	assets = require('postcss-assets'),
 	notify = require('gulp-notify')
+	cache = require('gulp-cache');
 
 let productionStatus;
 
@@ -222,19 +223,24 @@ gulp.task('imgBuild', function () {
 gulp.task('imgMinify', function () {
 	return gulp
 		.src([assetsDir + 'i/**/*', '!' + assetsDir + 'i/sprite/**/*'])
-		.pipe(
-			image({
-				pngquant: true,
-				optipng: false,
-				zopflipng: true,
-				jpegRecompress: false,
-				mozjpeg: true,
-				gifsicle: true,
-				svgo: false,
-				concurrent: 10,
-				quiet: false, // defaults to false
-			})
-		)
+		.pipe(cache(image({
+			pngquant: true,
+			optipng: false,
+			zopflipng: true,
+			jpegRecompress: false,
+			mozjpeg: true,
+			gifsicle: true,
+			svgo: false,
+			concurrent: 5,
+			quiet: false,
+		}), {
+			key: function (file) {
+				// Use the path relative to the working directory as cache key
+				return file.relative;
+			},
+			// Specify the cache folder
+			cacheDir: outputDir + 'i-cache'
+		}))
 		.pipe(gulp.dest(outputDir + 'i/'));
 });
 
